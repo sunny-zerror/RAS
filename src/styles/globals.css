@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scroller::-webkit-scrollbar{
+  background-color: #E9E9E9;
+  height: .3rem;
+  border-left: 50%;
+}
+.scroller::-webkit-scrollbar-thumb
+{
+  background-color: #a9a9a9;
+}
+p{
+  color: #262626;
+}
+a{
+  color: #262626;
+}
+.pad{
+  padding: 0rem 3rem;
+}
