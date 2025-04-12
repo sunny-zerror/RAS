@@ -4,7 +4,7 @@ const RedBtn = ({ text }) => {
     return (
         <div>
             <button className='bg-[#EA1B22] text-sm center font-medium px-6 py-2 rounded-lg'>
-                <p className='text-white'>{text}</p>
+                <h2 className='text-white'>{text}</h2>
             </button>
         </div>
     )

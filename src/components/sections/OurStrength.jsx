@@ -4,17 +4,17 @@ import RedBtn from '../buttons/RedBtn'
 const OurStrength = () => {
     return (
         <div>
-            <div class="pad h-[40vh]  flex items-center justify-between  ">
-                <div class="w-[45%] h-full flex flex-col justify-evenly ">
+            <div class="pad py-10 my-10  flex items-center justify-between  ">
+                <div class="w-[45%] h-full flex gap-10 flex-col justify-evenly ">
                     <p class="text-3xl font-semibold">
-                        Our Core Strengths
+                    Our Edge
                     </p>
                     <div className="">
 
-                        <p class="font-medium text-lg ">
+                        <p class="font-semibold text-lg ">
                             Built on Precision. Driven by Compliance. Powered by Expertise.
                         </p>
-                        <p class="mt-2">
+                        <p class="mt-2 text-base leading-tight">
                             RASSCS delivers specialized logistics solutions with a sharp focus on safety, sustainability, and performance. Our deep technical know-how, disciplined execution, and tailored approach enable seamless global movement of sensitive and regulated cargo.
                         </p>
                     </div>

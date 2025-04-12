@@ -1,3 +1,32 @@
+@font-face {
+  font-family: gilroy-thin;
+  src: url(/fonts/Gilroy-Thin.ttf) format('truetype');
+}
+@font-face {
+  font-family: gilroy-ultra-light;
+  src: url(/fonts/Gilroy-UltraLight.ttf) format('truetype');
+}
+@font-face {
+  font-family: gilroy-light;
+  src: url(/fonts/Gilroy-Light.ttf) format('truetype');
+}
+@font-face {
+  font-family: gilroy-medium;
+  src: url(/fonts/Gilroy-Medium.ttf) format('truetype');
+}
+@font-face {
+  font-family: gilroy-regular;
+  src: url(/fonts/Gilroy-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: gilroy-semi-bold;
+  src: url(/fonts/Gilroy-SemiBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: gilroy-bold;
+  src: url(/fonts/Gilroy-Bold.ttf) format('truetype');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,6 +35,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+h1{
+  font-family: gilroy-bold;
+  color: #222D37;
+}
+h2{
+  font-family: gilroy-semi-bold;
+  color: #222D37;
 }
 .scroller::-webkit-scrollbar{
   background-color: #E9E9E9;
@@ -17,11 +54,20 @@
   background-color: #a9a9a9;
 }
 p{
-  color: #262626;
+  font-family: gilroy-regular;
+  color: #222D37;
 }
 a{
-  color: #262626;
+  color: #222D37;
 }
 .pad{
   padding: 0rem 3rem;
+}
+.ft p{
+  font-family: gilroy-regular;
+  color: #FFFFFF;
+}
+.ft a{
+  font-family: gilroy-regular;
+  color: #FFFFFF;
 }
