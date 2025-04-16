@@ -15,9 +15,14 @@ const tankData = [{
     description: 'RASSCS maintains a robust fleet of ISO tanks—T11, T14, T20, and T22—engineered for the global movement of bulk liquids. These tanks serve both chemical and food-grade industries, offering flexibility, safety, and regulatory compliance.',
     image: '/images/tank/chemical_grade.webp',
     highlights: [
-        'Versatile applications for hazardous and non-hazardous cargo',
-        'Designed for food-grade and chemical-grade products',
-        'Compliance with international transport standards',
+        'Carriage of hazardous and non-hazardous products.',
+        'Capacity ranging from 24KL to 26KL',
+        'Specialized chemline coated tanks for dedicated products.',
+        'T20 & T22: Top Load Top Discharge tanks for highly hazardous products with higher saftey parameters',
+    ],
+    changeHighlight: [
+        'Capacity ranging from 24KL to 26KL',
+        'Dedicated Food grade tanks meets hygiene, precision and compliance to meet the requirements of food grade products.'
     ],
     tankTypes: [
         {
@@ -34,13 +39,13 @@ const tankData = [{
 {
     title: 'Baffle Tanks',
     subtitle: 'Stabilized Transport for Bulk Liquids with Reduced Surge Impact',
-    description: 'Baffle Tanks come with internal partitions to minimize liquid movement during transit, ensuring added safety for sensitive or partially filled loads.',
+    description: 'Baffle Tanks come with internal partitions to control liquid movement during transit, ensuring added safety for sensitive or partially filled loads.',
     image: '/images/tank/baffle_tanks.webp',
     highlights: [
-        'Surge reduction for better balance and control.',
+        'Improved safety- Less sloshing, reduced risk of accidents during transporting.',
         'Ideal for partial loads and sensitive cargo.',
-        'Improves safety and efficiency in transit.',
-        'Enhanced load security with reduced risk of in-transit shifting.',
+        'Improves balance, provides stability of vehicle or tank during sudden shift in liquid weight.',
+        'Ensures better handling by making loading-unloading process more safer.',
     ],
     tankTypes: [
     ]
@@ -48,13 +53,13 @@ const tankData = [{
 {
     title: 'Flexi Tank Solutions',
     subtitle: 'Scalable and Reliable Logistics for Non-Hazardous Liquids',
-    description: 'RASSCS provides end-to-end Flexi Tank logistics for non-hazardous liquid cargo across industries—from edible oils to industrial chemicals.',
+    description: 'RASSCS provides end-to-end Flexi Tank logistics for non-hazardous and foodgrade liquid products.',
     image: '/images/tank/flexi.webp',
     highlights: [
-        'Complete coverage: Supply, fitting, loading, shipping, and discharge.',
-        'Global connectivity: In-house teams and a strong international partner network.',
+        'Complete coverage: Supply, fitting, loading, shipping, discharge and disposal assistance.',
+        'Capacity Range form 16,000 L to 24,000 L.',
         'Emergency response: Rapid issue resolution and contingency handling.',
-        'Trusted across industries: Food & beverages, industrial chemicals, agriculture, pharmaceuticals, and cosmetics',
+        'Types-Top Loading Top Discharge, Bottom Loading Bottom Discharge and Top Loading and Bottom Discharge.',
     ],
     tankTypes: [
     ]
@@ -62,12 +67,11 @@ const tankData = [{
 {
     title: 'Swap Tanks',
     subtitle: 'High-Capacity Storage and Movement for Bulk Liquids',
-    description: 'Swap Tanks offer 25–40KL capacity, outperforming standard ISO tanks in volume. Ideal for plant storage and large-scale logistics.',
+    description: 'Swap tanks ranges from 28,000 L to 40,000 L capacity with similar features of regular ISO tank but with shell extended out of frame on both ends.',
     image: '/images/tank/swap_tank.webp',
     highlights: [
         'Up to 25% higher capacity than regular ISO tanks.',
-        'SS 316L build with insulation, heating, and dual manholes.',
-        'Perfect for on-site chemical storage and bulk transport.',
+        'Cost effective for transportation and storage with higher pay load and lesser tare weight.',
         'Ready for road, rail, and intermodal movement.',
     ],
     tankTypes: [
@@ -76,13 +80,12 @@ const tankData = [{
 {
     title: 'T50 Tanks',
     subtitle: 'Safe and Efficient Transport for Pressurized Gases',
-    description: 'Built for liquefied gases such as LPG, ammonia, and propylene, T50 tanks are pressure-resistant (up to 34.4 bar) and ideal for industrial gas transport and storage.',
+    description: 'Built for non-refrigerated liquefied gases such as LPG, ammonia, and propylene. Ideal for industrial gas transport and storage.',
     image: '/images/tank/t50.webp',
     highlights: [
-        'High-pressure containment with reinforced build.',
-        'Multi-gas compatibility.',
-        'Robust safety valves and relief systems.',
-        'Suitable for global gas logistics.',
+        'High pressure vessel with robust construction with product details on date plate.',
+        'Pressure ratings up to 34.4 bar.',
+        'All calves adn fitting are mounted in a protective cabinate.',
     ],
     tankTypes: [
     ]
@@ -90,11 +93,11 @@ const tankData = [{
 {
     title: 'T75 Tanks',
     subtitle: 'Ultra-Low Temperature Transport for Cryogenic Liquids',
-    description: 'T75 tanks are built for cryogenic products like LNG, LOX, LIN, and LAR, maintaining temperatures as low as -196°C with vacuum-insulated double walls.',
+    description: 'T75 tanks are built for cryogenic (Refrigerated liquified gases) products like LNG, LOX, LIN, and LAR, maintaining temperatures as low as -196°C with vacuum-insulated double walls.',
     image: '/images/tank/T75i.webp',
     highlights: [
         'Designed for extreme temperature retention.',
-        'Suitable for a range of cryogenic gases.',
+        'Frame sizes-20ft and 40ft to suit customer requirement.',
         'Minimal boil-off and high thermal efficiency.',
         'Compliant with international cryogenic safety standards.',
     ],
@@ -104,12 +107,10 @@ const tankData = [{
 
 ]
 
-export const Tank = ({ title, subtitle, description, highlights, tankTypes, image }) => {
+export const Tank = ({ title, subtitle, description, highlights, changeHighlight, tankTypes, image }) => {
 
     const [selectedImage, setSelectedImage] = useState(image)
 
-       
-    
     return (
         <div className="w-full mb-10 py-6 md:py-12 ">
             <div className="flex h-full gap-3 flex-col">
@@ -125,11 +126,12 @@ export const Tank = ({ title, subtitle, description, highlights, tankTypes, imag
 
                     <div className=" w-full md:w-[50%] pt-10 h-full pr-0 md:pr-10">
                         <p className='font-semibold text-sm mb-2'>Highlights:</p>
-                        {highlights.map((item, idx) => (
-                            <div key={idx} className=" text-xs md:text-base py-2 mt-2 border-b-2  border-[#222d37ac]">
+                        {(selectedImage === '/images/tank/food_grade.webp' ? changeHighlight : highlights).map((item, idx) => (
+                            <div key={idx} className=" text-xs md:text-base py-2 mt-2 border-b-2 border-[#222d37ac]">
                                 <p>{item}</p>
                             </div>
                         ))}
+
 
                         <div className="w-full flex gap-5 mt-10 flex-wrap">
                             {tankTypes.map((tank, idx) => {
@@ -162,21 +164,21 @@ const Tanks = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const [totalSlides, setTotalSlides] = useState(tankData.length);
-        const [swiperInstance, setSwiperInstance] = useState(null);
-        const prevRef = useRef(null);
-        const nextRef = useRef(null);
-    
-    
-        useEffect(() => {
-            if (swiperInstance && prevRef.current && nextRef.current) {
-                swiperInstance.params.navigation.prevEl = prevRef.current;
-                swiperInstance.params.navigation.nextEl = nextRef.current;
-                swiperInstance.navigation.destroy(); // destroy existing navigation
-                swiperInstance.navigation.init(); // re-init navigation
-                swiperInstance.navigation.update(); // update navigation
-            }
-        }, [swiperInstance, prevRef, nextRef]);
-    
+    const [swiperInstance, setSwiperInstance] = useState(null);
+    const prevRef = useRef(null);
+    const nextRef = useRef(null);
+
+
+    useEffect(() => {
+        if (swiperInstance && prevRef.current && nextRef.current) {
+            swiperInstance.params.navigation.prevEl = prevRef.current;
+            swiperInstance.params.navigation.nextEl = nextRef.current;
+            swiperInstance.navigation.destroy(); // destroy existing navigation
+            swiperInstance.navigation.init(); // re-init navigation
+            swiperInstance.navigation.update(); // update navigation
+        }
+    }, [swiperInstance, prevRef, nextRef]);
+
 
     return (
         <div className=" relative w-full  pad my-20">
@@ -193,13 +195,13 @@ const Tanks = () => {
                 onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
                 className="story_swiper_classname_swiper"
             >
-            {
-                tankData.map((tank, idx) => (
-                    <SwiperSlide key={idx}>
-                    <Tank key={idx} {...tank} />
-                    </SwiperSlide>
-                ))
-            }
+                {
+                    tankData.map((tank, idx) => (
+                        <SwiperSlide key={idx}>
+                            <Tank key={idx} {...tank} />
+                        </SwiperSlide>
+                    ))
+                }
             </Swiper>
             <div className="absolute bottom-0 md:bottom-10  flex w-full  right-0 z-[90] items-center justify-end ">
                 <div className="flex pr-5 md:pr-14   gap-2 md:gap-4 ">

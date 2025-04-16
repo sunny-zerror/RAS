@@ -7,7 +7,7 @@ const OurServices = () => {
     {
         title: 'Tank Services',
         description: 'Comprehensive support for ISO, food-grade, special, gas, flexi, and baffle tanks; including cleaning, maintenance, and repair, to ensure operational readiness and compliance for ISO tanks.',
-        buttons: ['Learn More', 'Get Quote'],
+        buttons: ['Chemical Grade', 'Food Grade' ,'Liquified Gas','Baffle','Swap','Coated'],
 
     },
     {
@@ -17,12 +17,12 @@ const OurServices = () => {
     },
     {
         title: 'Tank Leasing',
-        description: 'End-to-end management of tank operations, ensuring efficiency in fleet utilization, regulatory compliance, and seamless coordination across supply chains.',
-        buttons: ['Learn More', 'Get Quote'],
+        description: 'Dedicated representation and operational support for international ISO tank operators, facilitating smooth logistics operations, documentation, and compliance management.',
+        buttons: ['Chemical', 'Food Grade','Liquified Gas','T11','T14','T20 & T22','T50','T75'],
     },
     {
         title: 'Tank Management',
-        description: 'Dedicated representation and operational support for international ISO tank operators, facilitating smooth logistics operations, documentation, and compliance management.',
+        description: 'End-to-end management of tank operations, ensuring efficiency in fleet utilization, regulatory compliance, and seamless coordination across supply chains.',
         buttons: ['Learn More', 'Get Quote'],
     },
     {

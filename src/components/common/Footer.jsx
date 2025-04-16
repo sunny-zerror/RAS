@@ -92,7 +92,7 @@ const Footer = () => {
 
   return (
     <div>
-      <div className="w-full overflow-x-hidden  bg-[#222D37] text-base  pad ft">
+      <div className="w-full overflow-x-hidden  bg-[#222D37] md:text-xs  xl:text-base  pad ft">
         <div className=" pt-5 md:pt-10">
           <div className="w-full center">
             <img className='w-[40%] md:w-[12%]' src="/logos/footer logo.png" alt="" />
@@ -112,11 +112,11 @@ const Footer = () => {
               </div>
               <div className=" md:h-[70%] flex flex-col justify-between">
                 <p>Company Building Name</p>
-                <p className='text-sm'>+91 12345-12345</p>
-                <p className='text-sm'>info@rascs.in</p>
+                <p className=' text-xs xl:text-sm'>+91 12345-12345</p>
+                <p className=' text-xs xl:text-sm'>info@rascs.in</p>
               </div>
 
-              <div className="md:h-[70%] flex items-end text-sm md:leading-tight">
+              <div className="md:h-[70%] flex items-end  text-xs xl:text-sm md:leading-tight">
                 <p>
                   7th & 8th Floor, Meraki Area, Sion Trombay Rd.,Chembur (E), Mumbai 400071
                 </p>
@@ -150,7 +150,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="py-10 center w-full ">
-            <p className=' text-sm md:text-xl font-semibold text-[#DCF1F7]' >X of the Top 10 Chemical Manufacturers trust RASSCS</p>
+            <h6 className=' text-sm md:text-xl font-semibold text-[#DCF1F7]' >X of the Top 10 Chemical Manufacturers trust RASSCS</h6>
           </div>
           <div className="w-full   gap-10 md:gap-24 grid  grid-cols-1 md:grid-cols-3">
             <div className="w-full h-full">

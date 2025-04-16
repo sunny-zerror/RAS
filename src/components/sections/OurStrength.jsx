@@ -38,10 +38,10 @@ const OurStrength = () => {
           <p className="text-xl md:text-2xl lg:text-3xl font-semibold">Our Edge</p>
           <div>
             <p className="font-semibold text-xs md:text-lg">
-              Built on Precision. Driven by Compliance. Powered by Expertise.
+            Built on Responsibility. Driven by Safety. Powered by Expertise.
             </p>
             <p className="mt-2 text-xs md:text-base leading-tight">
-              RASSCS delivers specialized logistics solutions with a sharp focus on safety, sustainability, and performance. Our deep technical know-how, disciplined execution, and tailored approach enable seamless global movement of sensitive and regulated cargo.
+            We deliver specialized logistics solutions with a sharp focus on safety, sustainability, and performance. Our deep technical know-how, disciplined execution, and tailored approach enable seamless global movement of sensitive and regulated goods across global supply networks.
             </p>
           </div>
           <RedBtn text={'Get a Risk Free Audit Today'} />
@@ -51,7 +51,7 @@ const OurStrength = () => {
           <IconWithLabel
             defaultImg="/icons/chemical_precision.webp"
             hoverImg="/icons/chemical_precision_hover.webp"
-            label="Chemical Precision"
+            label="Chemical  Command"
           />
           <IconWithLabel
             defaultImg="/icons/grade_a_care.webp"

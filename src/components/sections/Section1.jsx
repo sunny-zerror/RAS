@@ -17,7 +17,7 @@ const Section1 = () => {
             <div className="w-full h-[30vh] md:h-[20vh] lg:h-[90vh]  flex items-center justify-end pr-0 md:pr-10 xl:pr-20">
                 <div className=" w-full md:w-[38%]      h-full pad flex flex-col gap-5 justify-end">
                     <p className=' text-2xl lg:text-4xl font-semibold text-white'> What is RASSCS?</p>
-                    <p className=' text-xs lg:text-base leading-tight text-white'>RASSCS, a Goodrich company, ensures uninterrupted supply chain continuity through a well connected agency network focused on conscious risk mitigation, global asset availability, and environmentally sustainable solutions.</p>
+                    <p className=' text-xs lg:text-base leading-tight text-white'>RASSCS, a Goodrich company, focuses on supply chain continuity through a well connected agency network, building on delivering  solutions that are responsible, safe, and sustainable.</p>
                 </div>
             </div>
         </div>

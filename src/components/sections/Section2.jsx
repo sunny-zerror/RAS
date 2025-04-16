@@ -75,8 +75,7 @@ const Section2 = () => {
 
                 <div className=" w-full  md:w-[50%] flex flex-col justify-center gap-4 pt-14 ">
                     <p className=' text-xl md:text-2xl lg:text-3xl font-semibold'>Understanding the Landscape</p>
-                    <p className='  text-xs  lg:text-base  leading-tight '>At RASSCS, we engineer supply chains as interconnected systems rather than isolated transactions.
-                        Our four-pillar framework ensures compliance and operational resilience across all touchpoints</p>
+                    <p className='  text-xs  lg:text-base  leading-tight '>At RASSCS, we endeavor to create supply chain as interconnected systems rather than isolated transactions. This approach seeks therefore, to develop unified customer experience, resilience, and expertise across all touchpoints.</p>
                 </div>
 
                 <div className="pb-14 ">
