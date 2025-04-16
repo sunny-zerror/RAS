@@ -19,7 +19,7 @@ const Hero = () => {
       <HowRas/>
       <OurStrength/>
       <OurServices/>
-      <Stories/>
+      {/* <Stories/> */}
       <Tanks/>
       <Certifications/>
       <ContactSection/>

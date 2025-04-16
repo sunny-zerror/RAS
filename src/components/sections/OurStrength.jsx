@@ -1,49 +1,72 @@
-import React from 'react'
-import RedBtn from '../buttons/RedBtn'
+import React, { useState } from 'react';
+import RedBtn from '../buttons/RedBtn';
+
+const IconWithLabel = ({ defaultImg, hoverImg, label }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div
+      className="h-full w-[16%]   gap-2 text-center center flex-col relative"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="relative h-[8vh] w-full flex justify-center">
+        <img
+          src={defaultImg}
+          alt=""
+          className={`w-[80%] lg:w-[50%] absolute transition-opacity duration-300 ease-in-out ${isHovered ? 'opacity-0' : 'opacity-100'}`}
+        />
+        <img
+          src={hoverImg}
+          alt=""
+          className={`w-[80%] lg:w-[50%] absolute transition-opacity duration-300 ease-in-out ${isHovered ? 'opacity-100' : 'opacity-0'}`}
+        />
+      </div>
+      <div className="h-[8vh]">
+      <p className=" text-xs lg:text-sm ">{label}</p>
+
+      </div>
+    </div>
+  );
+};
 
 const OurStrength = () => {
-    return (
-        <div>
-            <div class="pad py-10 my-10  flex items-center justify-between  ">
-                <div class="w-[45%] h-full flex gap-10 flex-col justify-evenly ">
-                    <p class="text-3xl font-semibold">
-                    Our Edge
-                    </p>
-                    <div className="">
-
-                        <p class="font-semibold text-lg ">
-                            Built on Precision. Driven by Compliance. Powered by Expertise.
-                        </p>
-                        <p class="mt-2 text-base leading-tight">
-                            RASSCS delivers specialized logistics solutions with a sharp focus on safety, sustainability, and performance. Our deep technical know-how, disciplined execution, and tailored approach enable seamless global movement of sensitive and regulated cargo.
-                        </p>
-                    </div>
-                    <RedBtn text={"Get a Risk Free Audit Today"} />
-
-                </div>
-                <div class="flex items-center justify-evenly w-[50%] h-full ">
-                    <div class=" h-full  w-[16%] gap-2 text-center center flex-col">
-                        <img className='w-[50%]' src="/icons/manufacturer 1.png" alt="" />                        
-                            <p className='text-sm'>
-                                Chemical Precision
-                            </p>
-                    </div>
-                    <div class=" h-full  w-[16%] gap-2 text-center center flex-col">
-                        <img className='w-[50%]' src="/icons/manufacturer 1.png" alt="" />                       
-                            <p className='text-sm w-[70%] '>
-                                Grade-A  Care
-                            </p>
-                    </div>
-                    <div class=" h-full  w-[16%] gap-2 text-center center flex-col">
-                        <img className='w-[50%]' src="/icons/manufacturer 1.png" alt="" />                        
-                            <p className='text-sm'>
-                                Cryochemical Mastery
-                            </p>
-                    </div>
-                </div>
-            </div>
+  return (
+    <div>
+      <div className="pad py-10 my-10 flex flex-col md:flex-row items-center justify-between">
+        <div className=" w-full md:w-[45%] h-full flex gap-10 flex-col justify-evenly">
+          <p className="text-xl md:text-2xl lg:text-3xl font-semibold">Our Edge</p>
+          <div>
+            <p className="font-semibold text-xs md:text-lg">
+              Built on Precision. Driven by Compliance. Powered by Expertise.
+            </p>
+            <p className="mt-2 text-xs md:text-base leading-tight">
+              RASSCS delivers specialized logistics solutions with a sharp focus on safety, sustainability, and performance. Our deep technical know-how, disciplined execution, and tailored approach enable seamless global movement of sensitive and regulated cargo.
+            </p>
+          </div>
+          <RedBtn text={'Get a Risk Free Audit Today'} />
         </div>
-    )
-}
 
-export default OurStrength
+        <div className="flex mt-10 md:mt-0  items-center justify-evenly w-full md:w-[50%] h-full">
+          <IconWithLabel
+            defaultImg="/icons/chemical_precision.webp"
+            hoverImg="/icons/chemical_precision_hover.webp"
+            label="Chemical Precision"
+          />
+          <IconWithLabel
+            defaultImg="/icons/grade_a_care.webp"
+            hoverImg="/icons/grade_a_care_hover.webp"
+            label="Grade-A Care"
+          />
+          <IconWithLabel
+            defaultImg="/icons/cryochemical_mastery.webp"
+            hoverImg="/icons/cryochemical_mastery_hover.webp"
+            label="Cryochemical Mastery"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default OurStrength;

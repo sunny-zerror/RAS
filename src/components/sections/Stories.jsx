@@ -21,7 +21,7 @@ const Stories = () => {
             </div>
             <div className="h-full py-20 w-[50%] center ">
                 <div className="w-full rounded-xl h-[90%]  overflow-hidden">
-                    <img className='w-full h-[90%] object-cover rounded-xl' src="/images/img 2.png" alt="" />
+                    <img className='w-full h-[90%] object-cover rounded-xl' src="/images/RASSCS_stories.webp" alt="" />
                 </div>
             </div>
         </div>

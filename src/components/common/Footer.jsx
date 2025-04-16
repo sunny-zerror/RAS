@@ -92,15 +92,14 @@ const Footer = () => {
 
   return (
     <div>
-
-      <div className="w-full  bg-[#222D37] text-base  pad ft">
-        <div className="pt-10">
+      <div className="w-full overflow-x-hidden  bg-[#222D37] text-base  pad ft">
+        <div className=" pt-5 md:pt-10">
           <div className="w-full center">
-            <img className='w-[12%]' src="/logos/footer logo.png" alt="" />
+            <img className='w-[40%] md:w-[12%]' src="/logos/footer logo.png" alt="" />
           </div>
-          <div className="w-full h-[17vh]   mt-6 flex items-center justify-between border-b border-[#FFFFFF]">
-            <div className="w-[49.5%] h-full grid grid-cols-3  items-center pr-14 ">
-              <div className=" h-[70%] flex flex-col justify-between ">
+          <div className="w-full md:h-[17vh]   mt-6 flex flex-col md:flex-row items-center justify-between md:border-b md:border-[#FFFFFF]">
+            <div className="w-full md:w-[49.5%] h-full grid grid-cols-1 md:grid-cols-3  items-center pr-14 ">
+              <div className=" md:h-[70%] flex flex-col justify-between ">
                 <a href="" className=''>
                   About Us
                 </a>
@@ -111,22 +110,22 @@ const Footer = () => {
                   Certifications
                 </a>
               </div>
-              <div className=" h-[70%] flex flex-col justify-between">
+              <div className=" md:h-[70%] flex flex-col justify-between">
                 <p>Company Building Name</p>
                 <p className='text-sm'>+91 12345-12345</p>
                 <p className='text-sm'>info@rascs.in</p>
               </div>
 
-              <div className="h-[70%] flex items-end text-sm leading-tight">
+              <div className="md:h-[70%] flex items-end text-sm md:leading-tight">
                 <p>
                   7th & 8th Floor, Meraki Area, Sion Trombay Rd.,Chembur (E), Mumbai 400071
                 </p>
               </div>
 
             </div>
-            <div className="w-[.5px] bg-[#FFFFFF] h-[70%]"></div>
-            <div className="w-[49.5%] h-full grid grid-cols-3  items-center  pl-14">
-              <div className=" h-[70%] flex flex-col justify-between ">
+            <div className="w-[.5px] bg-[#FFFFFF] h-[70%] max-[600px]:hidden"></div>
+            <div className="w-full md:w-[49.5%] h-full grid grid-cols-1 md:grid-cols-3  items-center  md:pl-14">
+              <div className=" md:h-[70%] flex flex-col justify-between ">
                 <a href="" className=''>
                   Chemical Logistics
                 </a>
@@ -151,13 +150,13 @@ const Footer = () => {
             </div>
           </div>
           <div className="py-10 center w-full ">
-            <p className='text-xl font-semibold text-[#DCF1F7]' >X of the Top 10 Chemical Manufacturers trust RASSCS</p>
+            <p className=' text-sm md:text-xl font-semibold text-[#DCF1F7]' >X of the Top 10 Chemical Manufacturers trust RASSCS</p>
           </div>
-          <div className="w-full   gap-24 grid grid-cols-3">
+          <div className="w-full   gap-10 md:gap-24 grid  grid-cols-1 md:grid-cols-3">
             <div className="w-full h-full">
               {
                 arr1.map((item, index) => (
-                  <div key={index} className="flex pb-10 flex-col gap-4">
+                  <div key={index} className="flex md:pb-10 flex-col gap-4">
                     <div className="pb-1 border-b border-[#FFFFFF]">
                       <a>{item.title}</a>
                     </div>
@@ -211,6 +210,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
     </div>
   )
 }

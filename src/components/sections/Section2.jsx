@@ -1,27 +1,113 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import UnderstandingCard from '../cards/UnderstandingCard'
+import { RiArrowLeftLine, RiArrowRightLine } from '@remixicon/react';
+
+
+const data = [
+    {
+        id: 1,
+        img: "/icons/raw_material.webp",
+        hoverimg: "/icons/raw_meterial_hover.webp",
+        heading: "Raw Material",
+        para: "From chemicals to food-grade goods, we ensure safe, compliant raw material handling for a seamless supply chain."
+    },
+    {
+        id: 2,
+        img: "/icons/manufacturer.webp",
+        hoverimg: "/icons/manufacturer_hover.webp",
+        heading: "Manufacturer",
+        para: "We prioritize safety and efficiency, ensuring precise handling of hazardous chemicals, food-grade goods, and high-value cargo."
+    },
+    {
+        id: 3,
+        img: "/icons/storage.webp",
+        hoverimg: "/icons/storage_hover.webp",
+        heading: "Storage",
+        para: "We ensure secure, compliant storage, preserving the integrity of chemicals, food-grade goods, and specialized cargo."
+    },
+    {
+        id: 4,
+        img: "/icons/distribution.webp",
+        hoverimg: "/icons/distribution_hover.webp",
+        heading: "Distribution",
+        para: "We optimize distribution through our comprehensive agency network and tracking, ensuring end-to-end visibility and zero disruptions. "
+    },
+    {
+        id: 5,
+        img: "/icons/customer.webp",
+        hoverimg: "/icons//customer_hover.webp",
+        heading: "Customer",
+        para: "We ensure reliable, resilient supply chains, delivering products to customer on time and in perfect condition."
+    },
+
+
+]
 
 const Section2 = () => {
+    const scrollRef = useRef(null);
+    const [btn1, setbtn1] = useState(false)
+    const [btn2, setbtn2] = useState(true)
+
+    const handleScrollToEnd = () => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollTo({
+                left: scrollRef.current.scrollWidth,
+                behavior: 'smooth',
+            });
+            setbtn1(true)
+            setbtn2(false)
+        }
+    };
+    const handleScrollToStart = () => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollTo({
+                left: -scrollRef.current.scrollWidth,
+                behavior: 'smooth',
+            });
+            setbtn2(true)
+            setbtn1(false)
+        }
+    };
+
     return (
         <div>
-            <div className="w-full   pad ">
-                <div className="w-[50%] flex flex-col justify-center gap-4 pt-14 ">
-                    <p className='text-3xl font-semibold'>Understanding the Landscape</p>
-                    <p className='text-base  leading-tight '>At RASSCS, we engineer supply chains as interconnected systems rather than isolated transactions.
+            <div className="w-full relative   pad ">
+
+                <div className=" w-full  md:w-[50%] flex flex-col justify-center gap-4 pt-14 ">
+                    <p className=' text-xl md:text-2xl lg:text-3xl font-semibold'>Understanding the Landscape</p>
+                    <p className='  text-xs  lg:text-base  leading-tight '>At RASSCS, we engineer supply chains as interconnected systems rather than isolated transactions.
                         Our four-pillar framework ensures compliance and operational resilience across all touchpoints</p>
                 </div>
-                <div className="pb-14">
 
-                <div className="w-full pb-6 flex gap-14 mt-14 overflow-x-scroll scroller">
+                <div className="pb-14 ">
                     {
-                        [
-                            1, 2, 3, 4, 5, 6].map((item) => (
-                                
-                                <UnderstandingCard />
-                                
+                        btn2 && (
+                            <button
+                                onClick={handleScrollToEnd}
+                                className="absolute  bottom-[15%] md:top-[60%]  right-5 md:right-10  size-6 lg:size-10 center text-[#EA1B22] border-[#EA1B22] rounded-full border z-10"
+                            >
+                                <RiArrowRightLine size={16} />
+                            </button>
+                        )
+                    }
+                    {
+                        btn1 && (
+
+                            <button
+                                onClick={handleScrollToStart}
+                                className="absolute  bottom-[15%] md:top-[60%]  left-5 md:left-10  size-6 lg:size-10 center text-[#EA1B22] border-[#EA1B22] rounded-full border z-10"
+                            >
+                                <RiArrowLeftLine size={16} />
+                            </button>
+                        )
+                    }
+                    <div ref={scrollRef} className=" relative w-full pb-6 flex gap-14  mt-5 md:mt-14 overflow-x-scroll scroller">
+                        {
+                            data.map((item, index) => (
+                                <UnderstandingCard key={index} data={item} />
                             ))
                         }
-                        </div>
+                    </div>
                 </div>
 
 

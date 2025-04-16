@@ -56,12 +56,12 @@ const OurServices = () => {
     <div>
         <div className="w-full  mb-10 mt-20 pad">
         <div className="w-full ">
-                <p className='text-3xl font-semibold'>Our Services</p>
+                <p className='text-xl md:text-2xl lg:text-3xl font-semibold'>Our Services</p>
             </div>
-            <div className="w-full mt-5 grid grid-cols-3 gap-5">
+            <div className="w-full mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {
                     services.map((item, index) => (
-                        <div key={index} className="h-full flex items-center justify-center">
+                        <div key={index} className="h-full flex  justify-center">
                             <ServicesCard title={item.title} description={item.description} buttons={item.buttons}/>
                         </div>
                     ))
