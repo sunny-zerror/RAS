@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { RiArrowRightLine } from '@remixicon/react';
 import gsap from 'gsap';
 
-const RedBtn = ({ text, width = "224px" }) => { // Default to 224px (w-56)
+const FormBtn = ({ text, width = "224px" }) => { // Default to 224px (w-56)
     const wrapperRef = useRef(null);
     const textRef = useRef(null);
     const arrowRef = useRef(null);
@@ -39,17 +39,17 @@ const RedBtn = ({ text, width = "224px" }) => { // Default to 224px (w-56)
 
     return (
         <div>
-            <a href="#contactSection" className=' h-10   inline-block whitespace-nowrap'>
+            <a href="#contactSection" className=' h-10 w-full   inline-block whitespace-nowrap'>
                 <div
                     ref={wrapperRef}
                     className={`relative h-10 w-full border-2 border-[#EA1B22] overflow-hidden rounded-lg cursor-pointer`}
-                    
                 >
                     <div
                         ref={arrowRef}
-                        className={`absolute left-0 w-full top-0 h-full flex items-center justify-center px-4 text-[#EA1B22] text-xl z-10`}
+                        className={`absolute left-0 w-full top-0 gap-3 h-full flex items-center justify-center font-medium  text-xs md:text-base px-4 text-[#EA1B22]  z-10`}
                         
                     >
+                        <p className='text-[#EA1B22] font-semibold'>Submit Details</p>
                         <RiArrowRightLine />
                     </div>
 
@@ -69,4 +69,4 @@ const RedBtn = ({ text, width = "224px" }) => { // Default to 224px (w-56)
     );
 };
 
-export default RedBtn;
+export default FormBtn;

@@ -31,6 +31,9 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  scroll-behavior: smooth;
+}
 .center{
   display: flex;
   justify-content: center;

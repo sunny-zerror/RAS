@@ -8,10 +8,12 @@ const Section1 = () => {
             <div className="w-fit  mt-[10vh] md:mt-[20vh] z-[99]  h-[40vh] flex flex-col gap-5 justify-center">
                 <p className='  text-2xl md:text-5xl font-bold pad text-black'>Global Supply Chain Mastery</p>
                 <div className="flex pad gap-5 ">
-                    <RedBtn text={"Explore Services"}/>
-                    <button className='border-2 border-black text-xs md:text-sm center font-medium   px-6 py-2 rounded-lg'>
-                        <p className='font-bold '>Contact US</p>
+                    <RedBtn text={"Explore Services"}  />
+                    <a href="#contactSection">
+                    <button className='border-2 cursor-pointer border-black text-xs md:text-sm center font-medium   px-6 py-2 rounded-lg'>
+                        <p className='font-bold cursor-pointer '>Contact US</p>
                     </button>
+                    </a>
                 </div>
             </div>
             <div className="w-full h-[30vh] md:h-[20vh] lg:h-[90vh]  flex items-center justify-end pr-0 md:pr-10 xl:pr-20">

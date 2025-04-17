@@ -1,10 +1,11 @@
 import React from 'react'
 import RedBtn from '../buttons/RedBtn'
+import FormBtn from '../buttons/FormBtn'
 
 const ContactSection = () => {
     return (
         <div>
-            <div className="w-full md:h-screen  pad my-24">
+            <div id='contactSection' className="w-full md:h-screen  pad my-24">
                 <div className="w-full h-full flex flex-col-reverse md:flex-row  ">
                     <div className=" w-full md:w-1/2 h-full center">
                         <div className="w-full md:w-[90%] h-[90%] rounded-xl overflow-hidden">
@@ -13,20 +14,17 @@ const ContactSection = () => {
                                 <p className=' text-sm md:text-xl leading-tight'>Experience the RASSCS Solution</p>
                             </div>
                             <div className="w-full md:w-[80%] h-[50vh] flex flex-col gap-8  mt-12">
-                                <input type="text" name="" id="" placeholder='Business Name' className='outline-none w-full  text-lg  border-b-2 border-[#00000092] ' />
-                                <input type="text" name="" id="" placeholder='Email ID' className='outline-none w-full  text-lg  border-b-2 border-[#00000092] ' />
+                                <input type="text" name="" id="" placeholder='Business Name' className='outline-none w-full  text-sm  border-b-2 border-[#00000092] ' />
+                                <input type="text" name="" id="" placeholder='Email ID' className='outline-none w-full  text-sm  border-b-2 border-[#00000092] ' />
                                 <div className="flex gap-2">
                                     <div className="">
                                         <img src="/icons/flg.png" alt="" />
                                     </div>
-                                    <input type="text" name="" id="" placeholder='Phone Number' className='outline-none w-full  text-lg  border-b-2 border-[#00000092] ' />
+                                    <input type="text" name="" id="" placeholder='Phone Number' className='outline-none w-full  text-sm  border-b-2 border-[#00000092] ' />
                                 </div>
-                                <input type="text" name="" id="" placeholder='Message' className='outline-none w-full  text-lg  border-b-2 border-[#00000092] ' />
+                                <input type="text" name="" id="" placeholder='Message' className='outline-none w-full  text-sm  border-b-2 border-[#00000092] ' />
                                 <div className="mt-6 w-full">
-                                    <button className= ' w-full bg-[#EA1B22] text-sm center font-medium px-6 py-2 rounded-lg'>
-                                        <h2 className=' text-xs md:text-base text-white'>Optimize Your Supply Chain</h2>
-                                    </button>
-
+                                    <FormBtn text={"Optimize Your Supply Chain"}  />
                                 </div>
                             </div>
                             <div className="w-full">
