@@ -76,8 +76,8 @@ const HowRas = () => {
                                 <div className=" w-full md:w-[45%] h-full center pt-5 md:pt-0">
                                     <div className="flex flex-col  h-full md:h-[50%] items-start gap-5   w-full ">
                                         <div className="flex w-full  items-center  gap-3 ">
-                                            <div className=" size-3 md:size-5 center">
-                                                <img className='' src="/icons/Ellipse 30.png" alt="" />
+                                            <div className="   md:size-5 center">
+                                                <img className='w-[50%]' src="/icons/Ellipse 30.png" alt="" />
                                             </div>
                                             <p className='text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold'>{item.title}</p>
                                         </div>

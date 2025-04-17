@@ -23,7 +23,7 @@ const IconWithLabel = ({ defaultImg, hoverImg, label }) => {
         />
       </div>
       <div className="h-[8vh]">
-      <p className=" text-xs lg:text-sm ">{label}</p>
+      <p className=" text-xs lg:text-sm  px-4 ">{label}</p>
 
       </div>
     </div>
