@@ -72,14 +72,13 @@ const Section2 = () => {
     return (
         <div>
             <div className="w-full relative   pad ">
-
                 <div className=" w-full  md:w-[50%] flex flex-col justify-center gap-4 pt-14 ">
-                    <p className=' text-xl md:text-2xl lg:text-3xl font-semibold'>Understanding the Landscape</p>
+                    <h1 className=' text-xl md:text-2xl lg:text-3xl font-bold'>Understanding the Landscape</h1>
                     <p className='  text-xs  lg:text-base  leading-tight '>At RASSCS, we endeavor to create supply chain as interconnected systems rather than isolated transactions. This approach seeks therefore, to develop unified customer experience, resilience, and expertise across all touchpoints.</p>
                 </div>
 
                 <div className="pb-14 ">
-                    {
+                    {/* {
                         btn2 && (
                             <button
                                 onClick={handleScrollToEnd}
@@ -99,8 +98,8 @@ const Section2 = () => {
                                 <RiArrowLeftLine size={16} />
                             </button>
                         )
-                    }
-                    <div ref={scrollRef} className=" relative w-full pb-6 flex gap-14  mt-5 md:mt-14 overflow-x-scroll scroller">
+                    } */}
+                    <div ref={scrollRef} className=" relative w-full pb-6 grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-10  mt-5 md:mt-14 ">
                         {
                             data.map((item, index) => (
                                 <UnderstandingCard key={index} data={item} />

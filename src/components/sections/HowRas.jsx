@@ -55,7 +55,7 @@ const HowRas = () => {
 
     return (
         <div className="story_swiper_classname_container relative pad my-10 mb-20">
-            <p className='text-xl md:text-2xl lg:text-3xl font-semibold mb-8'>How RAS Makes It Happen</p>
+            <h1 className='text-xl md:text-2xl lg:text-3xl font-semibold mb-8 '>How RAS Makes It Happen</h1>
 
             <Swiper
                 modules={[Navigation, A11y]}
@@ -69,17 +69,17 @@ const HowRas = () => {
                 {
                     data.map((item, index) => (
                         <SwiperSlide key={item.id}>
-                            <div className="w-full h-[80vh] flex flex-col md:flex-row items-center justify-between">
+                            <div className="w-full h-[70vh] flex flex-col md:flex-row items-center justify-between">
                                 <div className=" w-full md:w-[50%]  overflow-hidden rounded-2xl h-full">
                                     <img className=' w-full h-full object-cover' src={item.img} alt="" />
                                 </div>
                                 <div className=" w-full md:w-[45%] h-full center pt-5 md:pt-0">
-                                    <div className="flex flex-col  h-full md:h-[50%] items-start gap-5 md:gap-0 md:justify-evenly  w-full ">
+                                    <div className="flex flex-col  h-full md:h-[50%] items-start gap-5   w-full ">
                                         <div className="flex w-full  items-center  gap-3 ">
                                             <div className=" size-3 md:size-5 center">
                                                 <img className='' src="/icons/Ellipse 30.png" alt="" />
                                             </div>
-                                            <p className='text-xl md:text-2xl lg:text-3xl xl:text-4xl'>{item.title}</p>
+                                            <p className='text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold'>{item.title}</p>
                                         </div>
                                         <div className="pl-9">
                                             <p className=' text-xs lg:text-base  w-full md:w-[80%]'>{item.para}</p>
@@ -97,18 +97,18 @@ const HowRas = () => {
 
             </Swiper>
 
-            <div className="absolute  bottom-[0] md:bottom-5  flex w-full  right-0 z-[90] items-center justify-end ">
+            <div className="absolute  top-[0]   flex w-full  right-0 z-[90] items-center justify-end ">
                 <div className="flex  pr-5 md:pr-14    gap-2 md:gap-4 ">
                     <button
                         ref={prevRef}
-                        className={`p-2 scale-75 md:scale-100 shrink-0 text-[#EA1B22] border-[#EA1B22] rounded-full border z-10 transition-opacity duration-300 ${currentSlide === 0 ? 'opacity-50 cursor-not-allowed' : ''
+                        className={`p-2 scale-75 md:scale-100 shrink-0 text-[#EA1B22] border-[#EA1B22] rounded-full border z-10 transition-opacity duration-300 ${currentSlide === 0 ? 'border-gray-800 text-black opacity-40 cursor-not-allowed' : ''
                             }`}
                     >
                         <RiArrowLeftLine size={16} />
                     </button>
                     <button
                         ref={nextRef}
-                        className={`p-2 scale-75 md:scale-100 shrink-0 text-[#EA1B22] border-[#EA1B22] rounded-full border z-10 transition-opacity duration-300 ${currentSlide === totalSlides - 1 ? 'opacity-50 cursor-not-allowed' : ''
+                        className={`p-2 scale-75 md:scale-100 shrink-0 text-[#EA1B22] border-[#EA1B22] rounded-full border z-10 transition-opacity duration-300 ${currentSlide === totalSlides - 1 ? 'border-gray-800 text-black opacity-40 cursor-not-allowed' : ''
                             }`}
                     >
                         <RiArrowRightLine size={16} />

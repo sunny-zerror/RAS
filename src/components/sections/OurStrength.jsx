@@ -35,7 +35,7 @@ const OurStrength = () => {
     <div>
       <div className="pad py-10 my-10 flex flex-col md:flex-row items-center justify-between">
         <div className=" w-full md:w-[45%] h-full flex gap-10 flex-col justify-evenly">
-          <p className="text-xl md:text-2xl lg:text-3xl font-semibold">Our Edge</p>
+          <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">Our Edge</h1>
           <div>
             <p className="font-semibold text-xs md:text-lg">
             Built on Responsibility. Driven by Safety. Powered by Expertise.

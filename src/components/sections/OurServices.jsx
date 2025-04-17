@@ -33,7 +33,7 @@ const OurServices = () => {
     {
         title: 'Transportation',
         description: 'Reliable domestic transportation services designed for seamless movement of goods within national networks, ensuring timely and secure deliveries.',
-        buttons: ['Learn More', 'Get Quote', 'Get Quote', 'Get Quote', 'Get Quote', 'Get Quote', 'Get Quote'],
+        buttons: ['Learn More', 'Get Quote'],
     },
     {
         title: 'Awareness',
@@ -56,7 +56,7 @@ const OurServices = () => {
     <div>
         <div className="w-full  mb-10 mt-20 pad">
         <div className="w-full ">
-                <p className='text-xl md:text-2xl lg:text-3xl font-semibold'>Our Services</p>
+                <h1 className='text-xl md:text-2xl lg:text-3xl font-semibold'>Our Services</h1>
             </div>
             <div className="w-full mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {

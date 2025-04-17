@@ -6,20 +6,20 @@ const UnderstandingCard = ({ index, data }) => {
   return (
     <div>
       <div
-        className=" w-[80vw] md:w-[45vw] lg:w-[40vw] xl:w-[28vw] flex flex-col justify-center pr-0 md:pr-10 gap-2"
+        className=" w-full flex flex-col justify-center  gap-2"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         <div className="relative">
-          <div className="w-full h-[8vh]">
+          <div className="w-full h-[7vh] md:h-[10vh]">
 
           <img
-            className={`w-[15%] absolute transition-opacity duration-300 ease-in-out ${isHovered ? 'opacity-0' : 'opacity-100'}`}
+            className={` w-[30%] lg:w-[20%] xl:w-[15%] absolute transition-opacity duration-300 ease-in-out ${isHovered ? 'opacity-0' : 'opacity-100'}`}
             src={data.img}
             alt=""
             />
           <img
-            className={`w-[15%] absolute transition-opacity duration-300 ease-in-out ${isHovered ? 'opacity-100' : 'opacity-0'}`}
+            className={` w-[30%] lg:w-[20%] xl:w-[15%] absolute transition-opacity duration-300 ease-in-out ${isHovered ? 'opacity-100' : 'opacity-0'}`}
             src={data.hoverimg}
             alt=""
             />
