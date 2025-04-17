@@ -112,22 +112,22 @@ export const Tank = ({ title, subtitle, description, highlights, changeHighlight
     const [selectedImage, setSelectedImage] = useState(image)
 
     return (
-        <div className="w-full mb-10 py-6 md:py-12 ">
+        <div className="w-full   mb-10 py-6  ">
             <div className="flex h-full gap-3 flex-col">
                 <h1 className='text-xl  lg:text-2xl uppercase text-[#EA1B22]'>{title}</h1>
                 <p className='text-sm'>{subtitle}</p>
-                <p className=' text-xs lg:text-base font-semibold w-[90%]'>{description}</p>
+                <p className=' text-xs xl:text-base font-semibold w-[90%]'>{description}</p>
 
-                <div className="w-full md:mt-10 xl:h-[80vh] md:h-[60vh] flex flex-col md:flex-row md:gap-5">
-                    <div className=" w-full md:w-[50%] center h-full">
-                        <img src={selectedImage} alt="Selected Tank" className="max-h-full object-contain" />
+                <div className="w-full h-fit    flex flex-col md:flex-row ">
+                    <div className=" w-full  md:w-[50%] center md:h-[50vh]">
+                        <img src={selectedImage} alt="Selected Tank" className="h-full w-[80%] object-contain" />
                     </div>
 
 
                     <div className=" w-full md:w-[50%] pt-10 h-full pr-0 md:pr-10">
                         <p className='font-semibold text-sm mb-2'>Highlights:</p>
                         {(selectedImage === '/images/tank/food_grade.webp' ? changeHighlight : highlights).map((item, idx) => (
-                            <div key={idx} className=" text-xs md:text-base py-2 mt-2 border-b-2 border-[#222d37ac]">
+                            <div key={idx} className=" text-xs xl:text-base py-2 mt-2 border-b-2 border-[#222d37ac]">
                                 <p>{item}</p>
                             </div>
                         ))}
@@ -181,9 +181,9 @@ const Tanks = () => {
 
 
     return (
-        <div className=" relative w-full  pad my-20">
+        <div className=" relative w-full  pad  mt-20">
             <div className="w-full ">
-                <p className='text-xl md:text-2xl lg:text-3xl font-semibold'>Your Requirement, Our Expertise</p>
+                <h1 className='text-xl md:text-2xl lg:text-3xl font-semibold'>Your Requirement, Our Expertise</h1>
                 <p className='text-xs  lg:text-base leading-tight'>Built for Efficiency, Safety & Sustainability: Explore Our Specialized Fleet</p>
             </div>
             <Swiper
@@ -203,7 +203,7 @@ const Tanks = () => {
                     ))
                 }
             </Swiper>
-            <div className="absolute bottom-0 md:bottom-10  flex w-full  right-0 z-[90] items-center justify-end ">
+            <div className="absolute bottom-0 md:bottom-24    flex w-full  right-0 z-[90] items-center justify-end ">
                 <div className="flex pr-5 md:pr-14   gap-2 md:gap-4 ">
                     <button
                         ref={prevRef}

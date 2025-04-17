@@ -5,12 +5,12 @@ const Certifications = () => {
 
   return (
     <div>
-      <div className="w-full my-10 flex flex-col  gap-5 md:gap-16 pad">
-        <p className="text-xl md:text-2xl lg:text-3xl font-semibold">Certification and Affiliations</p>
+      <div className="w-full  flex flex-col  gap-5 md:gap-16 pad">
+        <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">Certification and Affiliations</h1>
         <div className="w-full  gap-5 md:gap-10 grid grid-cols-3 md:grid-cols-5">
           {logos.map((logo, index) => (
             <div key={index} className="w-full h-full flex items-center justify-center">
-              <img className="w-[70%] object-contain" src={logo} alt={`RAS Logo ${index + 1}`} />
+              <img className="w-[70%] object-contain hover:scale-110 duration-200 " src={logo} alt={`RAS Logo ${index + 1}`} />
             </div>
           ))}
         </div>
