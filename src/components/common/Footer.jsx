@@ -142,15 +142,15 @@ const Footer = () => {
                 <p>OOG / ODC</p>
               </div>
 
-              <div className="h-[70%] flex flex-col justify-end pr-2 gap-4 items-end">
+              <div className="h-[70%] flex justify-end pr-2 gap-4 items-end">
                 <RiInstagramLine className='text-white' />
                 <RiLinkedinLine className='text-white' />
               </div>
 
             </div>
           </div>
-          <div className="py-10 center w-full ">
-            <h6 className=' text-sm md:text-xl font-semibold text-[#DCF1F7]' >X of the Top 10 Chemical Manufacturers trust RASSCS</h6>
+          <div className="py-5 center w-full ">
+            {/* <h6 className=' text-sm md:text-xl font-semibold text-[#DCF1F7]' >X of the Top 10 Chemical Manufacturers trust RASSCS</h6> */}
           </div>
           <div className="w-full   gap-10 md:gap-24 grid  grid-cols-1 md:grid-cols-3">
             <div className="w-full h-full">

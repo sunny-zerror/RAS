@@ -126,11 +126,14 @@ export const Tank = ({ title, subtitle, description, highlights, changeHighlight
 
                     <div className=" w-full md:w-[50%] pt-10 h-full pr-0 md:pr-10">
                         <p className='font-semibold text-sm mb-2'>Highlights:</p>
+                        <div className="w-full h-[33vh] ">
+
                         {(selectedImage === '/images/tank/food_grade.webp' ? changeHighlight : highlights).map((item, idx) => (
                             <div key={idx} className=" text-xs xl:text-base py-2 mt-2 border-b-2 border-[#222d37ac]">
                                 <p>{item}</p>
                             </div>
                         ))}
+                        </div>
 
 
                         <div className="w-full flex gap-5 mt-10 flex-wrap">

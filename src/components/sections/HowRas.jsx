@@ -14,7 +14,7 @@ const HowRas = () => {
     const data = [
         {
             id: 1,
-            title: "Precision Logistics",
+            title: "Integrated Logistics",
             img: "/images/How_RASSCS_Makes_It_Happen_slide_1_wider.webp",
             para: "With deep expertise in chemical, food-grade, cryogenic, and specialty logistics, we tailor solutions that comply with the highest industry standards—ensuring safety, traceability, and uninterrupted flow.",
             btn: "Customize Your Logistics Plan"

@@ -23,7 +23,7 @@ const IconWithLabel = ({ defaultImg, hoverImg, label }) => {
         />
       </div>
       <div className="h-[8vh]">
-      <p className=" text-xs lg:text-sm  px-4 ">{label}</p>
+      <p className=" text-xs lg:text-sm  px-4 font-semibold  ">{label}</p>
 
       </div>
     </div>
@@ -51,7 +51,7 @@ const OurStrength = () => {
           <IconWithLabel
             defaultImg="/icons/chemical_precision.webp"
             hoverImg="/icons/chemical_precision_hover.webp"
-            label="Chemical  Command"
+            label="Chemical Command"
           />
           <IconWithLabel
             defaultImg="/icons/grade_a_care.webp"
