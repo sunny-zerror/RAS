@@ -72,7 +72,7 @@ const OurServices = () => {
     ]
 
     return (
-        <div className='mt-32'>
+        <div className='mt-10 lg:mt-32'>
             <div id='our-services' className="w-full   pad">
                 <div className="w-full ">
                     <h1 className='text-xl md:text-2xl lg:text-4xl font-semibold'>Our Services</h1>

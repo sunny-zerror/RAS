@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { RiArrowRightLine } from '@remixicon/react';
 import gsap from 'gsap';
 
-const RedBtn = ({ text, width = "224px" }) => { // Default to 224px (w-56)
+const RedBtn = ({ text, link }) => { // Default to 224px (w-56)
     const wrapperRef = useRef(null);
     const textRef = useRef(null);
     const arrowRef = useRef(null);
@@ -39,7 +39,7 @@ const RedBtn = ({ text, width = "224px" }) => { // Default to 224px (w-56)
 
     return (
         <div>
-            <a href="#contact-form" className=' h-10   inline-block whitespace-nowrap'>
+            <a href={link ?? "#contact-form"} className=' h-10   inline-block whitespace-nowrap'>
                 <div
                     ref={wrapperRef}
                     className={`relative h-10 w-full border-2 border-[#EA1B22] overflow-hidden rounded-lg cursor-pointer`}

@@ -98,25 +98,25 @@ const Footer = () => {
             <img className='w-[20%] md:w-[8%]' src="/logos/RAS_logo_white.png" alt="" />
           </div>
           <div className="w-full md:h-[17vh]   mt-6 flex flex-col md:flex-row items-center justify-between md:border-b md:border-[#FFFFFF]">
-            <div className="w-full md:w-[49.5%] h-full grid grid-cols-1 md:grid-cols-3  items-center pr-14 ">
+            <div className="w-full md:w-[49.5%] h-full grid grid-cols-1 md:grid-cols-3  items-center  lg:pr-14 ">
               <div className=" md:h-[70%] flex flex-col justify-between ">
-                <a href="" className=''>
+                <a href="#home" className=''>
                   About Us
                 </a>
-                <a href="" className=''>
+                <a href="#our-services" className=''>
                   Our Services
                 </a>
-                <a href="" className=''>
+                <a href="#certifications" className=''>
                   Certifications
                 </a>
               </div>
               <div className=" md:h-[70%] flex flex-col justify-between">
                 <p>Company Building Name</p>
-                <p className=' text-xs xl:text-sm flex items-center gap-2'> <RiPhoneFill size={15}/> +91 12345-12345</p>
-                <p className=' text-xs xl:text-sm flex items-center gap-2'> <RiMailFill  size={15}/> info@rascs.in</p>
+                <p className=' text-xs xl:text-sm flex items-center gap-2 mt-2 md:mt-0 '> <RiPhoneFill size={15}/> +91 12345-12345</p>
+                <p className=' text-xs xl:text-sm flex items-center gap-2 my-2 md:my-0 '> <RiMailFill  size={15}/> info@rascs.in</p>
               </div>
 
-              <div className="md:h-[70%] flex items-end gap-2  text-xs xl:text-sm md:leading-tight">
+              <div className=" w-full md:h-[70%] flex items-end gap-2 mb-5 md:mb-0  text-xs xl:text-sm md:leading-tight">
                   <div className="shrink-0 h-full text-white flex items-center  ">
                   <RiMapPinFill size={18} className='translate-y-[-8px]'/>
                   </div>
@@ -127,7 +127,7 @@ const Footer = () => {
 
             </div>
             <div className="w-[.5px] bg-[#FFFFFF] h-[70%] max-[600px]:hidden"></div>
-            <div className="w-full md:w-[49.5%] h-full grid grid-cols-1 md:grid-cols-3  items-center  md:pl-14">
+            <div className="w-full md:w-[49.5%] h-full grid grid-cols-1 md:grid-cols-3  items-center  md:pl-5 lg:pl-14">
               <div className=" md:h-[70%] flex flex-col justify-between ">
                 <a href="" className=''>
                   Chemical Logistics

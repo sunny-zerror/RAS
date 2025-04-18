@@ -5,7 +5,7 @@ import FormBtn from '../buttons/FormBtn'
 const ContactSection = () => {
     return (
         <div>
-            <div id='contact-form' className="w-full md:h-screen  pad my-24">
+            <div id='contact-form' className="w-full md:h-screen  pad my-10 lg:my-20">
                 <div className="w-full  h-full flex flex-col-reverse md:flex-row  ">
                     <div className=" w-full md:w-1/2 h-full center">
                         <div className="w-full h-full rounded-xl overflow-hidden">

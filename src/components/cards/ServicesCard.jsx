@@ -5,40 +5,45 @@ const ServicesCard = ({ title, description, buttons, category }) => {
   const cardRef = useRef(null);
   const categoryRef = useRef(null);
 
-  useEffect(() => {
-    const cardEl = cardRef.current;
-    if (!category || !categoryRef.current) return;
+useEffect(() => {
+  const cardEl = cardRef.current;
+  if (!category || !categoryRef.current) return;
 
-    const catEl = categoryRef.current;
+  const catEl = categoryRef.current;
 
-    const handleMouseEnter = () => {
-      gsap.to(catEl, {
-        height: "auto",
+  const handleMouseEnter = () => {
+    gsap.set(catEl, { display: 'flex' }); // Ensure it's shown first
+    gsap.fromTo(
+      catEl,
+      { height: 0, opacity: 0 },
+      {
+        height: catEl.scrollHeight,
         opacity: 1,
         duration: 0.6,
-        ease: "power2.out",
-        display: "flex"
-      });
-    };
+      }
+    );
+  };
 
-    const handleMouseLeave = () => {
-      gsap.to(catEl, {
-        height: 0,
-        opacity: 0,
-        duration: 0.4,
-        ease: "power2.in",
-        onComplete: () => gsap.set(catEl, { display: "none" })
-      });
-    };
+  const handleMouseLeave = () => {
+    gsap.to(catEl, {
+      height: 0,
+      opacity: 0,
+      duration: 0.6,
+      onComplete: () => {
+        gsap.set(catEl, { display: 'none' });
+      }
+    });
+  };
 
-    cardEl.addEventListener('mouseenter', handleMouseEnter);
-    cardEl.addEventListener('mouseleave', handleMouseLeave);
+  cardEl.addEventListener('mouseenter', handleMouseEnter);
+  cardEl.addEventListener('mouseleave', handleMouseLeave);
 
-    return () => {
-      cardEl.removeEventListener('mouseenter', handleMouseEnter);
-      cardEl.removeEventListener('mouseleave', handleMouseLeave);
-    };
-  }, [category]);
+  return () => {
+    cardEl.removeEventListener('mouseenter', handleMouseEnter);
+    cardEl.removeEventListener('mouseleave', handleMouseLeave);
+  };
+}, [category]);
+
 
   return (
     <div>

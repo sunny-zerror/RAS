@@ -12,7 +12,7 @@ import { RiArrowLeftLine, RiArrowRightLine } from '@remixicon/react';
 const tankData = [{
     title: 'ISO Tanks',
     subtitle: 'Efficient and Secure Transport for Liquids and Chemicals',
-    description: 'RAS maintains a robust fleet of ISO tanks—T11, T14, T20, and T22—engineered for the global movement of bulk liquids. These tanks serve both chemical and food-grade industries, offering flexibility, safety, and regulatory compliance.',
+    description: 'RAS operates a diverse ISO tank fleet (T11, T14, T20, T22) for safe, compliant transport of chemical and food-grade bulk liquids worldwide.',
     image: '/images/tank/chemical_grade.webp',
     highlights: [
         'Carriage of hazardous and non-hazardous products.',
@@ -22,7 +22,7 @@ const tankData = [{
     ],
     changeHighlight: [
         'Capacity ranging from 24KL to 26KL',
-        'Dedicated Food grade tanks meets hygiene, precision and compliance to meet the requirements of food grade products.'
+        'Dedicated Food grade tanks meet hygiene, precision and compliance to meet the requirements of food grade products'
     ],
     tankTypes: [
         {
@@ -61,7 +61,7 @@ const tankData = [{
     image: '/images/tank/flexi.webp',
     highlights: [
         'Complete coverage: Supply, fitting, loading, shipping, discharge and disposal assistance.',
-        'Capacity Range form 16,000 L to 24,000 L.',
+        'Capacity Range from 16,000 L to 24,000 L.',
         'Emergency response: Rapid issue resolution and contingency handling.',
         'Types-Top Loading Top Discharge, Bottom Loading Bottom Discharge and Top Loading and Bottom Discharge.',
     ],
@@ -89,7 +89,7 @@ const tankData = [{
     highlights: [
         'High pressure vessel with robust construction with product details on date plate.',
         'Pressure ratings up to 34.4 bar.',
-        'All calves adn fitting are mounted in a protective cabinate.',
+        'All calves and fitting are mounted in a protective cabinet.',
     ],
     tankTypes: [
     ]
@@ -97,11 +97,11 @@ const tankData = [{
 {
     title: 'T75 Tanks',
     subtitle: 'Ultra-Low Temperature Transport for Cryogenic Liquids',
-    description: 'T75 tanks are built for cryogenic (Refrigerated liquified gases) products like LNG, LOX, LIN, and LAR, maintaining temperatures as low as -196°C with vacuum-insulated double walls.',
+    description: 'T75 tanks transport cryogenic gases at -196°C with vacuum-insulated protection.',
     image: '/images/tank/T75i.webp',
     highlights: [
         'Designed for extreme temperature retention.',
-        'Frame sizes-20ft and 40ft to suit customer requirement.',
+        'Frame sizes-20ft and 40ft to suit customer requirements.',
         'Minimal boil-off and high thermal efficiency.',
         'Compliant with international cryogenic safety standards.',
     ],
@@ -133,14 +133,14 @@ export const Tank = ({ title, subtitle, description, highlights, changeHighlight
 
 
                     <div className=" w-full md:w-[50%] h-full pr-0 md:pr-10">
-                        <div className="w-full flex gap-5 mb-10 flex-wrap">
+                        <div className="w-full flex gap-5 mt-10 md:mt-0 mb-10 flex-wrap">
                             {tankTypes.map((tank, idx) => {
                                 const isSelected = selectedImage === tank.image
                                 return (
                                     <div
                                         key={idx}
                                         onClick={() => setSelectedImage(tank.image)}
-                                        className={` w-[45%] md:w-[30%] lg:w-[20%] rounded-xl cursor-pointer transition-all duration-300 px-3 py-2 flex flex-col gap-2
+                                        className={` w-[45%] md:w-[30%]  xl:w-[20%] rounded-xl cursor-pointer transition-all duration-300 px-3 py-2 flex flex-col gap-2
                                         ${isSelected ? 'border shadow-lg border-[#959595]' : ''}`}
                                     >
                                         <p className=' text-xs lg:text-sm font-semibold text-center'>{tank.label}</p>
@@ -209,7 +209,7 @@ const Tanks = () => {
 
 
     return (
-        <div id='our-fleet' className=" relative w-full  pad  mt-32">
+        <div id='our-fleet' className=" relative w-full  pad  mt-10 lg:mt-32">
             <div className="w-full ">
                 <h1 className='text-xl md:text-2xl lg:text-4xl font-semibold'>Your Requirement, Our Expertise</h1>
                 <p className='text-xs  lg:text-base leading-tight'>Built for Efficiency, Safety & Sustainability: Explore Our Specialized Fleet</p>
@@ -218,7 +218,7 @@ const Tanks = () => {
                         <button
                             key={idx}
                             onClick={() => setSelectedTank(tank)}
-                            className={`px-2 md:px-4 text-sm font-semibold py-2 rounded-full transition-all duration-200
+                            className={`px-2 md:px-4 text-xs lg:text-sm font-semibold py-2 rounded-full transition-all duration-200
                                 ${selectedTank.title === tank.title
                                     ? 'bg-[#EA1B22] text-white'
                                     : 'border border-gray-700 text-black opacity-50'}`}

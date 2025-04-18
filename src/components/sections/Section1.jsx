@@ -8,7 +8,7 @@ const Section1 = () => {
             <div className="w-fit  mt-[10vh] md:mt-[20vh] z-[99]  h-[40vh] flex flex-col gap-5 justify-center">
                 <p className='  text-2xl md:text-5xl font-bold pad text-black'>Global Supply Chain </p>
                 <div className="flex pad gap-5 ">
-                    <RedBtn text={"Explore Services"}  />
+                    <RedBtn text={"Explore Services"} link={"#our-services"}  />
                     <a href="#contact-form">
                     <button className='border-2 cursor-pointer border-black text-xs md:text-sm center font-medium   px-6 py-2 rounded-lg'>
                         <p className='font-bold cursor-pointer '>Contact US</p>
