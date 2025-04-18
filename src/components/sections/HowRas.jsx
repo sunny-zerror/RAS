@@ -54,8 +54,8 @@ const HowRas = () => {
     }, [swiperInstance, prevRef, nextRef]);
 
     return (
-        <div id='our-approach' className="story_swiper_classname_container relative pad my-10 mb-20">
-            <h1 className='text-xl md:text-2xl lg:text-3xl font-semibold mb-8 '>How RAS Makes It Happen</h1>
+        <div id='our-approach' className="story_swiper_classname_container relative pad mt-20 ">
+            <h1 className='text-xl md:text-2xl lg:text-4xl font-semibold mb-8 '>How RAS Makes It Happen</h1>
             <div className="absolute  top-[20] md:top-0   flex w-full  right-0 z-[90] items-center justify-end ">
                 <div className="flex  pr-5 md:pr-14    gap-2 md:gap-4 ">
                     <button
@@ -99,7 +99,7 @@ const HowRas = () => {
                                             <div className="   md:size-5 center">
                                                 <img className='w-[50%]' src="/icons/Ellipse 30.png" alt="" />
                                             </div>
-                                            <p className='text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold'>{item.title}</p>
+                                            <p className='text-xl md:text-2xl lg:text-4xl xl:text-4xl font-semibold'>{item.title}</p>
                                         </div>
                                         <div className="pl-9">
                                             <p className=' text-xs lg:text-base  w-full md:w-[80%]'>{item.para}</p>

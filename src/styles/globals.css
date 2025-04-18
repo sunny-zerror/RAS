@@ -65,11 +65,11 @@ a{
   color: #222D37;
 }
 .pad{
-  padding: 0rem 3rem;
+  padding: 0rem 5rem;
 }
 @media (max-width: 768px) {
   .pad{
-    padding: 0rem 1rem;
+    padding: 0rem 1.5rem;
   }
 }
 

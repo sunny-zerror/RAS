@@ -12,7 +12,7 @@ import { RiArrowLeftLine, RiArrowRightLine } from '@remixicon/react';
 const tankData = [{
     title: 'ISO Tanks',
     subtitle: 'Efficient and Secure Transport for Liquids and Chemicals',
-    description: 'RASSCS maintains a robust fleet of ISO tanks—T11, T14, T20, and T22—engineered for the global movement of bulk liquids. These tanks serve both chemical and food-grade industries, offering flexibility, safety, and regulatory compliance.',
+    description: 'RAS maintains a robust fleet of ISO tanks—T11, T14, T20, and T22—engineered for the global movement of bulk liquids. These tanks serve both chemical and food-grade industries, offering flexibility, safety, and regulatory compliance.',
     image: '/images/tank/chemical_grade.webp',
     highlights: [
         'Carriage of hazardous and non-hazardous products.',
@@ -53,7 +53,7 @@ const tankData = [{
 {
     title: 'Flexi Tank Solutions',
     subtitle: 'Scalable and Reliable Logistics for Non-Hazardous Liquids',
-    description: 'RASSCS provides end-to-end Flexi Tank logistics for non-hazardous and foodgrade liquid products.',
+    description: 'RAS provides end-to-end Flexi Tank logistics for non-hazardous and foodgrade liquid products.',
     image: '/images/tank/flexi.webp',
     highlights: [
         'Complete coverage: Supply, fitting, loading, shipping, discharge and disposal assistance.',
@@ -128,11 +128,11 @@ export const Tank = ({ title, subtitle, description, highlights, changeHighlight
                         <p className='font-semibold text-sm mb-2'>Highlights:</p>
                         <div className="w-full h-[33vh] ">
 
-                        {(selectedImage === '/images/tank/food_grade.webp' ? changeHighlight : highlights).map((item, idx) => (
-                            <div key={idx} className=" text-xs xl:text-base py-2 mt-2 border-b-2 border-[#222d37ac]">
-                                <p>{item}</p>
-                            </div>
-                        ))}
+                            {(selectedImage === '/images/tank/food_grade.webp' ? changeHighlight : highlights).map((item, idx) => (
+                                <div key={idx} className=" text-xs xl:text-base py-2 mt-2 border-b-2 border-[#222d37ac]">
+                                    <p>{item}</p>
+                                </div>
+                            ))}
                         </div>
 
 
@@ -184,9 +184,9 @@ const Tanks = () => {
 
 
     return (
-        <div id='our-fleet' className=" relative w-full  pad  mt-20">
+        <div id='our-fleet' className=" relative w-full  pad  mt-32">
             <div className="w-full ">
-                <h1 className='text-xl md:text-2xl lg:text-3xl font-semibold'>Your Requirement, Our Expertise</h1>
+                <h1 className='text-xl md:text-2xl lg:text-4xl font-semibold'>Your Requirement, Our Expertise</h1>
                 <p className='text-xs  lg:text-base leading-tight'>Built for Efficiency, Safety & Sustainability: Explore Our Specialized Fleet</p>
             </div>
             <Swiper

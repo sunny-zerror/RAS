@@ -23,7 +23,7 @@ const IconWithLabel = ({ defaultImg, hoverImg, label }) => {
         />
       </div>
       <div className="h-[8vh]">
-      <p className=" text-xs lg:text-sm  px-4 font-semibold  ">{label}</p>
+        <p className=" text-xs lg:text-sm  px-4 font-semibold  ">{label}</p>
 
       </div>
     </div>
@@ -32,16 +32,16 @@ const IconWithLabel = ({ defaultImg, hoverImg, label }) => {
 
 const OurStrength = () => {
   return (
-    <div>
-      <div id='our-edge' className="pad my-20 flex flex-col md:flex-row items-center justify-between">
+    <div className='mt-32'>
+      <div id='our-edge' className="pad  flex flex-col md:flex-row items-center justify-between">
         <div className=" w-full md:w-[45%] h-full flex gap-10 flex-col justify-evenly">
-          <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">Our Edge</h1>
+          <h1 className="text-xl md:text-2xl lg:text-4xl font-semibold">Our Edge</h1>
           <div>
             <p className="font-semibold text-xs md:text-lg">
-            Built on Responsibility. Driven by Safety. Powered by Expertise.
+              Built on Responsibility. Driven by Safety. Powered by Expertise.
             </p>
             <p className="mt-2 text-xs md:text-base leading-tight">
-            We deliver specialized logistics solutions with a sharp focus on safety, sustainability, and performance. Our deep technical know-how, disciplined execution, and tailored approach enable seamless global movement of sensitive and regulated goods across global supply networks.
+              We deliver specialized logistics solutions with a sharp focus on safety, sustainability, and performance. Our deep technical know-how, disciplined execution, and tailored approach enable seamless global movement of sensitive and regulated goods across global supply networks.
             </p>
           </div>
           <RedBtn text={'Get a Risk Free Audit Today'} />
@@ -51,7 +51,7 @@ const OurStrength = () => {
           <IconWithLabel
             defaultImg="/icons/chemical_precision.webp"
             hoverImg="/icons/chemical_precision_hover.webp"
-            label="Chemical Command"
+            label="Chemical Fluency"
           />
           <IconWithLabel
             defaultImg="/icons/grade_a_care.webp"

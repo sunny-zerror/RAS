@@ -1,4 +1,4 @@
-import { RiInstagramLine, RiLinkedinLine } from '@remixicon/react'
+import { RiInstagramLine, RiLinkedinLine, RiMailFill, RiMapPinFill, RiPhoneFill } from '@remixicon/react'
 import React from 'react'
 
 const Footer = () => {
@@ -87,7 +87,7 @@ const Footer = () => {
       ],
       link: ""
     },
-    
+
   ]
 
   return (
@@ -112,12 +112,15 @@ const Footer = () => {
               </div>
               <div className=" md:h-[70%] flex flex-col justify-between">
                 <p>Company Building Name</p>
-                <p className=' text-xs xl:text-sm'>+91 12345-12345</p>
-                <p className=' text-xs xl:text-sm'>info@rascs.in</p>
+                <p className=' text-xs xl:text-sm flex items-center gap-2'> <RiPhoneFill size={15}/> +91 12345-12345</p>
+                <p className=' text-xs xl:text-sm flex items-center gap-2'> <RiMailFill  size={15}/> info@rascs.in</p>
               </div>
 
-              <div className="md:h-[70%] flex items-end  text-xs xl:text-sm md:leading-tight">
-                <p>
+              <div className="md:h-[70%] flex items-end gap-2  text-xs xl:text-sm md:leading-tight">
+                  <div className="shrink-0 h-full text-white flex items-center  ">
+                  <RiMapPinFill size={18} className='translate-y-[-8px]'/>
+                  </div>
+                <p className='text-xs xl:text-sm flex items-center gap-2'>
                   7th & 8th Floor, Meraki Area, Sion Trombay Rd.,Chembur (E), Mumbai 400071
                 </p>
               </div>
@@ -150,7 +153,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="py-5 center w-full ">
-            {/* <h6 className=' text-sm md:text-xl font-semibold text-[#DCF1F7]' >X of the Top 10 Chemical Manufacturers trust RASSCS</h6> */}
+            {/* <h6 className=' text-sm md:text-xl font-semibold text-[#DCF1F7]' >X of the Top 10 Chemical Manufacturers trust RAS</h6> */}
           </div>
           <div className="w-full   gap-10 md:gap-24 grid  grid-cols-1 md:grid-cols-3">
             <div className="w-full h-full">

@@ -43,7 +43,26 @@ const OurServices = () => {
         {
             title: 'Flexi',
             description: 'Reliable logistics for non-hazardous liquid cargo, supported by operational control and a global network.',
-            buttons: ['Learn More', 'Get Quote'],
+            buttons: [],
+            category: [
+                {
+                    title: "Our Services Include",
+                    btn: [
+                        'End-to-End Logistics',
+                        'Global Reach',
+                        'Emergency Response'
+                    ]
+                },
+                {
+                    title: "We Transport:",
+                    btn: [
+                        'Food & Beverages',
+                        'Industrial Chemicals',
+                        'Agricultural Products'
+                    ]
+                },
+
+            ]
         },
         {
             title: 'Other Services',
@@ -53,16 +72,16 @@ const OurServices = () => {
     ]
 
     return (
-        <div>
-            <div id='our-services' className="w-full  mb-10 mt-20 pad">
+        <div className='mt-32'>
+            <div id='our-services' className="w-full   pad">
                 <div className="w-full ">
-                    <h1 className='text-xl md:text-2xl lg:text-3xl font-semibold'>Our Services</h1>
+                    <h1 className='text-xl md:text-2xl lg:text-4xl font-semibold'>Our Services</h1>
                 </div>
                 <div className="w-full mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {
                         services.map((item, index) => (
                             <div key={index} className="h-full flex  justify-center">
-                                <ServicesCard title={item.title} description={item.description} buttons={item.buttons} />
+                                <ServicesCard title={item.title} description={item.description} buttons={item.buttons} category={item.category} />
                             </div>
                         ))
                     }
