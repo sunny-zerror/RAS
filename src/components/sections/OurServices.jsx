@@ -54,7 +54,7 @@ const OurServices = () => {
 
     return (
         <div>
-            <div className="w-full  mb-10 mt-20 pad">
+            <div id='our-services' className="w-full  mb-10 mt-20 pad">
                 <div className="w-full ">
                     <h1 className='text-xl md:text-2xl lg:text-3xl font-semibold'>Our Services</h1>
                 </div>

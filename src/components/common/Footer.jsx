@@ -95,7 +95,7 @@ const Footer = () => {
       <div className="w-full overflow-x-hidden  bg-[#222D37] md:text-xs  xl:text-base  pad ft">
         <div className=" pt-5 md:pt-10">
           <div className="w-full center">
-            <img className='w-[40%] md:w-[12%]' src="/logos/footer logo.png" alt="" />
+            <img className='w-[20%] md:w-[8%]' src="/logos/RAS_logo_white.png" alt="" />
           </div>
           <div className="w-full md:h-[17vh]   mt-6 flex flex-col md:flex-row items-center justify-between md:border-b md:border-[#FFFFFF]">
             <div className="w-full md:w-[49.5%] h-full grid grid-cols-1 md:grid-cols-3  items-center pr-14 ">

@@ -33,7 +33,7 @@ const IconWithLabel = ({ defaultImg, hoverImg, label }) => {
 const OurStrength = () => {
   return (
     <div>
-      <div className="pad py-10 my-10 flex flex-col md:flex-row items-center justify-between">
+      <div id='our-edge' className="pad my-20 flex flex-col md:flex-row items-center justify-between">
         <div className=" w-full md:w-[45%] h-full flex gap-10 flex-col justify-evenly">
           <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">Our Edge</h1>
           <div>

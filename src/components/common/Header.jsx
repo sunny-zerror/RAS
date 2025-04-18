@@ -1,29 +1,65 @@
-import React from 'react';
+import { RiCloseLine, RiMenu2Line, RiMenuLine } from '@remixicon/react';
+import React, { useState } from 'react';
 
 const navItems = [
-  "Our Services",
-  "Explore Fleet",
-  "Partner With Us",
-  "Our Approach",
-  "Our Edge"
+  {
+    title: "Our Services",
+    link: "#our-services"
+  },
+  {
+    title: "Explore Fleet",
+    link: "#our-fleet"
+  },
+  {
+    title: "Partner With Us",
+    link: "#contact-form"
+  },
+  {
+    title: "Our Approach",
+    link: "#our-approach"
+  },
+  {
+    title: "Our Edge",
+    link: "#our-edge"
+  },
 ];
 
 const Header = () => {
+
+  const [navOpen, setNavOpen] = useState(false);
   return (
     <div>
-      <div id='header' className="w-full  fixed top-0 left-0 h-[10vh] z-[99] px-12 flex items-center justify-between bg-white">
+      <div id='header' className="w-full  fixed top-0 left-0 h-[7vh] md:h-[10vh] z-[99] px-3 md:px-6 lg:px-12 flex items-center justify-between bg-white">
         <div className="w-[20%]">
-          <img className='w-[50%]' src="/logos/logo.svg" alt="Logo" />
+          <img className='w-[80%] md:w-[50%] lg:w-[30%]' src="/logos/ras_logo.png" alt="Logo" />
         </div>
-
-        <div className=" max-[768px]:hidden flex gap-10 font-semibold items-center text-sm">
+        <div className=" hidden md:flex gap-10 font-semibold items-center text-sm">
           {navItems.map((item, index) => (
-            <div key={index} className="h-5 overflow-hidden whitespace-nowrap w-fit group">
-              <p className='hover:text-[#EA1B22] duration-200 cursor-pointer group-hover:-translate-y-5'>{item}</p>
-              <p className='hover:text-[#EA1B22] duration-200 cursor-pointer group-hover:-translate-y-5'>{item}</p>
+            <div key={index} className="h-5 flex flex-col overflow-hidden whitespace-nowrap w-fit group">
+              <a href={item.link} className='hover:text-[#EA1B22] duration-200 cursor-pointer group-hover:-translate-y-5'>{item.title}</a>
+              <a href={item.link} className='hover:text-[#EA1B22] duration-200 cursor-pointer group-hover:-translate-y-5'>{item.title}</a>
             </div>
           ))}
         </div>
+
+        <div  onClick={() => setNavOpen(true)} className=" h-full center md:hidden ">
+          <RiMenu2Line />
+        </div>
+
+        <div className={`w-full fixed left-0 bg-white p-5 transition-all duration-500 ease-in-out z-40 ${navOpen ? 'top-0' : '-top-96'}`}>
+        
+          {navItems.map((item, index) => (
+            <div className="w-fit py-1 flex items-center  ">
+              <div key={index} className="h-full text-2xl  flex flex-col overflow-hidden whitespace-nowrap w-fit group">
+                <a onClick={() => setNavOpen(false)} href={item.link} className=''>{item.title}</a>
+              </div>
+            </div>
+          ))}
+          <div onClick={() => setNavOpen(false)} className="absolute top-5 right-5">
+          <RiCloseLine/>
+          </div>
+        </div>
+
       </div>
     </div>
   );

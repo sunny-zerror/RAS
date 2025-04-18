@@ -54,7 +54,7 @@ const HowRas = () => {
     }, [swiperInstance, prevRef, nextRef]);
 
     return (
-        <div className="story_swiper_classname_container relative pad my-10 mb-20">
+        <div id='our-approach' className="story_swiper_classname_container relative pad my-10 mb-20">
             <h1 className='text-xl md:text-2xl lg:text-3xl font-semibold mb-8 '>How RAS Makes It Happen</h1>
             <div className="absolute  top-[20] md:top-0   flex w-full  right-0 z-[90] items-center justify-end ">
                 <div className="flex  pr-5 md:pr-14    gap-2 md:gap-4 ">

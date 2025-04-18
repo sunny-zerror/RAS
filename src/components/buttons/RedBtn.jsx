@@ -39,7 +39,7 @@ const RedBtn = ({ text, width = "224px" }) => { // Default to 224px (w-56)
 
     return (
         <div>
-            <a href="#contactSection" className=' h-10   inline-block whitespace-nowrap'>
+            <a href="#contact-form" className=' h-10   inline-block whitespace-nowrap'>
                 <div
                     ref={wrapperRef}
                     className={`relative h-10 w-full border-2 border-[#EA1B22] overflow-hidden rounded-lg cursor-pointer`}
@@ -47,7 +47,7 @@ const RedBtn = ({ text, width = "224px" }) => { // Default to 224px (w-56)
                 >
                     <div
                         ref={arrowRef}
-                        className={`absolute left-0 w-full top-0 h-full flex items-center justify-center px-4 text-[#EA1B22] text-xl z-10`}
+                        className={`absolute left-0 w-full top-0 h-full flex items-center justify-center px-2 md:px-4 text-[#EA1B22] text-xl z-10`}
                         
                     >
                         <RiArrowRightLine />
@@ -61,7 +61,7 @@ const RedBtn = ({ text, width = "224px" }) => { // Default to 224px (w-56)
                         {text}
                     </div>
                 </div>
-                <p className='opacity-0 px-5'>
+                <p className='opacity-0 px-1 md:px-5'>
                 {text}
                 </p>
             </a>
