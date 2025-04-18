@@ -2,6 +2,7 @@ import { RiCloseLine, RiMenu2Line } from '@remixicon/react';
 import React, { useEffect, useState } from 'react';
 
 const navItems = [
+  { title: "Home", link: "#home", id: "home" },
   { title: "Our Approach", link: "#our-approach", id: "our-approach" },
   { title: "Our Edge", link: "#our-edge", id: "our-edge" },
   { title: "Our Services", link: "#our-services", id: "our-services" },
@@ -14,29 +15,41 @@ const Header = () => {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
+    const sectionVisibility = {};
+
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
+        entries.forEach((entry) => {
+          sectionVisibility[entry.target.id] = entry.isIntersecting
+            ? entry.intersectionRatio
+            : 0;
         });
+
+        // Find the section with the highest intersection ratio
+        const mostVisible = Object.entries(sectionVisibility).reduce(
+          (max, [id, ratio]) => (ratio > max.ratio ? { id, ratio } : max),
+          { id: "", ratio: 0 }
+        );
+
+        setActiveSection(mostVisible.id);
       },
-      { threshold: 0.6 }
+      { threshold: [0.2, 0.4, 0.6, 0.8, 1] } // more fine-grained tracking
     );
 
-    navItems.forEach(item => {
+    navItems.forEach((item) => {
       const el = document.getElementById(item.id);
       if (el) observer.observe(el);
     });
 
     return () => {
-      navItems.forEach(item => {
+      navItems.forEach((item) => {
         const el = document.getElementById(item.id);
         if (el) observer.unobserve(el);
       });
     };
   }, []);
+
+
 
   return (
     <div>
@@ -49,25 +62,28 @@ const Header = () => {
 
         <div className="hidden md:flex gap-10 font-semibold items-center text-sm">
           {navItems.map((item, index) => (
-            <div key={index} className="h-5 flex flex-col overflow-hidden whitespace-nowrap w-fit group">
+            <div
+              key={index}
+              className={`h-5 flex flex-col overflow-hidden whitespace-nowrap w-fit group ${item.title === "Home" ? "opacity-0 pointer-events-none" : ""
+                }`}
+            >
               <a
                 href={item.link}
-                className={`duration-200 cursor-pointer group-hover:-translate-y-5 ${
-                  activeSection === item.id ? 'text-[#EA1B22]' : ''
-                }`}
+                className={`duration-200 cursor-pointer group-hover:-translate-y-5 ${activeSection === item.id ? "text-[#EA1B22]" : ""
+                  }`}
               >
                 {item.title}
               </a>
               <a
                 href={item.link}
-                className={`duration-200 cursor-pointer group-hover:-translate-y-5 ${
-                  activeSection === item.id ? 'text-[#EA1B22]' : ''
-                }`}
+                className={`duration-200 cursor-pointer text-[#EA1B22] group-hover:-translate-y-5 ${activeSection === item.id ? "text-[#EA1B22]" : ""
+                  }`}
               >
                 {item.title}
               </a>
             </div>
           ))}
+
         </div>
 
         <div onClick={() => setNavOpen(true)} className="h-full center md:hidden">

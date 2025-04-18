@@ -27,10 +27,14 @@ const tankData = [{
     tankTypes: [
         {
             label: 'Chemical',
+            display1img: "/icons/iso_tank_chemical_grey.png",
+            display2img: "/icons/iso_tank_chemical_red.png",
             image: '/images/tank/chemical_grade.webp',
         },
         {
             label: 'Food Grade',
+            display1img: "/icons/iso_tank_food_grade_grey.png",
+            display2img: "/icons/iso_tank_food_grade_red.png",
             image: '/images/tank/food_grade.webp'
         },
 
@@ -111,11 +115,15 @@ export const Tank = ({ title, subtitle, description, highlights, changeHighlight
 
     const [selectedImage, setSelectedImage] = useState(image)
 
+    useEffect(() => {
+        setSelectedImage(image);
+    }, [image]);
+
     return (
-        <div className="w-full   mb-10 py-6  ">
+        <div className="w-full   mb-10 pb-6  ">
             <div className="flex h-full gap-3 flex-col">
-                <h1 className='text-xl  lg:text-2xl uppercase text-[#EA1B22]'>{title}</h1>
-                <p className='text-sm'>{subtitle}</p>
+                {/* <h1 className='text-xl  lg:text-2xl uppercase text-[#EA1B22]'>{title}</h1> */}
+                <p className='text-sm font-semibold opacity-80'>{subtitle}</p>
                 <p className=' text-xs xl:text-base font-semibold w-[90%]'>{description}</p>
 
                 <div className="w-full h-fit    flex flex-col md:flex-row ">
@@ -147,9 +155,23 @@ export const Tank = ({ title, subtitle, description, highlights, changeHighlight
                                         ${isSelected ? 'border shadow-lg border-[#959595]' : ''}`}
                                     >
                                         <p className=' text-xs lg:text-sm font-semibold text-center'>{tank.label}</p>
-                                        <div className="w-full center">
-                                            <img className='  w-full md:w-[70%]' src={tank.image} alt={tank.label} />
-                                        </div>
+                                        <div className="w-full relative h-10 center">
+  <img
+    className={`absolute w-[30%] transition-opacity duration-300 ${
+      isSelected ? 'opacity-0' : 'opacity-100'
+    }`}
+    src={tank.display1img}
+    alt={tank.label}
+  />
+  <img
+    className={`absolute w-[30%] transition-opacity duration-300 ${
+      isSelected ? 'opacity-100' : 'opacity-0'
+    }`}
+    src={tank.display2img}
+    alt={tank.label}
+  />
+</div>
+
                                     </div>
                                 )
                             })}
@@ -164,23 +186,27 @@ export const Tank = ({ title, subtitle, description, highlights, changeHighlight
 
 
 const Tanks = () => {
-    const [currentSlide, setCurrentSlide] = useState(0);
 
-    const [totalSlides, setTotalSlides] = useState(tankData.length);
-    const [swiperInstance, setSwiperInstance] = useState(null);
-    const prevRef = useRef(null);
-    const nextRef = useRef(null);
+    const [selectedTank, setSelectedTank] = useState(tankData[0]);
 
 
-    useEffect(() => {
-        if (swiperInstance && prevRef.current && nextRef.current) {
-            swiperInstance.params.navigation.prevEl = prevRef.current;
-            swiperInstance.params.navigation.nextEl = nextRef.current;
-            swiperInstance.navigation.destroy(); // destroy existing navigation
-            swiperInstance.navigation.init(); // re-init navigation
-            swiperInstance.navigation.update(); // update navigation
-        }
-    }, [swiperInstance, prevRef, nextRef]);
+    // const [currentSlide, setCurrentSlide] = useState(0);
+
+    // const [totalSlides, setTotalSlides] = useState(tankData.length);
+    // const [swiperInstance, setSwiperInstance] = useState(null);
+    // const prevRef = useRef(null);
+    // const nextRef = useRef(null);
+
+
+    // useEffect(() => {
+    //     if (swiperInstance && prevRef.current && nextRef.current) {
+    //         swiperInstance.params.navigation.prevEl = prevRef.current;
+    //         swiperInstance.params.navigation.nextEl = nextRef.current;
+    //         swiperInstance.navigation.destroy(); // destroy existing navigation
+    //         swiperInstance.navigation.init(); // re-init navigation
+    //         swiperInstance.navigation.update(); // update navigation
+    //     }
+    // }, [swiperInstance, prevRef, nextRef]);
 
 
     return (
@@ -188,8 +214,34 @@ const Tanks = () => {
             <div className="w-full ">
                 <h1 className='text-xl md:text-2xl lg:text-4xl font-semibold'>Your Requirement, Our Expertise</h1>
                 <p className='text-xs  lg:text-base leading-tight'>Built for Efficiency, Safety & Sustainability: Explore Our Specialized Fleet</p>
+                <div className="w-full md:flex grid grid-cols-2 gap-5 items-center my-5">
+                    {tankData.map((tank, idx) => (
+                        <button
+                            key={idx}
+                            onClick={() => setSelectedTank(tank)}
+                            className={`px-2 md:px-4 text-xs font-semibold py-2 rounded-full transition-all duration-200
+                                ${selectedTank.title === tank.title
+                                    ? 'bg-[#EA1B22] text-white'
+                                    : 'border border-gray-700 text-black opacity-50'}`}
+                        >
+                            {tank.title}
+                        </button>
+                    ))}
+                </div>
+
             </div>
-            <Swiper
+
+            <Tank
+                title={selectedTank.title}
+                subtitle={selectedTank.subtitle}
+                description={selectedTank.description}
+                highlights={selectedTank.highlights}
+                changeHighlight={selectedTank.changeHighlight}
+                tankTypes={selectedTank.tankTypes}
+                image={selectedTank.image}
+            />
+
+            {/* <Swiper
                 modules={[Navigation, A11y]}
                 spaceBetween={10}
                 slidesPerView={1}
@@ -205,8 +257,8 @@ const Tanks = () => {
                         </SwiperSlide>
                     ))
                 }
-            </Swiper>
-            <div className="absolute bottom-0 md:bottom-24    flex w-full  right-0 z-[90] items-center justify-end ">
+            </Swiper> */}
+            {/* <div className="absolute bottom-0 md:bottom-24    flex w-full  right-0 z-[90] items-center justify-end ">
                 <div className="flex pr-5 md:pr-14   gap-2 md:gap-4 ">
                     <button
                         ref={prevRef}
@@ -226,7 +278,7 @@ const Tanks = () => {
 
                 </div>
 
-            </div>
+            </div> */}
         </div>
     );
 };
