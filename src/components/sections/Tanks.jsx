@@ -132,19 +132,8 @@ export const Tank = ({ title, subtitle, description, highlights, changeHighlight
                     </div>
 
 
-                    <div className=" w-full md:w-[50%] pt-10 h-full pr-0 md:pr-10">
-                        <p className='font-semibold text-sm mb-2'>Highlights:</p>
-                        <div className="w-full h-[33vh] ">
-
-                            {(selectedImage === '/images/tank/food_grade.webp' ? changeHighlight : highlights).map((item, idx) => (
-                                <div key={idx} className=" text-xs xl:text-base py-2 mt-2 border-b-2 border-[#222d37ac]">
-                                    <p>{item}</p>
-                                </div>
-                            ))}
-                        </div>
-
-
-                        <div className="w-full flex gap-5 mt-10 flex-wrap">
+                    <div className=" w-full md:w-[50%] h-full pr-0 md:pr-10">
+                        <div className="w-full flex gap-5 mb-10 flex-wrap">
                             {tankTypes.map((tank, idx) => {
                                 const isSelected = selectedImage === tank.image
                                 return (
@@ -156,26 +145,36 @@ export const Tank = ({ title, subtitle, description, highlights, changeHighlight
                                     >
                                         <p className=' text-xs lg:text-sm font-semibold text-center'>{tank.label}</p>
                                         <div className="w-full relative h-10 center">
-  <img
-    className={`absolute w-[30%] transition-opacity duration-300 ${
-      isSelected ? 'opacity-0' : 'opacity-100'
-    }`}
-    src={tank.display1img}
-    alt={tank.label}
-  />
-  <img
-    className={`absolute w-[30%] transition-opacity duration-300 ${
-      isSelected ? 'opacity-100' : 'opacity-0'
-    }`}
-    src={tank.display2img}
-    alt={tank.label}
-  />
-</div>
+                                            <img
+                                                className={`absolute w-[30%] transition-opacity duration-300 ${isSelected ? 'opacity-0' : 'opacity-100'
+                                                    }`}
+                                                src={tank.display1img}
+                                                alt={tank.label}
+                                            />
+                                            <img
+                                                className={`absolute w-[30%] transition-opacity duration-300 ${isSelected ? 'opacity-100' : 'opacity-0'
+                                                    }`}
+                                                src={tank.display2img}
+                                                alt={tank.label}
+                                            />
+                                        </div>
 
                                     </div>
                                 )
                             })}
                         </div>
+                        <p className='font-semibold text-sm mb-2'>Highlights:</p>
+                        <div className="w-full h-[33vh] ">
+
+                            {(selectedImage === '/images/tank/food_grade.webp' ? changeHighlight : highlights).map((item, idx) => (
+                                <div key={idx} className=" text-xs xl:text-base py-2 mt-2 border-b-2 border-[#222d37ac]">
+                                    <p>{item}</p>
+                                </div>
+                            ))}
+                        </div>
+
+
+
 
                     </div>
                 </div>
@@ -219,7 +218,7 @@ const Tanks = () => {
                         <button
                             key={idx}
                             onClick={() => setSelectedTank(tank)}
-                            className={`px-2 md:px-4 text-xs font-semibold py-2 rounded-full transition-all duration-200
+                            className={`px-2 md:px-4 text-sm font-semibold py-2 rounded-full transition-all duration-200
                                 ${selectedTank.title === tank.title
                                     ? 'bg-[#EA1B22] text-white'
                                     : 'border border-gray-700 text-black opacity-50'}`}
