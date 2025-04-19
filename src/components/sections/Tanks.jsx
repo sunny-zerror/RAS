@@ -122,7 +122,7 @@ export const Tank = ({ title, subtitle, description, highlights, changeHighlight
     }, [image]);
 
     return (
-        <div className="w-full   mb-10 pb-6  ">
+        <div className="w-full  pb-6  ">
             <div className="flex h-full gap-3 flex-col">
                 <AnimatePresence mode="wait">
                     <motion.div
@@ -133,11 +133,11 @@ export const Tank = ({ title, subtitle, description, highlights, changeHighlight
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
                         {/* <h1 className='text-xl  lg:text-2xl uppercase text-[#EA1B22]'>{title}</h1> */}
-                        <p className=' text-sm md:text-xs xl:text-base  font-semibold opacity-80'>{subtitle}</p>
-                        <p className='  mt-2 md:mt-0 mb-5 md:mb-0 text-[3vw]  leading-tight md:text-xs xl:text-base font-semibold w-[90%]'>{description}</p>
+                        <p className=' text-sm md:text-xs xl:text-base  font-semibold leading-tight'>{subtitle}</p>
+                        <p className='  mt-2 md:mt-0 mb-5 md:mb-0 text-[3vw] opacity-80  leading-tight md:text-xs xl:text-sm  '>{description}</p>
 
-                        <div className="w-full h-fit    flex flex-col md:flex-row ">
-                            <div className=" w-full  md:w-[50%] center md:h-[50vh]">
+                        <div className="w-full h-fit     flex flex-col md:flex-row ">
+                            <div className=" w-full py-5 md:py-0  md:w-[50%] center h-[20vh]  md:h-[50vh]">
                                 <motion.img
                                     key={selectedImage}
                                     initial={{ opacity: 0 }}
@@ -159,7 +159,7 @@ export const Tank = ({ title, subtitle, description, highlights, changeHighlight
                                                 key={idx}
                                                 onClick={() => setSelectedImage(tank.image)}
                                                 className={` w-[45%] md:w-[30%]  xl:w-[20%] rounded-xl cursor-pointer transition-all duration-300 px-3 py-2 flex flex-col gap-2
-                                        ${isSelected ? 'border shadow-lg border-[#959595]' : ''}`}
+                                        ${isSelected ? 'border shadow-lg border-[#c4c4c4]' : ''}`}
                                             >
                                                 <p className=' text-xs lg:text-sm font-semibold text-center'>{tank.label}</p>
                                                 <div className="w-full relative h-10 center">
@@ -182,10 +182,10 @@ export const Tank = ({ title, subtitle, description, highlights, changeHighlight
                                     })}
                                 </div>
                                 <p className='font-semibold text-sm mb-2'>Highlights:</p>
-                                <div className="w-full h-[33vh] ">
+                                <div className="w-full  ">
 
                                     {(selectedImage === '/images/tank/food_grade.webp' ? changeHighlight : highlights).map((item, idx) => (
-                                        <div key={idx} className=" text-xs xl:text-base py-2 mt-2 border-b-2 border-[#222d37ac]">
+                                        <div key={idx} className=" text-xs xl:text-base py-2 mt-2 border-b border-[#222d374d]">
                                             <p>{item}</p>
                                         </div>
                                     ))}
@@ -229,16 +229,16 @@ const Tanks = () => {
 
 
     return (
-        <div id='our-fleet' className=" relative w-full  pad  mt-10 lg:mt-32">
+        <div id='our-fleet' className=" relative w-full  pad  mt-20 lg:my-20">
             <div className="w-full ">
                 <h1 className='text-xl md:text-2xl lg:text-4xl font-semibold'>Your Requirement, Our Expertise</h1>
                 <p className='text-xs  lg:text-base leading-tight'>Built for Efficiency, Safety & Sustainability: Explore Our Specialized Fleet</p>
-                <div className="w-full md:flex grid grid-cols-2 gap-5 items-center my-5">
+                <div className="w-full flex max-[640px]:overflow-x-scroll max-[640px]:scroller pb-2 gap-2 md:gap-5 items-center my-5">
                     {tankData.map((tank, idx) => (
                         <button
                             key={idx}
                             onClick={() => setSelectedTank(tank)}
-                            className={`px-2 md:px-4 text-xs lg:text-sm font-semibold py-2 rounded-full transition-all duration-200
+                            className={`px-4 shrink-0  text-xs lg:text-sm font-semibold py-2 rounded-full transition-all duration-200
                                 ${selectedTank.title === tank.title
                                     ? 'bg-[#EA1B22] text-white'
                                     : 'border border-gray-700 text-black opacity-50'}`}

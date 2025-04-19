@@ -6,7 +6,7 @@ const IconWithLabel = ({ defaultImg, hoverImg, label }) => {
 
   return (
     <div
-      className="h-full w-[16%]   gap-2 text-center center flex-col relative"
+      className="h-full w-[22%] md:w-[18%]   gap-2 text-center center flex-col relative"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -34,7 +34,7 @@ const OurStrength = () => {
   return (
     <div className='mt-10 lg:mt-32'>
       <div id='our-edge' className="pad  flex flex-col md:flex-row items-center justify-between">
-        <div className=" w-full md:w-[45%] h-full flex gap-10 flex-col justify-evenly">
+        <div className=" w-full md:w-[45%]  h-full flex gap-5 flex-col ">
           <h1 className="text-xl md:text-2xl lg:text-4xl font-semibold">Our Edge</h1>
           <div>
             <p className="font-semibold text-xs md:text-lg">
@@ -47,7 +47,7 @@ const OurStrength = () => {
           <RedBtn text={'Get a Risk Free Audit Today'} />
         </div>
 
-        <div className="flex mt-10 md:mt-0  items-center justify-evenly w-full md:w-[50%] h-full">
+        <div className="flex mt-0  items-center justify-evenly w-full md:w-[50%] h-full">
           <IconWithLabel
             defaultImg="/icons/chemical_precision.webp"
             hoverImg="/icons/chemical_precision_hover.webp"

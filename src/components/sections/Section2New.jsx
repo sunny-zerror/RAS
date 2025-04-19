@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Section2New = () => {
 
-    const [selectedImage, setselectedImage] = useState("/globe/default.svg")
+    const [selectedImage, setselectedImage] = useState("/globe/default.png")
     const [selectedInfo, setSelectedInfo] = useState({
         title: "",
         desc: ""
@@ -59,32 +59,32 @@ const Section2New = () => {
     const data = [
         {
             title: "Raw Material",
-            img: "/globe/globe1.svg",
+            img: "/globe/globe1.png",
             desc: "From chemicals to food-grade goods, we ensure safe, compliant raw material handling for a seamless supply chain.",
         },
         {
             title: "Manufacturer",
-            img: "/globe/globe2.svg",
+            img: "/globe/globe2.png",
             desc: "We prioritize safety and efficiency, ensuring efficient handling of hazardous chemicals, food-grade goods, and high-value cargo.",
         },
         {
             title: "Storage",
-            img: "/globe/globe3.svg",
+            img: "/globe/globe3.png",
             desc: "We ensure secure, compliant storage, preserving the integrity of chemicals, food-grade goods, and specialized cargo.",
         },
         {
             title: "Distribution",
-            img: "/globe/globe4.svg",
+            img: "/globe/globe4.png",
             desc: "We optimize distribution through our comprehensive agency network and tracking, ensuring end-to-end visibility and zero disruptions. ",
         },
         {
             title: "Retailer",
-            img: "/globe/globe5.svg",
+            img: "/globe/globe5.png",
             desc: "RAS ensures reliable, resilient supply chains, delivering products to retailers on time and in perfect condition.",
         },
         {
             title: "Customer",
-            img: "/globe/globe6.svg",
+            img: "/globe/globe6.png",
             desc: "We ensure reliable, resilient supply chains, delivering products to customer on time and inperfect condition.",
         },
 
@@ -99,14 +99,14 @@ const Section2New = () => {
     };
 
     return (
-        <div className='mt-10 mb-10 lg:mb-0 lg:mt-32'>
+        <div className='mt-10 mb-20 lg:mb-0 lg:mt-32'>
             <div className=" pad relative   w-full  ">
                 <div className=" w-full  flex flex-col justify-center gap-4  ">
                     <h1 className=' text-xl md:text-2xl lg:text-4xl font-bold'>Understanding the Landscape</h1>
                     <p className='  text-xs  w-[80%] lg:text-base  leading-tight '>At RAS, we endeavor to create supply chain as interconnected systems rather than isolated transactions. This approach seeks therefore, to develop unified customer experience, resilience, and expertise across all touchpoints.</p>
                 </div>
                 <div className="w-full h-fit md:h-[60vh]   mt-6 flex flex-col-reverse md:flex-row items-center">
-                    <div className=" w-full md:w-1/2 h-full pt-10 md:pr-24">
+                    <div className=" w-full md:w-1/2 h-full md:pt-10 md:pr-24">
                         {
                             selectedInfo.title === "" ? (
                                 <div className="w-full grid grid-cols-2">
@@ -143,8 +143,8 @@ const Section2New = () => {
 
                     </div>
                     <div className=" w-full md:w-1/2 h-full relative   center ">
-                        <div className="relative w-full h-auto">
-                            <img className="w-full scale-75 h-auto block" src={selectedImage} alt="" />
+                        <div className="  relative w-full h-auto">
+                            <img className="w-full scale-[.8] md:scale-75 h-auto block" src={selectedImage} alt="" />
                             {
                                 markers.map((marker, index) => (
                                     <div

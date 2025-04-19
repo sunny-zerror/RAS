@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
+import { RiArrowDownSLine } from '@remixicon/react';
 
 const ServicesCard = ({ title, description, buttons, category }) => {
   const cardRef = useRef(null);
@@ -49,9 +50,9 @@ useEffect(() => {
     <div>
       <div
         ref={cardRef}
-        className="w-full min-h-[25vh] flex flex-col overflow-hidden rounded-lg border-black border p-5 hover:border-transparent hover:bg-[#EA1B22] group transition-all duration-700"
+        className="w-full min-h-[10vh]  md:min-h-[25vh] flex flex-col overflow-hidden rounded-lg border-black border p-5 hover:border-transparent hover:bg-[#EA1B22] group transition-all duration-700"
       >
-        <p className='text-sm md:text-lg font-semibold mb-2 group-hover:text-white'>{title}</p>
+        <p className='text-sm md:text-lg font-semibold mb-2 group-hover:text-white flex items-center justify-between'>{title} <RiArrowDownSLine className='md:hidden' size={15}/></p>
         <p className='text-xs md:text-sm leading-tight group-hover:text-white'>{description}</p>
 
         {/* Static Buttons */}

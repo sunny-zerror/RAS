@@ -56,18 +56,18 @@ const HowRas = () => {
     return (
         <div id='our-approach' className="story_swiper_classname_container relative pad mt-0 lg:mt-20 ">
             <h1 className='text-xl md:text-2xl lg:text-4xl font-semibold mb-8 '>How RAS Makes It Happen</h1>
-            <div className="absolute  top-[20] md:top-0   flex w-full  right-0 z-[90] items-center justify-end ">
-                <div className="flex  pr-5 md:pr-14    gap-2 md:gap-4 ">
+            <div className="absolute  top-[90%] pl-10 md:pl-0 md:top-0   flex w-full  right-0 z-[90] items-center md:justify-end ">
+                <div className="flex  pr-5 md:pr-14 gap-4 ">
                     <button
                         ref={prevRef}
-                        className={`p-2 scale-75 md:scale-100 shrink-0 text-[#EA1B22] border-[#EA1B22] rounded-full border z-10 transition-opacity duration-300 ${currentSlide === 0 ? 'border-gray-800 text-black opacity-40 cursor-not-allowed' : ''
+                        className={`p-2  shrink-0 text-[#EA1B22] border-[#EA1B22] rounded-full border z-10 transition-opacity duration-300 ${currentSlide === 0 ? 'border-gray-800 text-black opacity-40 cursor-not-allowed' : ''
                             }`}
                     >
                         <RiArrowLeftLine size={16} />
                     </button>
                     <button
                         ref={nextRef}
-                        className={`p-2 scale-75 md:scale-100 shrink-0 text-[#EA1B22] border-[#EA1B22] rounded-full border z-10 transition-opacity duration-300 ${currentSlide === totalSlides - 1 ? 'border-gray-800 text-black opacity-40 cursor-not-allowed' : ''
+                        className={`p-2  shrink-0 text-[#EA1B22] border-[#EA1B22] rounded-full border z-10 transition-opacity duration-300 ${currentSlide === totalSlides - 1 ? 'border-gray-800 text-black opacity-40 cursor-not-allowed' : ''
                             }`}
                     >
                         <RiArrowRightLine size={16} />

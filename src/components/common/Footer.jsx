@@ -114,7 +114,7 @@ const Footer = () => {
           </div>
           <div className="w-full md:h-[17vh]   mt-6 flex flex-col md:flex-row items-center justify-between md:border-b md:border-[#FFFFFF]">
             <div className="w-full md:w-[49.5%] h-full grid grid-cols-1 md:grid-cols-3  items-center  lg:pr-14 ">
-              <div className=" md:h-[70%] flex flex-col justify-between ">
+              <div className=" md:h-[70%] flex flex-row md:flex-col  justify-between ">
                 <a href="#home" className=''>
                   About Us
                 </a>
@@ -125,13 +125,13 @@ const Footer = () => {
                   Certifications
                 </a>
               </div>
-              <div className=" md:h-[70%] flex flex-col justify-between">
+              <div className=" mt-4 md:mt-0 md:h-[70%] flex flex-col justify-between">
                 <p>Company Building Name</p>
-                <p className=' text-xs xl:text-sm flex items-center gap-2 mt-2 md:mt-0 '> <RiPhoneFill size={15} /> +91 12345-12345</p>
-                <p className=' text-xs xl:text-sm flex items-center gap-2 my-2 md:my-0 '> <RiMailFill size={15} /> info@rascs.in</p>
+                <p className=' text-xs xl:text-sm flex items-center opacity-80 font-semibold md:font-normal gap-2 mt-2 md:mt-0 '> <RiPhoneFill size={15} /> +91 12345-12345</p>
+                <p className=' text-xs xl:text-sm flex items-center opacity-80 font-semibold md:font-normal gap-2 my-2 md:my-0 '> <RiMailFill size={15} /> info@rascs.in</p>
               </div>
 
-              <div className=" w-full md:h-[70%] flex items-end gap-2 mb-5 md:mb-0  text-xs xl:text-sm md:leading-tight">
+              <div className=" w-full md:h-[70%] flex items-end opacity-80 font-semibold md:font-normal gap-2 mb-5 md:mb-0  text-xs xl:text-sm md:leading-tight">
                 <div className="shrink-0 h-full text-white flex items-center  ">
                   <RiMapPinFill size={18} className='translate-y-[-8px]' />
                 </div>
@@ -143,7 +143,7 @@ const Footer = () => {
             </div>
             <div className="w-[.5px] bg-[#FFFFFF] h-[70%] max-[600px]:hidden"></div>
             <div className="w-full md:w-[49.5%] h-full grid grid-cols-1 md:grid-cols-3  items-center  md:pl-5 lg:pl-14">
-              <div className=" md:h-[70%] flex flex-col justify-between ">
+              <div className=" md:h-[70%] flex  flex-col justify-between ">
                 <a href="" className=''>
                   Chemical Logistics
                 </a>
@@ -154,7 +154,7 @@ const Footer = () => {
                   CIS
                 </a>
               </div>
-              <div className=" h-[70%] flex flex-col justify-between">
+              <div className=" mt-4 md:mt-0 h-[70%] flex flex-col justify-between">
                 <p>Global Freight Forwarding</p>
                 <p>Logistics & Heavy Lifts</p>
                 <p>OOG / ODC</p>
@@ -176,14 +176,14 @@ const Footer = () => {
                 const isOpen = arr1activeIndex === index
 
                 return (
-                  <div key={index} className="flex flex-col  gap-2 md:gap-4 md:pb-10">
+                  <div key={index} className="flex flex-col mb-3 md:mb-0   gap-2 md:gap-4 md:pb-10">
                     <div
-                      className="md:pb-1 border-b border-white flex justify-between items-center cursor-pointer"
+                      className=" pb-1 md:pb-1 border-b border-gray-500 md:border-white flex justify-between items-center cursor-pointer"
                       onClick={() => arr1handleToggle(index)}
                     >
                       <a>{item.title}</a>
                       <RiArrowDownSLine
-                        className={` md:hidden transition-transform duration-300 text-white ${isOpen ? 'rotate-180' : 'rotate-0'}`}
+                        className={` md:hidden transition-transform duration-300 text-gray-300 md:text-white ${isOpen ? 'rotate-180' : 'rotate-0'}`}
                       />
                     </div>
                     <div className=" hidden md:flex flex-col gap-2">
@@ -215,14 +215,14 @@ const Footer = () => {
                 const isOpen = arr2activeIndex === index
 
                 return (
-                  <div key={index} className="flex flex-col  gap-2 md:gap-4 md:pb-10">
+                  <div key={index} className="flex flex-col mb-3 md:mb-0   gap-2 md:gap-4 md:pb-10">
                     <div
-                      className="md:pb-1 border-b border-white flex justify-between items-center cursor-pointer"
+                      className=" pb-1 md:pb-1 border-b border-gray-500 md:border-white flex justify-between items-center cursor-pointer"
                       onClick={() => arr2handleToggle(index)}
                     >
                       <a>{item.title}</a>
                       <RiArrowDownSLine
-                        className={` md:hidden transition-transform duration-300 text-white ${isOpen ? 'rotate-180' : 'rotate-0'}`}
+                        className={` md:hidden transition-transform duration-300 text-gray-300 md:text-white ${isOpen ? 'rotate-180' : 'rotate-0'}`}
                       />
                     </div>
                     <div className=" hidden md:flex flex-col gap-2">
@@ -249,19 +249,19 @@ const Footer = () => {
                 )
               })}
             </div>
-            <div className="w-full pb-5 md:pb-0 h-full">
+            <div className="w-full h-full pb-14 md:pb-0">
               {arr3.map((item, index) => {
                 const isOpen = arr3activeIndex === index
 
                 return (
-                  <div key={index} className="flex flex-col  gap-2 md:gap-4 md:pb-10">
+                  <div key={index} className="flex flex-col mb-3 md:mb-0   gap-2 md:gap-4 md:pb-10">
                     <div
-                      className="md:pb-1 border-b border-white flex justify-between items-center cursor-pointer"
+                      className=" pb-1 md:pb-1 border-b border-gray-500 md:border-white flex justify-between items-center cursor-pointer"
                       onClick={() => arr3handleToggle(index)}
                     >
                       <a>{item.title}</a>
                       <RiArrowDownSLine
-                        className={` md:hidden transition-transform duration-300 text-white ${isOpen ? 'rotate-180' : 'rotate-0'}`}
+                        className={` md:hidden transition-transform duration-300 text-gray-300 md:text-white ${isOpen ? 'rotate-180' : 'rotate-0'}`}
                       />
                     </div>
                     <div className=" hidden md:flex flex-col gap-2">
@@ -271,11 +271,11 @@ const Footer = () => {
                         ))
                       }
                     </div>
-                    <div
+                    <div  
                       className={`
-                        md:hidden
+                        md:hidden 
                 pl-4 overflow-hidden transition-all duration-500 ease-in-out
-                ${isOpen ? 'max-h-40 opacity-100 ' : 'max-h-0 opacity-0'}
+                ${isOpen ? 'max-h-full opacity-100 ' : 'max-h-0 opacity-0'}
               `}
                     >
                       <div className="flex text-sm opacity-80 flex-col gap-2">
@@ -288,6 +288,7 @@ const Footer = () => {
                 )
               })}
             </div>
+
 
           </div>
         </div>

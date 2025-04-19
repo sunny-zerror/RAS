@@ -13,21 +13,21 @@ const ContactSection = () => {
                                 <h1 className='text-xl md:text-3xl font-semibold'>Begin Your Risk-Free Partnership</h1>
                                 <p className=' text-sm md:text-xl leading-tight'>Experience the RAS Solution</p>
                             </div>
-                            <div className="w-full md:w-[70%] h-[50vh] flex flex-col gap-8  mt-12">
-                                <input type="text" name="" id="" placeholder='Business Name' className='outline-none w-full  text-sm  border-b-2 border-[#00000092] ' />
-                                <input type="text" name="" id="" placeholder='Email ID' className='outline-none w-full  text-sm  border-b-2 border-[#00000092] ' />
+                            <div className="w-full md:w-[70%] md:h-[50vh] flex flex-col gap-6 md:gap-8  mt-12">
+                                <input type="text" name="" id="" placeholder='Business Name' className='outline-none w-full  text-sm  border-b border-[#00000092] ' />
+                                <input type="text" name="" id="" placeholder='Email ID' className='outline-none w-full  text-sm  border-b border-[#00000092] ' />
                                 <div className="flex gap-2">
                                     <div className="">
                                         <img src="/icons/flg.png" alt="" />
                                     </div>
-                                    <input type="text" name="" id="" placeholder='Phone Number' className='outline-none w-full  text-sm  border-b-2 border-[#00000092] ' />
+                                    <input type="text" name="" id="" placeholder='Phone Number' className='outline-none w-full  text-sm  border-b border-[#00000092] ' />
                                 </div>
-                                <input type="text" name="" id="" placeholder='Message' className='outline-none w-full  text-sm  border-b-2 border-[#00000092] ' />
+                                <input type="text" name="" id="" placeholder='Message' className='outline-none w-full  text-sm  border-b border-[#00000092] ' />
                                 <div className="mt-6 w-full">
                                     <FormBtn text={"Optimize Your Supply Chain"} />
                                 </div>
                             </div>
-                            <div className="w-full xl:mt-5 ">
+                            <div className="w-full  xl:mt-5 ">
                                 <p className=' text-xs lg:text-sm xl:text-xl w-full  md:w-[60%] '>Where every shipment advances the science of safe, sustainable logistics.</p>
                                 <button className=' border-2 border-[#EA1B22] px-2 py-1 rounded-lg mt-3 xl:mt-10 text-[#EA1B22]'>Download Our Brochure</button>
                             </div>
