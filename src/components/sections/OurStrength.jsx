@@ -33,9 +33,10 @@ const IconWithLabel = ({ defaultImg, hoverImg, label }) => {
 const OurStrength = () => {
   return (
     <div className='mt-10 lg:mt-32'>
-      <div id='our-edge' className="pad  flex flex-col md:flex-row items-center justify-between">
+      <div id='our-edge' className="pad  ">
+          <h1 className="text-xl md:text-2xl lg:text-4xl font-semibold mb-5">Our Edge</h1>
+          <div className="flex flex-col-reverse md:flex-row items-center justify-between">
         <div className=" w-full md:w-[45%]  h-full flex gap-5 flex-col ">
-          <h1 className="text-xl md:text-2xl lg:text-4xl font-semibold">Our Edge</h1>
           <div>
             <p className="font-semibold text-xs md:text-lg">
               Built on Responsibility. Driven by Safety. Powered by Expertise.
@@ -64,6 +65,7 @@ const OurStrength = () => {
             label="Cryochemical Mastery"
           />
         </div>
+          </div>
       </div>
     </div>
   );

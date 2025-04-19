@@ -93,7 +93,7 @@ const Header = () => {
         <div className={`w-full fixed left-0 bg-white p-5 transition-all duration-500 ease-in-out z-40 ${navOpen ? 'top-0' : '-top-96'}`}>
           {navItems.map((item, index) => (
             <div key={index} className="w-fit py-1 flex items-center">
-              <div className="h-full text-2xl flex flex-col overflow-hidden whitespace-nowrap w-fit group">
+              <div className="h-full text-base flex flex-col overflow-hidden whitespace-nowrap w-fit group">
                 <a
                   onClick={() => setNavOpen(false)}
                   href={item.link}

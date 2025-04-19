@@ -81,3 +81,23 @@ a{
   font-family: gilroy-regular;
   color: #FFFFFF;
 }
+
+#home,
+#our-approach,
+#our-edge,
+#our-services,
+#our-fleet,
+#contact-form {
+  scroll-margin-top: 12vh;
+}
+@media (max-width: 640px) {
+  #home,
+  #our-approach,
+  #our-edge,
+  #our-services,
+  #our-fleet,
+  #contact-form {
+    scroll-margin-top: 7vh;
+  }
+  
+}
