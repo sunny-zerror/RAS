@@ -7,6 +7,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useState, useRef, useEffect } from "react";
 import { RiArrowLeftLine, RiArrowRightLine } from '@remixicon/react';
+import { motion, AnimatePresence } from 'framer-motion';
+
 
 
 const tankData = [{
@@ -122,62 +124,80 @@ export const Tank = ({ title, subtitle, description, highlights, changeHighlight
     return (
         <div className="w-full   mb-10 pb-6  ">
             <div className="flex h-full gap-3 flex-col">
-                {/* <h1 className='text-xl  lg:text-2xl uppercase text-[#EA1B22]'>{title}</h1> */}
-                <p className='text-sm font-semibold opacity-80'>{subtitle}</p>
-                <p className=' text-xs xl:text-base font-semibold w-[90%]'>{description}</p>
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={selectedImage}
+                        initial={{ y: "1vh", opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: "-1vh", opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                        {/* <h1 className='text-xl  lg:text-2xl uppercase text-[#EA1B22]'>{title}</h1> */}
+                        <p className=' text-sm md:text-xs xl:text-base  font-semibold opacity-80'>{subtitle}</p>
+                        <p className='  mt-2 md:mt-0 mb-5 md:mb-0 text-[3vw]  leading-tight md:text-xs xl:text-base font-semibold w-[90%]'>{description}</p>
 
-                <div className="w-full h-fit    flex flex-col md:flex-row ">
-                    <div className=" w-full  md:w-[50%] center md:h-[50vh]">
-                        <img src={selectedImage} alt="Selected Tank" className="h-full w-[80%] object-contain" />
-                    </div>
+                        <div className="w-full h-fit    flex flex-col md:flex-row ">
+                            <div className=" w-full  md:w-[50%] center md:h-[50vh]">
+                                <motion.img
+                                    key={selectedImage}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 0.8, ease: 'easeInOut' }}
+                                    src={selectedImage}
+                                    alt="Selected Tank"
+                                    className="h-full w-[80%] object-contain"
+                                />
+                            </div>
 
 
-                    <div className=" w-full md:w-[50%] h-full pr-0 md:pr-10">
-                        <div className="w-full flex gap-5 mt-10 md:mt-0 mb-10 flex-wrap">
-                            {tankTypes.map((tank, idx) => {
-                                const isSelected = selectedImage === tank.image
-                                return (
-                                    <div
-                                        key={idx}
-                                        onClick={() => setSelectedImage(tank.image)}
-                                        className={` w-[45%] md:w-[30%]  xl:w-[20%] rounded-xl cursor-pointer transition-all duration-300 px-3 py-2 flex flex-col gap-2
+                            <div className=" w-full md:w-[50%] h-full pr-0 md:pr-10">
+                                <div className="w-full flex gap-5 my-5 flex-wrap">
+                                    {tankTypes.map((tank, idx) => {
+                                        const isSelected = selectedImage === tank.image
+                                        return (
+                                            <div
+                                                key={idx}
+                                                onClick={() => setSelectedImage(tank.image)}
+                                                className={` w-[45%] md:w-[30%]  xl:w-[20%] rounded-xl cursor-pointer transition-all duration-300 px-3 py-2 flex flex-col gap-2
                                         ${isSelected ? 'border shadow-lg border-[#959595]' : ''}`}
-                                    >
-                                        <p className=' text-xs lg:text-sm font-semibold text-center'>{tank.label}</p>
-                                        <div className="w-full relative h-10 center">
-                                            <img
-                                                className={`absolute w-[30%] transition-opacity duration-300 ${isSelected ? 'opacity-0' : 'opacity-100'
-                                                    }`}
-                                                src={tank.display1img}
-                                                alt={tank.label}
-                                            />
-                                            <img
-                                                className={`absolute w-[30%] transition-opacity duration-300 ${isSelected ? 'opacity-100' : 'opacity-0'
-                                                    }`}
-                                                src={tank.display2img}
-                                                alt={tank.label}
-                                            />
-                                        </div>
+                                            >
+                                                <p className=' text-xs lg:text-sm font-semibold text-center'>{tank.label}</p>
+                                                <div className="w-full relative h-10 center">
+                                                    <img
+                                                        className={`absolute w-[30%] transition-opacity duration-300 ${isSelected ? 'opacity-0' : 'opacity-100'
+                                                            }`}
+                                                        src={tank.display1img}
+                                                        alt={tank.label}
+                                                    />
+                                                    <img
+                                                        className={`absolute w-[30%] transition-opacity duration-300 ${isSelected ? 'opacity-100' : 'opacity-0'
+                                                            }`}
+                                                        src={tank.display2img}
+                                                        alt={tank.label}
+                                                    />
+                                                </div>
 
-                                    </div>
-                                )
-                            })}
-                        </div>
-                        <p className='font-semibold text-sm mb-2'>Highlights:</p>
-                        <div className="w-full h-[33vh] ">
-
-                            {(selectedImage === '/images/tank/food_grade.webp' ? changeHighlight : highlights).map((item, idx) => (
-                                <div key={idx} className=" text-xs xl:text-base py-2 mt-2 border-b-2 border-[#222d37ac]">
-                                    <p>{item}</p>
+                                            </div>
+                                        )
+                                    })}
                                 </div>
-                            ))}
+                                <p className='font-semibold text-sm mb-2'>Highlights:</p>
+                                <div className="w-full h-[33vh] ">
+
+                                    {(selectedImage === '/images/tank/food_grade.webp' ? changeHighlight : highlights).map((item, idx) => (
+                                        <div key={idx} className=" text-xs xl:text-base py-2 mt-2 border-b-2 border-[#222d37ac]">
+                                            <p>{item}</p>
+                                        </div>
+                                    ))}
+                                </div>
+
+
+
+
+                            </div>
                         </div>
-
-
-
-
-                    </div>
-                </div>
+                    </motion.div>
+                </AnimatePresence>
             </div>
         </div>
     );

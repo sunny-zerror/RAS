@@ -1,7 +1,11 @@
-import { RiInstagramLine, RiLinkedinLine, RiMailFill, RiMapPinFill, RiPhoneFill } from '@remixicon/react'
-import React from 'react'
+import { RiArrowDownSLine, RiInstagramLine, RiLinkedinLine, RiMailFill, RiMapPinFill, RiPhoneFill } from '@remixicon/react'
+import React, { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Footer = () => {
+  const [arr1activeIndex, setarr1ActiveIndex] = useState(null);
+  const [arr2activeIndex, setarr2ActiveIndex] = useState(null);
+  const [arr3activeIndex, setarr3ActiveIndex] = useState(null);
 
   const arr1 = [
     {
@@ -90,6 +94,17 @@ const Footer = () => {
 
   ]
 
+
+  const arr1handleToggle = (index) => {
+    setarr1ActiveIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+  const arr2handleToggle = (index) => {
+    setarr2ActiveIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+  const arr3handleToggle = (index) => {
+    setarr3ActiveIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
   return (
     <div>
       <div className="w-full overflow-x-hidden  bg-[#222D37] md:text-xs  xl:text-base  pad ft">
@@ -112,14 +127,14 @@ const Footer = () => {
               </div>
               <div className=" md:h-[70%] flex flex-col justify-between">
                 <p>Company Building Name</p>
-                <p className=' text-xs xl:text-sm flex items-center gap-2 mt-2 md:mt-0 '> <RiPhoneFill size={15}/> +91 12345-12345</p>
-                <p className=' text-xs xl:text-sm flex items-center gap-2 my-2 md:my-0 '> <RiMailFill  size={15}/> info@rascs.in</p>
+                <p className=' text-xs xl:text-sm flex items-center gap-2 mt-2 md:mt-0 '> <RiPhoneFill size={15} /> +91 12345-12345</p>
+                <p className=' text-xs xl:text-sm flex items-center gap-2 my-2 md:my-0 '> <RiMailFill size={15} /> info@rascs.in</p>
               </div>
 
               <div className=" w-full md:h-[70%] flex items-end gap-2 mb-5 md:mb-0  text-xs xl:text-sm md:leading-tight">
-                  <div className="shrink-0 h-full text-white flex items-center  ">
-                  <RiMapPinFill size={18} className='translate-y-[-8px]'/>
-                  </div>
+                <div className="shrink-0 h-full text-white flex items-center  ">
+                  <RiMapPinFill size={18} className='translate-y-[-8px]' />
+                </div>
                 <p className='text-xs xl:text-sm flex items-center gap-2'>
                   7th & 8th Floor, Meraki Area, Sion Trombay Rd.,Chembur (E), Mumbai 400071
                 </p>
@@ -157,59 +172,123 @@ const Footer = () => {
           </div>
           <div className="w-full   gap-10 md:gap-24 grid  grid-cols-1 md:grid-cols-3">
             <div className="w-full h-full">
-              {
-                arr1.map((item, index) => (
-                  <div key={index} className="flex md:pb-10 flex-col gap-4">
-                    <div className="pb-1 border-b border-[#FFFFFF]">
+              {arr1.map((item, index) => {
+                const isOpen = arr1activeIndex === index
+
+                return (
+                  <div key={index} className="flex flex-col  gap-2 md:gap-4 md:pb-10">
+                    <div
+                      className="md:pb-1 border-b border-white flex justify-between items-center cursor-pointer"
+                      onClick={() => arr1handleToggle(index)}
+                    >
                       <a>{item.title}</a>
+                      <RiArrowDownSLine
+                        className={` md:hidden transition-transform duration-300 text-white ${isOpen ? 'rotate-180' : 'rotate-0'}`}
+                      />
                     </div>
-                    <div className="flex flex-col gap-2">
+                    <div className=" hidden md:flex flex-col gap-2">
                       {
                         item.subTitle.map((subItem, subIndex) => (
                           <a key={subIndex}>{subItem}</a>
                         ))
                       }
                     </div>
+                    <div
+                      className={`
+                        md:hidden
+                pl-4 overflow-hidden transition-all duration-500 ease-in-out
+                ${isOpen ? 'max-h-40 opacity-100 ' : 'max-h-0 opacity-0'}
+              `}
+                    >
+                      <div className="flex text-sm opacity-80 flex-col gap-2">
+                        {item.subTitle.map((subItem, subIndex) => (
+                          <a key={subIndex}>{subItem}</a>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                ))
-              }
+                )
+              })}
             </div>
             <div className="w-full h-full">
-              {
-                arr2.map((item, index) => (
-                  <div key={index} className="flex pb-10 flex-col gap-4">
-                    <div className="pb-1 border-b border-[#FFFFFF]">
+              {arr2.map((item, index) => {
+                const isOpen = arr2activeIndex === index
+
+                return (
+                  <div key={index} className="flex flex-col  gap-2 md:gap-4 md:pb-10">
+                    <div
+                      className="md:pb-1 border-b border-white flex justify-between items-center cursor-pointer"
+                      onClick={() => arr2handleToggle(index)}
+                    >
                       <a>{item.title}</a>
+                      <RiArrowDownSLine
+                        className={` md:hidden transition-transform duration-300 text-white ${isOpen ? 'rotate-180' : 'rotate-0'}`}
+                      />
                     </div>
-                    <div className="flex flex-col gap-2">
+                    <div className=" hidden md:flex flex-col gap-2">
                       {
                         item.subTitle.map((subItem, subIndex) => (
                           <a key={subIndex}>{subItem}</a>
                         ))
                       }
                     </div>
-                  </div>
-                ))
-              }
-            </div>
-            <div className="w-full h-full">
-              {
-                arr3.map((item, index) => (
-                  <div key={index} className="flex pb-10 flex-col gap-4">
-                    <div className="pb-1 border-b border-[#FFFFFF]">
-                      <a>{item.title}</a>
+                    <div
+                      className={`
+                        md:hidden
+                pl-4 overflow-hidden transition-all duration-500 ease-in-out
+                ${isOpen ? 'max-h-40 opacity-100 ' : 'max-h-0 opacity-0'}
+              `}
+                    >
+                      <div className="flex text-sm opacity-80 flex-col gap-2">
+                        {item.subTitle.map((subItem, subIndex) => (
+                          <a key={subIndex}>{subItem}</a>
+                        ))}
+                      </div>
                     </div>
-                    <div className="flex flex-col gap-2">
+                  </div>
+                )
+              })}
+            </div>
+            <div className="w-full pb-5 md:pb-0 h-full">
+              {arr3.map((item, index) => {
+                const isOpen = arr3activeIndex === index
+
+                return (
+                  <div key={index} className="flex flex-col  gap-2 md:gap-4 md:pb-10">
+                    <div
+                      className="md:pb-1 border-b border-white flex justify-between items-center cursor-pointer"
+                      onClick={() => arr3handleToggle(index)}
+                    >
+                      <a>{item.title}</a>
+                      <RiArrowDownSLine
+                        className={` md:hidden transition-transform duration-300 text-white ${isOpen ? 'rotate-180' : 'rotate-0'}`}
+                      />
+                    </div>
+                    <div className=" hidden md:flex flex-col gap-2">
                       {
                         item.subTitle.map((subItem, subIndex) => (
                           <a key={subIndex}>{subItem}</a>
                         ))
                       }
                     </div>
+                    <div
+                      className={`
+                        md:hidden
+                pl-4 overflow-hidden transition-all duration-500 ease-in-out
+                ${isOpen ? 'max-h-40 opacity-100 ' : 'max-h-0 opacity-0'}
+              `}
+                    >
+                      <div className="flex text-sm opacity-80 flex-col gap-2">
+                        {item.subTitle.map((subItem, subIndex) => (
+                          <a key={subIndex}>{subItem}</a>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                ))
-              }
+                )
+              })}
             </div>
+
           </div>
         </div>
       </div>

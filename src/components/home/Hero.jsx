@@ -8,6 +8,7 @@ import Certifications from '../sections/Certifications'
 import Tanks from '../sections/Tanks'
 import OurServices from '../sections/OurServices'
 import ContactSection from '../sections/ContactSection'
+import Section2New from '../sections/Section2New'
 
 const Hero = () => {
 
@@ -15,7 +16,8 @@ const Hero = () => {
   return (
     <div>
       <Section1/>
-      <Section2/>
+      <Section2New/>
+      {/* <Section2/> */}
       <HowRas/>
       <OurStrength/>
       <OurServices/>
