@@ -149,7 +149,7 @@ const Section2New = () => {
                                 markers.map((marker, index) => (
                                     <div
                                         key={index}
-                                        className="absolute z-[9] flex flex-col items-center justify-center size-10  lg:size-12 xl:size-20 rounded-full"
+                                        className="absolute z-[9] flex flex-col items-center justify-center size-10 scale-125 md:scale-110  lg:size-12 xl:size-20 rounded-full"
                                         style={{
                                             top: marker.top,
                                             bottom: marker.bottom,
