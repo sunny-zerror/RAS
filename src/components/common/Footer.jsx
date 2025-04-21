@@ -1,4 +1,4 @@
-import { RiArrowDownSLine, RiInstagramLine, RiLinkedinLine, RiMailFill, RiMapPinFill, RiPhoneFill } from '@remixicon/react'
+import { RiArrowDownSLine, RiArrowUpSLine, RiInstagramLine, RiLinkedinLine, RiMailFill, RiMapPinFill, RiPhoneFill } from '@remixicon/react'
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -107,9 +107,9 @@ const Footer = () => {
 
   return (
     <div>
-      <div className="w-full overflow-x-hidden  bg-[#222D37] md:text-xs  xl:text-base  pad ft">
-        <div className=" pt-5 md:pt-10">
-          <div className="w-full center">
+      <div className="w-full mt-20 overflow-x-hidden  bg-[#222D37] md:text-xs  xl:text-base  pad ft">
+        <div className=" pt-10">
+          <div className="w-full py-2 center">
             <img className='w-[35%] md:w-[8%]' src="/logos/RAS_logo_white.png" alt="" />
           </div>
           <div className="w-full md:h-[17vh]   mt-6 flex flex-col md:flex-row items-center justify-between md:border-b md:border-[#FFFFFF]">
@@ -125,13 +125,17 @@ const Footer = () => {
                   Certifications
                 </a>
               </div>
-              <div className=" :mt-0 md:h-[70%] flex flex-col justify-between">
+              <div className=" border-b  md:border-none pb-2 md:pb-0 border-gray-500 md:h-[70%] flex flex-col justify-between">
                 <p className='max-[640px]:hidden'>Contact Us</p>
                 <p className=' text-xs xl:text-sm flex items-center opacity-80 font-semibold md:font-normal gap-2 mt-2 md:mt-0 '> <RiPhoneFill size={15} /> +91 12345-12345</p>
-                <p className=' text-xs xl:text-sm flex items-center opacity-80 font-semibold md:font-normal gap-2 my-2 md:my-0 '> <RiMailFill size={15} /> info@rascs.in</p>
+                <p className=' text-xs xl:text-sm flex items-center opacity-80 font-semibold md:font-normal gap-2 mt-2 md:my-0 '> <RiMailFill size={15} /> info@rascs.in</p>
+                <p className=' min-[640px]:hidden  text-xs xl:text-sm flex items-center opacity-80 font-semibold md:font-normal gap-2 my-2 md:my-0 '>
+                <RiMapPinFill size={18} className='  ' />
+                  7th & 8th Floor, Meraki Area, Sion Trombay Rd.,Chembur (E), Mumbai 400071
+                </p>
               </div>
 
-              <div className=" border-b md:border-none pb-5 md:pb-0 border-gray-500 w-full md:h-[70%] flex items-end opacity-80 font-semibold md:font-normal gap-2 mb-5 md:mb-0  text-xs xl:text-sm md:leading-tight">
+              <div className=" border-b max-[640px]:hidden md:border-none pb-5 md:pb-0 border-gray-500 w-full md:h-[70%] flex items-end opacity-80 font-semibold md:font-normal gap-2 mb-5 md:mb-0  text-xs xl:text-sm md:leading-tight">
                 <div className="shrink-0 h-full text-white flex items-center  ">
                   <RiMapPinFill size={18} className='translate-y-[-8px]' />
                 </div>
@@ -141,9 +145,9 @@ const Footer = () => {
               </div>
 
             </div>
-            <div className="w-[.5px] bg-[#FFFFFF] h-[70%] max-[600px]:hidden"></div>
-            <div className="w-full md:w-[49.5%] h-full grid grid-cols-1 md:grid-cols-3  items-center  md:pl-5 lg:pl-14">
-            <div className=" md:h-[70%] min-[640px]:hidden flex flex-col  justify-between ">
+            <div className="   w-[.5px] bg-[#FFFFFF] h-[70%] max-[600px]:hidden"></div>
+            <div className="  mt-5 md:mt-0 w-full md:w-[49.5%] h-full grid grid-cols-1 md:grid-cols-3  items-center  md:pl-5 lg:pl-14">
+              <div className=" md:h-[70%] min-[640px]:hidden flex flex-col  justify-between ">
                 <a href="#home" className=''>
                   About Us
                 </a>
@@ -172,8 +176,15 @@ const Footer = () => {
               </div>
 
               <div className="h-[70%] flex justify-end pr-2 gap-4 items-end">
-                <RiInstagramLine className='text-white' />
-                <RiLinkedinLine className='text-white' />
+                {/* <RiInstagramLine className='text-white' />
+                <RiLinkedinLine className='text-white' /> */}
+
+                <div
+                  className="p-1 cursor-pointer bg-white"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                >
+                  <RiArrowUpSLine />
+                </div>
               </div>
 
             </div>
@@ -282,7 +293,7 @@ const Footer = () => {
                         ))
                       }
                     </div>
-                    <div  
+                    <div
                       className={`
                         md:hidden 
                 pl-4 overflow-hidden transition-all duration-500 ease-in-out

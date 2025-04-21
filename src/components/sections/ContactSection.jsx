@@ -6,15 +6,15 @@ import { RiArrowDownSLine } from '@remixicon/react'
 const ContactSection = () => {
     return (
         <div>
-            <div id='contact-form' className="w-full md:h-screen  pad my-10 lg:my-20">
+            <div id='contact-form' className="w-full md:h-screen lg:h-[80vh] xl:h-[95vh]   pad my-10 lg:my-36">
                 <div className="w-full  h-full flex flex-col-reverse md:flex-row  ">
-                    <div className=" w-full md:w-1/2 h-full center">
-                        <div className="w-full h-full  overflow-hidden">
-                            <div className="w-full mt-10 flex flex-col gap-2 ">
-                                <h1 className='text-xl md:text-3xl font-semibold'>Begin Your Risk-Free Partnership</h1>
+                    <div className=" w-full md:w-1/2 h-full  center">
+                        <div className="w-full h-full flex flex-col justify-between overflow-hidden">
+                            <div className=" mb-5 md:mb-0 w-full  flex flex-col gap-2 ">
+                                <h1 className='text-xl md:text-2xl lg:text-4xl font-semibold'>Begin Your Risk-Free Partnership</h1>
                                 <p className=' text-sm md:text-xl leading-tight'>Experience the RAS Solution</p>
                             </div>
-                            <div className="w-full md:w-[70%] md:h-[50vh] flex flex-col gap-6 md:gap-8  mt-12">
+                            <div className="w-full  md:w-[70%]  flex flex-col gap-6 md:gap-8  ">
                                 <input type="text" name="" id="" placeholder='Business Name' className='outline-none pb-1 w-full  text-sm  border-b border-[#00000092] ' />
                                 <input type="text" name="" id="" placeholder='Email ID' className='outline-none pb-1 w-full  text-sm  border-b border-[#00000092] ' />
                                 <div className="flex gap-2">
@@ -29,14 +29,14 @@ const ContactSection = () => {
                                     <FormBtn text={"Optimize Your Supply Chain"} />
                                 </div>
                             </div>
-                            <div className="w-full mt-5 md:mt-0 xl:mt-5  ">
-                                <p className=' text-xs lg:text-sm xl:text-xl w-full  md:w-[60%] '>Where every shipment advances the science of safe, sustainable logistics.</p>
+                            <div className="w-full md:w-[70%] bg-gray-100 rounded-xl py-8 p-5   ">
+                                <p className=' leading-tight text-sm xl:text-xl w-full   '>Where every shipment advances the science of safe, sustainable logistics.</p>
                                 <button className=' border-2 border-[#EA1B22] px-2 py-1 rounded-lg mt-3 xl:mt-10 text-[#EA1B22]'>Download Our Brochure</button>
                             </div>
                         </div>
                     </div>
-                    <div className=" w-full md:w-1/2 mb-5 md:pl-10 md:mb-0 h-full overflow-hidden center">
-                        <div className=" w-full h-[85%] rounded-xl overflow-hidden">
+                    <div className=" w-full md:w-1/2 mb-5  md:mb-0 h-full overflow-hidden center">
+                        <div className=" w-full h-full rounded-xl overflow-hidden">
                             <img className='w-full h-full object-cover' src="/images/contact_form.webp" alt="" />
                         </div>
                     </div>

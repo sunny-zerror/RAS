@@ -32,13 +32,13 @@ const IconWithLabel = ({ defaultImg, hoverImg, label }) => {
 
 const OurStrength = () => {
   return (
-    <div className='mt-20 lg:mt-32'>
+    <div className='mt-24 lg:mt-32'>
       <div id='our-edge' className="pad  ">
           <h1 className="text-xl md:text-2xl lg:text-4xl font-semibold mb-5">Our Edge</h1>
           <div className="flex flex-col-reverse md:flex-row items-center justify-between">
         <div className=" w-full md:w-[45%]  h-full flex gap-5 flex-col ">
           <div>
-            <p className="font-semibold text-xs md:text-lg">
+            <p className="font-semibold text-sm leading-tight md:text-lg">
               Built on Responsibility. Driven by Safety. Powered by Expertise.
             </p>
             <p className="mt-2 text-xs md:text-base leading-tight">

@@ -56,7 +56,7 @@ const Header = () => {
       <div id='header' className="w-full fixed top-0 left-0 h-[7vh] md:h-[10vh] z-[99] px-6 md:px-6 lg:px-20 flex items-center justify-between bg-white">
         <div className="w-[20%]">
           <a href="#home">
-            <img className='w-[80%] md:w-[50%] lg:w-[30%]' src="/logos/ras_logo.png" alt="Logo" />
+            <img className='w-[100%] md:w-[50%] lg:w-[30%]' src="/logos/ras_logo.png" alt="Logo" />
           </a>
         </div>
 
