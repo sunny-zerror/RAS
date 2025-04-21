@@ -6,7 +6,7 @@ import { RiArrowDownSLine } from '@remixicon/react'
 const ContactSection = () => {
     return (
         <div>
-            <div id='contact-form' className="w-full md:h-screen lg:h-[65vh] 2xl:h-[90vh]   pad my-10 lg:my-36">
+            <div id='contact-form' className="w-full md:h-screen lg:h-[70vh] 2xl:h-[42vw]   pad my-10 lg:my-36">
                 <div className="w-full  h-full flex flex-col-reverse md:flex-row  ">
                     <div className=" w-full md:w-1/2 h-full  center">
                         <div className="w-full h-full flex flex-col justify-between overflow-hidden">
