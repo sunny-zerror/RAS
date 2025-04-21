@@ -74,7 +74,7 @@ const Section2 = () => {
             <div className="w-full relative   pad ">
                 <div className=" w-full  md:w-[50%] flex flex-col justify-center gap-4  ">
                     <h1 className=' text-xl md:text-2xl lg:text-4xl font-bold'>Understanding the Landscape</h1>
-                    <p className='  text-xs  lg:text-base  leading-tight '>At RAS, we endeavor to create supply chain as interconnected systems rather than isolated transactions. This approach seeks therefore, to develop unified customer experience, resilience, and expertise across all touchpoints.</p>
+                    <p className='  text-sm  lg:text-base  leading-tight '>At RAS, we endeavor to create supply chain as interconnected systems rather than isolated transactions. This approach seeks therefore, to develop unified customer experience, resilience, and expertise across all touchpoints.</p>
                 </div>
 
                 <div className="pb-14 ">

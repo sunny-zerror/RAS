@@ -23,7 +23,7 @@ const IconWithLabel = ({ defaultImg, hoverImg, label }) => {
         />
       </div>
       <div className="h-[8vh]">
-        <p className=" text-xs lg:text-sm  px-4 font-semibold  ">{label}</p>
+        <p className=" text-sm lg:text-sm  px-4 font-semibold  ">{label}</p>
 
       </div>
     </div>
@@ -34,38 +34,38 @@ const OurStrength = () => {
   return (
     <div className='mt-24 lg:mt-32'>
       <div id='our-edge' className="pad  ">
-          <h1 className="text-xl md:text-2xl lg:text-4xl font-semibold mb-5">Our Edge</h1>
-          <div className="flex flex-col-reverse md:flex-row items-center justify-between">
-        <div className=" w-full md:w-[45%]  h-full flex gap-5 flex-col ">
-          <div>
-            <p className="font-semibold text-sm leading-tight md:text-lg">
-              Built on Responsibility. Driven by Safety. Powered by Expertise.
-            </p>
-            <p className="mt-2 text-xs md:text-base leading-tight">
-              We deliver specialized logistics solutions with a sharp focus on safety, sustainability, and performance. Our deep technical know-how, disciplined execution, and tailored approach enable seamless global movement of sensitive and regulated goods across global supply networks.
-            </p>
+        <h1 className="text-xl md:text-2xl lg:text-4xl font-semibold mb-5">Our Edge</h1>
+        <div className="flex flex-col-reverse md:flex-row gap-5 md:gap-0 items-center justify-between">
+          <div className=" w-full md:w-[45%]  h-full flex md:gap-5 gap-8 flex-col ">
+            <div>
+              <p className="font-semibold text-sm leading-tight md:text-lg">
+                Built on Responsibility. Driven by Safety. Powered by Expertise.
+              </p>
+              <p className="mt-2 text-sm md:text-base leading-tight">
+                We deliver specialized logistics solutions with a sharp focus on safety, sustainability, and performance. Our deep technical know-how, disciplined execution, and tailored approach enable seamless global movement of sensitive and regulated goods across global supply networks.
+              </p>
+            </div>
+            <RedBtn text={'Get a Risk Free Audit Today'} />
           </div>
-          <RedBtn text={'Get a Risk Free Audit Today'} />
-        </div>
 
-        <div className="flex mt-0   items-center justify-between md:justify-evenly w-full md:w-[50%] h-full">
-          <IconWithLabel
-            defaultImg="/icons/chemical_precision.webp"
-            hoverImg="/icons/chemical_precision_hover.webp"
-            label="Chemical Fluency"
-          />
-          <IconWithLabel
-            defaultImg="/icons/grade_a_care.webp"
-            hoverImg="/icons/grade_a_care_hover.webp"
-            label="Grade-A Care"
-          />
-          <IconWithLabel
-            defaultImg="/icons/cryochemical_mastery.webp"
-            hoverImg="/icons/cryochemical_mastery_hover.webp"
-            label="Cryochemical Mastery"
-          />
-        </div>
+          <div className="flex mt-0   items-center justify-between md:justify-evenly w-full md:w-[50%] h-full">
+            <IconWithLabel
+              defaultImg="/icons/chemical_precision.webp"
+              hoverImg="/icons/chemical_precision_hover.webp"
+              label="Chemical Fluency"
+            />
+            <IconWithLabel
+              defaultImg="/icons/grade_a_care.webp"
+              hoverImg="/icons/grade_a_care_hover.webp"
+              label="Grade-A Care"
+            />
+            <IconWithLabel
+              defaultImg="/icons/cryochemical_mastery.webp"
+              hoverImg="/icons/cryochemical_mastery_hover.webp"
+              label="Cryochemical Mastery"
+            />
           </div>
+        </div>
       </div>
     </div>
   );

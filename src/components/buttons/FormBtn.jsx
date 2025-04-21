@@ -46,8 +46,8 @@ const FormBtn = ({ text, width = "224px" }) => { // Default to 224px (w-56)
                 >
                     <div
                         ref={arrowRef}
-                        className={`absolute left-0 w-full top-0 gap-3 h-full flex items-center justify-center font-medium  text-xs md:text-base px-4 text-[#EA1B22]  z-10`}
-                        
+                        className={`absolute left-0 w-full top-0 gap-3 h-full flex items-center justify-center font-medium  text-sm md:text-base px-4 text-[#EA1B22]  z-10`}
+
                     >
                         <p className='text-[#EA1B22] font-semibold'>Submit Details</p>
                         <RiArrowRightLine />
@@ -55,14 +55,14 @@ const FormBtn = ({ text, width = "224px" }) => { // Default to 224px (w-56)
 
                     <div
                         ref={textRef}
-                        className={`absolute left-0 w-full top-0 h-full bg-[#EA1B22] flex items-center justify-center font-medium text-white text-xs md:text-base`}
-                        
+                        className={`absolute left-0 w-full top-0 h-full bg-[#EA1B22] flex items-center justify-center font-medium text-white text-sm md:text-base`}
+
                     >
                         {text}
                     </div>
                 </div>
                 <p className='opacity-0 px-5'>
-                {text}
+                    {text}
                 </p>
             </a>
         </div>

@@ -102,7 +102,7 @@ const HowRas = () => {
                                             <p className='text-xl md:text-2xl lg:text-4xl xl:text-4xl font-semibold'>{item.title}</p>
                                         </div>
                                         <div className=" pl-5 md:pl-9">
-                                            <p className=' text-xs lg:text-base  w-full md:w-[80%]'>{item.para}</p>
+                                            <p className=' text-sm lg:text-base  w-full md:w-[80%]'>{item.para}</p>
 
                                         </div>
                                         <div className="pl-5 md:pl-9">

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Section2New = () => {
 
-    const [selectedImage, setselectedImage] = useState("/globe/default.png")
+    const [selectedImage, setselectedImage] = useState("/globe/default.webp")
     const [selectedInfo, setSelectedInfo] = useState({
         title: "",
         desc: ""
@@ -59,32 +59,32 @@ const Section2New = () => {
     const data = [
         {
             title: "Raw Material",
-            img: "/globe/globe1.png",
+            img: "/globe/globe1.webp",
             desc: "From chemicals to food-grade goods, we ensure safe, compliant raw material handling for a seamless supply chain.",
         },
         {
             title: "Manufacturer",
-            img: "/globe/globe2.png",
+            img: "/globe/globe2.webp",
             desc: "We prioritize safety and efficiency, ensuring efficient handling of hazardous chemicals, food-grade goods, and high-value cargo.",
         },
         {
             title: "Storage",
-            img: "/globe/globe3.png",
+            img: "/globe/globe3.webp",
             desc: "We ensure secure, compliant storage, preserving the integrity of chemicals, food-grade goods, and specialized cargo.",
         },
         {
             title: "Distribution",
-            img: "/globe/globe4.png",
+            img: "/globe/globe4.webp",
             desc: "We optimize distribution through our comprehensive agency network and tracking, ensuring end-to-end visibility and zero disruptions. ",
         },
         {
             title: "Retailer",
-            img: "/globe/globe5.png",
+            img: "/globe/globe5.webp",
             desc: "RAS ensures reliable, resilient supply chains, delivering products to retailers on time and in perfect condition.",
         },
         {
             title: "Customer",
-            img: "/globe/globe6.png",
+            img: "/globe/globe6.webp",
             desc: "We ensure reliable, resilient supply chains, delivering products to customer on time and inperfect condition.",
         },
 

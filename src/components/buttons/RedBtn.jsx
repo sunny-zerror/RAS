@@ -56,7 +56,7 @@ const RedBtn = ({ text, link }) => { // Default to 224px (w-56)
 
                         <div
                             ref={textRef}
-                            className={`absolute left-0 w-full top-0 h-full bg-[#EA1B22] flex items-center justify-center font-medium text-white text-xs md:text-base`}
+                            className={`absolute left-0 w-full top-0 h-full bg-[#EA1B22] flex items-center justify-center font-medium text-white text-sm md:text-base`}
 
                         >
                             {text}
@@ -67,13 +67,13 @@ const RedBtn = ({ text, link }) => { // Default to 224px (w-56)
                     </p>
                 </a>
                 <a href={link ?? "#contact-form"} className=' h-10 min-[640px]:hidden    inline-block whitespace-nowrap'>
-                <div
-                        
-                            className={` w-full px-6 rounded-lg  h-full bg-[#EA1B22] flex items-center justify-center font-medium text-white text-xs md:text-base`}
+                    <div
 
-                        >
-                            {text}
-                        </div>
+                        className={` w-full px-6 rounded-lg  h-full bg-[#EA1B22] flex items-center justify-center font-medium text-white text-sm md:text-base`}
+
+                    >
+                        {text}
+                    </div>
                 </a>
             </div>
         </div>
