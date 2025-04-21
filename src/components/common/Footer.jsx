@@ -110,11 +110,11 @@ const Footer = () => {
       <div className="w-full overflow-x-hidden  bg-[#222D37] md:text-xs  xl:text-base  pad ft">
         <div className=" pt-5 md:pt-10">
           <div className="w-full center">
-            <img className='w-[20%] md:w-[8%]' src="/logos/RAS_logo_white.png" alt="" />
+            <img className='w-[35%] md:w-[8%]' src="/logos/RAS_logo_white.png" alt="" />
           </div>
           <div className="w-full md:h-[17vh]   mt-6 flex flex-col md:flex-row items-center justify-between md:border-b md:border-[#FFFFFF]">
             <div className="w-full md:w-[49.5%] h-full grid grid-cols-1 md:grid-cols-3  items-center  lg:pr-14 ">
-              <div className=" md:h-[70%] flex flex-row md:flex-col  justify-between ">
+              <div className=" md:h-[70%] max-[640px]:hidden flex flex-row md:flex-col  justify-between ">
                 <a href="#home" className=''>
                   About Us
                 </a>
@@ -125,13 +125,13 @@ const Footer = () => {
                   Certifications
                 </a>
               </div>
-              <div className=" mt-4 md:mt-0 md:h-[70%] flex flex-col justify-between">
-                <p>Company Building Name</p>
+              <div className=" :mt-0 md:h-[70%] flex flex-col justify-between">
+                <p className='max-[640px]:hidden'>Contact US</p>
                 <p className=' text-xs xl:text-sm flex items-center opacity-80 font-semibold md:font-normal gap-2 mt-2 md:mt-0 '> <RiPhoneFill size={15} /> +91 12345-12345</p>
                 <p className=' text-xs xl:text-sm flex items-center opacity-80 font-semibold md:font-normal gap-2 my-2 md:my-0 '> <RiMailFill size={15} /> info@rascs.in</p>
               </div>
 
-              <div className=" w-full md:h-[70%] flex items-end opacity-80 font-semibold md:font-normal gap-2 mb-5 md:mb-0  text-xs xl:text-sm md:leading-tight">
+              <div className=" border-b md:border-none pb-5 md:pb-0 border-gray-500 w-full md:h-[70%] flex items-end opacity-80 font-semibold md:font-normal gap-2 mb-5 md:mb-0  text-xs xl:text-sm md:leading-tight">
                 <div className="shrink-0 h-full text-white flex items-center  ">
                   <RiMapPinFill size={18} className='translate-y-[-8px]' />
                 </div>
@@ -143,7 +143,18 @@ const Footer = () => {
             </div>
             <div className="w-[.5px] bg-[#FFFFFF] h-[70%] max-[600px]:hidden"></div>
             <div className="w-full md:w-[49.5%] h-full grid grid-cols-1 md:grid-cols-3  items-center  md:pl-5 lg:pl-14">
-              <div className=" md:h-[70%] flex  flex-col justify-between ">
+            <div className=" md:h-[70%] min-[640px]:hidden flex flex-col  justify-between ">
+                <a href="#home" className=''>
+                  About Us
+                </a>
+                <a href="#our-services" className=''>
+                  Our Services
+                </a>
+                <a href="#certifications" className=''>
+                  Certifications
+                </a>
+              </div>
+              <div className="  mt-4 md:h-[70%] flex  flex-col justify-between ">
                 <a href="" className=''>
                   Chemical Logistics
                 </a>

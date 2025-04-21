@@ -54,10 +54,10 @@ const HowRas = () => {
     }, [swiperInstance, prevRef, nextRef]);
 
     return (
-        <div id='our-approach' className="story_swiper_classname_container relative pad mt-0 lg:mt-20 ">
+        <div id='our-approach' className="story_swiper_classname_container  relative  pad mt-0 lg:mt-20 ">
             <h1 className='text-xl md:text-2xl lg:text-4xl font-semibold mb-8 '>How RAS Makes It Happen</h1>
-            <div className="absolute  top-[95%] pl-10 md:pl-0 md:top-0   flex w-full  right-0 z-[90] items-center md:justify-end ">
-                <div className="flex  pr-5 md:pr-14 gap-4 ">
+            <div className="absolute  max-[640px]:-bottom-6 pl-10 md:pl-0 md:top-0   flex w-full  right-0 z-[90] items-center md:justify-end ">
+                <div className="flex  pr-5 md:pr-14 gap-2 ">
                     <button
                         ref={prevRef}
                         className={`p-2  shrink-0 text-[#EA1B22] border-[#EA1B22] rounded-full border z-10 transition-opacity duration-300 ${currentSlide === 0 ? 'border-gray-800 text-black opacity-40 cursor-not-allowed' : ''
@@ -89,7 +89,7 @@ const HowRas = () => {
                 {
                     data.map((item, index) => (
                         <SwiperSlide key={item.id}>
-                            <div className="w-full h-[70vh] flex flex-col md:flex-row items-center justify-between">
+                            <div className="w-full md:h-[70vh] flex flex-col md:flex-row items-center justify-between">
                                 <div className=" w-full md:w-[50%]  overflow-hidden rounded-2xl h-full">
                                     <img className=' w-full h-full object-cover' src={item.img} alt="" />
                                 </div>

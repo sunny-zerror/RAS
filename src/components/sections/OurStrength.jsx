@@ -32,7 +32,7 @@ const IconWithLabel = ({ defaultImg, hoverImg, label }) => {
 
 const OurStrength = () => {
   return (
-    <div className='mt-10 lg:mt-32'>
+    <div className='mt-20 lg:mt-32'>
       <div id='our-edge' className="pad  ">
           <h1 className="text-xl md:text-2xl lg:text-4xl font-semibold mb-5">Our Edge</h1>
           <div className="flex flex-col-reverse md:flex-row items-center justify-between">
@@ -48,7 +48,7 @@ const OurStrength = () => {
           <RedBtn text={'Get a Risk Free Audit Today'} />
         </div>
 
-        <div className="flex mt-0  items-center justify-evenly w-full md:w-[50%] h-full">
+        <div className="flex mt-0   items-center justify-between md:justify-evenly w-full md:w-[50%] h-full">
           <IconWithLabel
             defaultImg="/icons/chemical_precision.webp"
             hoverImg="/icons/chemical_precision_hover.webp"

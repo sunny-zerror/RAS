@@ -9,7 +9,7 @@ const ContactSection = () => {
             <div id='contact-form' className="w-full md:h-screen  pad my-10 lg:my-20">
                 <div className="w-full  h-full flex flex-col-reverse md:flex-row  ">
                     <div className=" w-full md:w-1/2 h-full center">
-                        <div className="w-full h-full rounded-xl overflow-hidden">
+                        <div className="w-full h-full  overflow-hidden">
                             <div className="w-full mt-10 flex flex-col gap-2 ">
                                 <h1 className='text-xl md:text-3xl font-semibold'>Begin Your Risk-Free Partnership</h1>
                                 <p className=' text-sm md:text-xl leading-tight'>Experience the RAS Solution</p>
@@ -29,7 +29,7 @@ const ContactSection = () => {
                                     <FormBtn text={"Optimize Your Supply Chain"} />
                                 </div>
                             </div>
-                            <div className="w-full  xl:mt-5 ">
+                            <div className="w-full mt-5 md:mt-0 xl:mt-5  ">
                                 <p className=' text-xs lg:text-sm xl:text-xl w-full  md:w-[60%] '>Where every shipment advances the science of safe, sustainable logistics.</p>
                                 <button className=' border-2 border-[#EA1B22] px-2 py-1 rounded-lg mt-3 xl:mt-10 text-[#EA1B22]'>Download Our Brochure</button>
                             </div>

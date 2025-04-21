@@ -39,10 +39,11 @@ const RedBtn = ({ text, link }) => { // Default to 224px (w-56)
 
     return (
         <div>
-            <a href={link ?? "#contact-form"} className=' h-10   inline-block whitespace-nowrap'>
+            <div className="w-full h-full flex items-center ">
+            <a href={link ?? "#contact-form"} className=' h-10    inline-block whitespace-nowrap'>
                 <div
                     ref={wrapperRef}
-                    className={`relative h-10 w-full border-2 border-[#EA1B22] overflow-hidden rounded-lg cursor-pointer`}
+                    className={`relative h-10 w-full border-2  border-[#EA1B22] overflow-hidden rounded-lg cursor-pointer`}
                     
                 >
                     <div
@@ -65,6 +66,7 @@ const RedBtn = ({ text, link }) => { // Default to 224px (w-56)
                 {text}
                 </p>
             </a>
+            </div>
         </div>
     );
 };

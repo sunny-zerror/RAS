@@ -43,6 +43,12 @@ h1{
   font-family: gilroy-bold;
   color: #222D37;
 }
+@media (max-width: 640px) {
+  h1 {
+  font-family: gilroy-semi-bold;
+  color: #222D37;
+  }
+}
 h2{
   font-family: gilroy-semi-bold;
   color: #222D37;

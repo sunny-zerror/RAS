@@ -158,7 +158,7 @@ export const Tank = ({ title, subtitle, description, highlights, changeHighlight
                                             <div
                                                 key={idx}
                                                 onClick={() => setSelectedImage(tank.image)}
-                                                className={` w-[45%] md:w-[30%]  xl:w-[20%] rounded-xl cursor-pointer transition-all duration-300 px-3 py-2 flex flex-col gap-2
+                                                className={` w-[30%] py-2  xl:w-[20%] rounded-xl cursor-pointer transition-all duration-300   flex flex-col gap-2
                                         ${isSelected ? 'border shadow-lg border-[#c4c4c4]' : ''}`}
                                             >
                                                 <p className=' text-xs lg:text-sm font-semibold text-center'>{tank.label}</p>
