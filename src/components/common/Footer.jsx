@@ -126,7 +126,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className=" :mt-0 md:h-[70%] flex flex-col justify-between">
-                <p className='max-[640px]:hidden'>Contact US</p>
+                <p className='max-[640px]:hidden'>Contact Us</p>
                 <p className=' text-xs xl:text-sm flex items-center opacity-80 font-semibold md:font-normal gap-2 mt-2 md:mt-0 '> <RiPhoneFill size={15} /> +91 12345-12345</p>
                 <p className=' text-xs xl:text-sm flex items-center opacity-80 font-semibold md:font-normal gap-2 my-2 md:my-0 '> <RiMailFill size={15} /> info@rascs.in</p>
               </div>
