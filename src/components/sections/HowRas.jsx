@@ -81,7 +81,7 @@ const HowRas = () => {
                 modules={[Navigation, A11y]}
                 spaceBetween={10}
                 slidesPerView={1}
-                speed={1000}
+                speed={600}
                 onSwiper={setSwiperInstance}
                 onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
                 className="story_swiper_classname_swiper"

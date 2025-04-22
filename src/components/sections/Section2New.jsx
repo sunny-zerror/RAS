@@ -128,6 +128,7 @@ const Section2New = () => {
                                     initial={{ y: "1vh", opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
                                     exit={{ y: "-1vh", opacity: 0 }}
+                                    className='w-full mt-5 md:mt-0 h-[12vh]'
                                     transition={{ duration: 0.3, ease: "easeInOut" }}
                                 >
                                     <h2 className="text-lg lg:text-xl font-medium cursor-default mb-2">
@@ -143,8 +144,8 @@ const Section2New = () => {
 
                     </div>
                     <div className=" w-full md:w-1/2 h-full relative   center ">
-                        <div className="  relative w-full h-auto">
-                            <img className="w-full scale-[.8] md:scale-75 h-auto block" src={selectedImage} alt="" />
+                        <div className=" scale-125 md:scale-100  relative w-full h-auto">
+                            <img className="w-full scale-75 h-auto block" src={selectedImage} alt="" />
                             {
                                 markers.map((marker, index) => (
                                     <div
