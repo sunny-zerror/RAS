@@ -54,82 +54,89 @@ const steps = [
 ];
 
 const ScrollServices = () => {
-  const [currentImage, setCurrentImage] = useState(steps[0].image);
-  const sectionsRef = useRef([]);
+  const [image, setImage] = useState(steps[0].image);
+  const imageRef = useRef();
 
   useEffect(() => {
-    import("gsap/ScrollTrigger").then((module) => {
-      const ScrollTrigger = module.ScrollTrigger;
+    import("gsap/ScrollTrigger").then(({ ScrollTrigger }) => {
       gsap.registerPlugin(ScrollTrigger);
-  
-      // Image swap based on section
-      sectionsRef.current.forEach((section, index) => {
+
+      const sections = gsap.utils.toArray("[id^=section_]");
+
+      sections.forEach((section, index) => {
         ScrollTrigger.create({
           trigger: section,
           start: "top center",
-          end: "bottom center",
-          onEnter: () => setCurrentImage(steps[index].image),
-          onEnterBack: () => setCurrentImage(steps[index].image),
+          onEnter: () => setImage(steps[index].image),
+          onEnterBack: () => setImage(steps[index].image),
         });
       });
-  
-      // Total scrollable area
-      const totalScrollLength = sectionsRef.current.length;
-      
-      // Smooth rotation over all sections
-      gsap.to("#scroll_img", {
-        rotation: -360 * (totalScrollLength - 1),
+
+      // Pin and scroll the whole container
+      gsap.to(sections, {
+        yPercent: -100 * (sections.length - 1),
         ease: "none",
         scrollTrigger: {
           trigger: "#scroll_parent",
           start: "top top",
-          end: "bottom bottom",
-          scrub: true,
-          // markers: true, // remove in prod
+          scrub: 1,
+          pin: true,
+          end: "+=" + window.innerHeight * (sections.length),
+          snap: 1 / (sections.length - 1),
+          // markers: true,
+        },
+      });
+      
+      gsap.to(imageRef.current, {
+        rotate: -360 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#scroll_parent",
+          start: "top top",
+          scrub: 1,
+          end: "+=" + window.innerHeight * (sections.length),
         },
       });
     });
   }, []);
-  
-  
-  
-  
 
   return (
-    <div id="scroll_parent" className="relative my-20 w-full text-white">
-      <div className="w-full h-full flex">
-        {/* Left column with the image */}
-        <div className="w-[40%] h-screen sticky top-0 flex items-center justify-center">
+    <div id="scroll_parent" className="relative my-20 pt-[4vh] h-screen  w-full text-white overflow-hidden">
+      <p className="text-2xl min-[640px]:hidden font-semibold  text-center my-5">From Insight to Impact</p>
+      <div className="w-full h-full flex flex-col md:flex-row">
+        {/* Image Section */}
+        <div className=" w-full md:w-[40%]  h-[50vh] md:h-screen sticky top-0 flex items-center justify-center">
           <img
+            ref={imageRef}
             id="scroll_img"
-            className="w-[100%] translate-x-[-40%] translate-y-10"
-            src={currentImage}
+            className=" w-[80%] md:w-[100%] md:translate-x-[-40%] md:translate-y-10"
+            src={image}
             alt="Rotating Circle"
           />
         </div>
 
-        {/* Right column with scrollable pinned sections */}
-        <div className="w-[60%]  flex flex-col relative">
-          
+        {/* Sections */}
+        <div className=" w-full  md:w-[60%] md:pt-5 h-[50vh] md:h-full relative">
           {steps.map((step, index) => (
-            <section
+            <div
               key={index}
-              ref={(el) => (sectionsRef.current[index] = el)}
-              className={`h-screen  flex flex-col bg-white justify-center gap-10 `}
+              id={`section_${index}`}
+              className="h-screen flex flex-col bg-white justify-center gap-10 p-10"
             >
-              <div className="">
-
-              <p className="text-3xl font-semibold ">{step.title}</p>
-              <p className="text-xl mt-2 ">{step.subtitle}</p>
+              <div>
+                <p className="text-3xl font-semibold text-black">{step.title}</p>
+                <p className="text-xl mt-2 text-black">{step.subtitle}</p>
               </div>
-              <p className="text-md w-[70%] leading-tight ">{step.description}</p>
-              <BorderBtn text={step.button} link={"#contact-form"} width="100%" />
-            </section>
+              <p className="text-md w-[70%] leading-tight text-black">
+                {step.description}
+              </p>
+              <BorderBtn text={step.button} link="#contact-form" width="100%" />
+            </div>
           ))}
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default ScrollServices;

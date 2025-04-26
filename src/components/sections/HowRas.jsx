@@ -99,7 +99,7 @@ const HowRas = () => {
                                             <div className="   md:size-5 center">
                                                 <img className='w-[50%]' src="/icons/Ellipse 30.png" alt="" />
                                             </div>
-                                            <p className='text-xl md:text-2xl lg:text-4xl xl:text-4xl font-semibold'>{item.title}</p>
+                                            <p className='text-2xl lg:text-4xl xl:text-4xl font-semibold'>{item.title}</p>
                                         </div>
                                         <div className=" pl-5 md:pl-9">
                                             <p className=' text-sm lg:text-base  w-full md:w-[80%]'>{item.para}</p>
