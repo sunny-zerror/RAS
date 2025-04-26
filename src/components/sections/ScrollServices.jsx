@@ -85,7 +85,7 @@ const ScrollServices = () => {
           start: "top top",
           end: "bottom bottom",
           scrub: true,
-          markers: true, // remove in prod
+          // markers: true, // remove in prod
         },
       });
     });
