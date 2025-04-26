@@ -241,7 +241,7 @@ const Tanks = () => {
                             className={`px-4 shrink-0  text-xs lg:text-sm font-semibold py-2 rounded-full transition-all duration-200
                                 ${selectedTank.title === tank.title
                                     ? 'bg-[#EA1B22] text-white'
-                                    : 'border border-gray-700 text-black opacity-50'}`}
+                                    : 'border border-gray-700 hover:opacity-80  hover:bg-gray-100 text-black opacity-50'}`}
                         >
                             {tank.title}
                         </button>

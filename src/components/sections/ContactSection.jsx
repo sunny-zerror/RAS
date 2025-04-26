@@ -2,6 +2,7 @@ import React from 'react'
 import RedBtn from '../buttons/RedBtn'
 import FormBtn from '../buttons/FormBtn'
 import { RiArrowDownSLine } from '@remixicon/react'
+import BorderBtn from '../buttons/BorderBtn'
 
 const ContactSection = () => {
     return (
@@ -31,7 +32,10 @@ const ContactSection = () => {
                             </div>
                             <div className="w-full md:w-[70%] bg-gray-100 rounded-xl py-8 p-5   ">
                                 <p className=' leading-tight text-sm xl:text-xl w-full   '>Where every shipment advances the science of safe, sustainable logistics.</p>
-                                <button className=' border-2 border-[#EA1B22] px-2 py-1 rounded-lg mt-3 xl:mt-10 text-[#EA1B22]'>Download Our Brochure</button>
+                                <div className="mt-3 xl:mt-10">
+
+                                <BorderBtn  text={"Download Our Brochure"} link={""} width="100%" />
+                                </div>
                             </div>
                         </div>
                     </div>

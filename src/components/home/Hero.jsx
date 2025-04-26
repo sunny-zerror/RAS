@@ -9,6 +9,7 @@ import Tanks from '../sections/Tanks'
 import OurServices from '../sections/OurServices'
 import ContactSection from '../sections/ContactSection'
 import Section2New from '../sections/Section2New'
+import ScrollServices from '../sections/ScrollServices'
 
 const Hero = () => {
 
@@ -20,7 +21,8 @@ const Hero = () => {
       {/* <Section2/> */}
       <HowRas/>
       <OurStrength/>
-      <OurServices/>
+      <ScrollServices/>
+      {/* <OurServices/> */}
       {/* <Stories/> */}
       <Tanks/>
       <Certifications/>

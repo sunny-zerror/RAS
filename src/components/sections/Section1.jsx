@@ -6,7 +6,11 @@ const Section1 = () => {
         <div>
             <div id='home' className="w-full relative h-[100dvh] lg:h-[180vh] pt-[12vh]  bg-[url('/images/hero_section.webp')] bg-cover bg-center">
                 <div className="w-fit  mt-[10vh] md:mt-[20vh] z-[99]  h-[40vh] flex flex-col gap-5 justify-center">
-                    <p className='  text-3xl md:text-5xl font-bold pad text-black'>Global Supply Chain </p>
+                    <div className="pad">
+
+                    <p className='  text-3xl md:text-5xl font-bold  text-black'>Supply Chain Solutions</p>
+                    <p className='md:mt-2 text-sm md:text-lg'>Responsible, safe, sustainable</p>
+                    </div>
                     <div className="flex pad items-center  gap-5 ">
                         <RedBtn text={"Explore Services"} link={"#our-services"} />
                         <a href="#contact-form">
