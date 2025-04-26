@@ -68,12 +68,12 @@ const ScrollServices = () => {
     const stepList = isMobile ? mobileSteps : desktopSteps;
     setSteps(stepList);
     setImage(stepList[0].image);
-  
+
     import("gsap/ScrollTrigger").then(({ ScrollTrigger }) => {
       gsap.registerPlugin(ScrollTrigger);
-  
+
       const sections = gsap.utils.toArray("[id^=section_]");
-  
+
       // 💬 Animate sections moving up
       gsap.to(sections, {
         yPercent: -100 * (sections.length - 1),
@@ -88,7 +88,7 @@ const ScrollServices = () => {
           // markers: true,
         },
       });
-  
+
       // 💬 Rotate and change image
       ScrollTrigger.create({
         trigger: "#our-services",
@@ -100,40 +100,41 @@ const ScrollServices = () => {
           const currentStep = Math.floor(progress * sections.length);
           const clampedStep = Math.min(currentStep, sections.length - 1);
           setImage(stepList[clampedStep].image);
-  
+
           if (imageRef.current) {
             const totalRotation = -360 * (sections.length - 1);
             imageRef.current.style.transform = `rotate(${totalRotation * progress}deg)`;
           }
         },
       });
-  
+
     });
   }, []);
   
-  
-  
+
+
+
 
   return (
     <div id="our-services" className="relative my-20 pt-[7vh] md:pt-0 h-screen w-full text-white overflow-hidden">
       <p className="text-2xl min-[640px]:hidden font-semibold text-center my-4">From Insight to Impact</p>
-      <div className="absolute w-full text-3xl max-[640px]:hidden font-semibold top-0 h-[25vh] items-end justify-end flex z-[9]">
+      <div className="absolute w-full  max-[640px]:hidden font-semibold top-0 h-[25vh] items-end justify-end flex z-[9]">
         <div className="w-[60%] h-full flex items-end bg-white">
-          <h1>From Insight to Impact</h1>
+          <h1 className="text-xl md:text-2xl lg:text-4xl font-bold">From Insight to Impact</h1>
         </div>
       </div>
       <div className="w-full h-full flex flex-col md:flex-row justify-between">
         {/* Image Section */}
         <div className="w-full md:w-[40%] h-[40vh] md:h-screen sticky top-0 flex items-center justify-center">
           <div className=" w-full center md:translate-x-[-40%] md:translate-y-10">
-          <img
-            ref={imageRef}
-            id="scroll_img"
-            className="w-[60%] md:w-[100%] "
-            src={image}
-            alt="Rotating Circle"
+            <img
+              ref={imageRef}
+              id="scroll_img"
+              className="w-[60%] md:w-[100%] "
+              src={image}
+              alt="Rotating Circle"
             />
-            </div>
+          </div>
         </div>
 
         {/* Sections */}
