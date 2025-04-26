@@ -65,14 +65,14 @@ const BorderBtn = ({ text, link, width }) => {
                             {text}
                         </div>
                     </div>
-                    <p className='opacity-0 px-1 md:px-5'>
+                    <p className='opacity-0 px-1 md:px-8'>
                         {text}
                     </p>
                 </a>
-                <a href={link ?? "#contact-form"} className=' h-10 min-[640px]:hidden    inline-block whitespace-nowrap'>
+                <a href={link ?? "#contact-form"} className=' h-9 min-[640px]:hidden    inline-block whitespace-nowrap'>
                     <div
 
-                        className={` w-${width} px-6 rounded-lg  h-full border-2  border-[#EA1B22] flex items-center justify-center font-medium text-[#EA1B22] text-sm md:text-base`}
+                        className={` w-${width} px-10 rounded-lg  h-full border-2  border-[#EA1B22] flex items-center justify-center font-medium text-[#EA1B22] text-sm md:text-base`}
 
                     >
                         {text}
