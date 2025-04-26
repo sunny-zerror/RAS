@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import BorderBtn from "../buttons/BorderBtn";
 
-const steps = [
+const desktopSteps = [
   {
     title: "Initial Inquiry",
     subtitle: "Establishing the first point of contact",
@@ -53,11 +53,21 @@ const steps = [
   },
 ];
 
+const mobileSteps = desktopSteps.map((step, index) => ({
+  ...step,
+  image: `/images/services/mobile_circle${index + 1}.png`,
+}));
+
 const ScrollServices = () => {
-  const [image, setImage] = useState(steps[0].image);
+  const [steps, setSteps] = useState(desktopSteps);
+  const [image, setImage] = useState(desktopSteps[0].image);
   const imageRef = useRef();
 
   useEffect(() => {
+    const isMobile = window.innerWidth <= 640; // You can adjust the breakpoint if needed
+    setSteps(isMobile ? mobileSteps : desktopSteps);
+    setImage(isMobile ? mobileSteps[0].image : desktopSteps[0].image);
+
     import("gsap/ScrollTrigger").then(({ ScrollTrigger }) => {
       gsap.registerPlugin(ScrollTrigger);
 
@@ -67,8 +77,8 @@ const ScrollServices = () => {
         ScrollTrigger.create({
           trigger: section,
           start: "top center",
-          onEnter: () => setImage(steps[index].image),
-          onEnterBack: () => setImage(steps[index].image),
+          onEnter: () => setImage((isMobile ? mobileSteps : desktopSteps)[index].image),
+          onEnterBack: () => setImage((isMobile ? mobileSteps : desktopSteps)[index].image),
         });
       });
 
@@ -77,7 +87,7 @@ const ScrollServices = () => {
         yPercent: -100 * (sections.length - 1),
         ease: "none",
         scrollTrigger: {
-          trigger: "#scroll_parent",
+          trigger: "#our-services",
           start: "top top",
           scrub: 1,
           pin: true,
@@ -86,12 +96,13 @@ const ScrollServices = () => {
           // markers: true,
         },
       });
-      
+
+      // Rotate Image
       gsap.to(imageRef.current, {
         rotate: -360 * (sections.length - 1),
         ease: "none",
         scrollTrigger: {
-          trigger: "#scroll_parent",
+          trigger: "#our-services",
           start: "top top",
           scrub: 1,
           end: "+=" + window.innerHeight * (sections.length),
@@ -101,42 +112,46 @@ const ScrollServices = () => {
   }, []);
 
   return (
-    <div id="scroll_parent" className="relative my-20 pt-[4vh] md:pt-0 h-screen  w-full text-white overflow-hidden">
-      <p className="text-2xl min-[640px]:hidden font-semibold  text-center my-4">From Insight to Impact</p>
+    <div id="our-services" className="relative my-20 pt-[4vh] md:pt-0 h-screen w-full text-white overflow-hidden">
+      <p className="text-2xl min-[640px]:hidden font-semibold text-center my-4">From Insight to Impact</p>
+      <div className="absolute w-full text-3xl max-[640px]:hidden font-semibold top-0 h-[25vh] items-end justify-end flex z-[9]">
+        <div className="w-[60%] h-full flex items-end bg-white">
+          <h1>From Insight to Impact</h1>
+        </div>
+      </div>
       <div className="w-full h-full flex flex-col md:flex-row justify-between">
         {/* Image Section */}
-        <div className=" w-full md:w-[40%]  h-[40vh] md:h-screen sticky top-0 flex items-center justify-center">
+        <div className="w-full md:w-[40%] h-[40vh] md:h-screen sticky top-0 flex items-center justify-center">
           <img
             ref={imageRef}
             id="scroll_img"
-            className=" w-[60%] md:w-[100%] md:translate-x-[-40%] md:translate-y-10"
+            className="w-[60%] md:w-[100%] md:translate-x-[-40%] md:translate-y-10"
             src={image}
             alt="Rotating Circle"
           />
         </div>
 
         {/* Sections */}
-        <div className="h-[50vh] overflow-hidden md:h-full w-full  md:w-[60%]">
-        <div className=" w-full md:pt-5 h-full relative">
-          {steps.map((step, index) => (
-            <div
-              key={index}
-              id={`section_${index}`}
-              className="h-full flex flex-col bg-white md:justify-center gap-5 md:gap-10 pad  md:p-0"
-            >
-              <div>
-                <p className=" text-xl md:text-3xl font-semibold ">{step.title}</p>
-                <p className=" text-base md:text-xl mt-2  leading-tight ">{step.subtitle}</p>
+        <div className="h-[50vh] overflow-hidden md:h-full w-full md:w-[60%]">
+          <div className="w-full md:pt-10 h-full relative">
+            {steps.map((step, index) => (
+              <div
+                key={index}
+                id={`section_${index}`}
+                className="h-full flex flex-col bg-white md:justify-center gap-5 md:gap-10 pad md:p-0"
+              >
+                <div>
+                  <p className="text-xl md:text-3xl font-semibold">{step.title}</p>
+                  <p className="text-base md:text-xl mt-2 leading-tight">{step.subtitle}</p>
+                </div>
+                <p className="text-sm md:text-base w-full md:w-[70%] leading-tight">
+                  {step.description}
+                </p>
+                <BorderBtn text={step.button} link="#contact-form" width="100%" />
               </div>
-              <p className=" text-sm md:text-base w-full md:w-[70%] leading-tight ">
-                {step.description}
-              </p>
-              <BorderBtn text={step.button} link="#contact-form" width="100%" />
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-        </div>
-
       </div>
     </div>
   );

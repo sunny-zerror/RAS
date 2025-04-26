@@ -16,11 +16,11 @@ const Hero = () => {
 
   return (
     <div>
-      <Section1/>
-      <Section2New/>
+      {/* <Section1/>
+      <Section2New/> */}
       {/* <Section2/> */}
-      <HowRas/>
-      <OurStrength/>
+      {/* <HowRas/>
+      <OurStrength/> */}
       <ScrollServices/>
       {/* <OurServices/> */}
       {/* <Stories/> */}
