@@ -101,7 +101,7 @@ const ScrollServices = () => {
   }, []);
 
   return (
-    <div id="scroll_parent" className="relative my-20 pt-[4vh] h-screen  w-full text-white overflow-hidden">
+    <div id="scroll_parent" className="relative my-20 pt-[4vh] md:pt-0 h-screen  w-full text-white overflow-hidden">
       <p className="text-2xl min-[640px]:hidden font-semibold  text-center my-5">From Insight to Impact</p>
       <div className="w-full h-full flex flex-col md:flex-row">
         {/* Image Section */}
