@@ -4,7 +4,7 @@ import RedBtn from '../buttons/RedBtn'
 const Section1 = () => {
     return (
         <div>
-            <div id='home' className="w-full relative h-[100dvh] lg:h-[180vh] pt-[12vh]  bg-[url('/images/hero_section.webp')] bg-cover bg-center">
+            <div id='home' className="w-full relative h-[90vh] lg:h-[180vh] pt-[12vh]  bg-[url('/images/hero_section.webp')] bg-cover bg-center">
                 <div className="w-fit  mt-[10vh] md:mt-[20vh] z-[99]  h-[40vh] flex flex-col gap-5 justify-center">
                     <div className="pad">
 
