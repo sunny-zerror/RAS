@@ -64,52 +64,55 @@ const ScrollServices = () => {
   const imageRef = useRef();
 
   useEffect(() => {
-    const isMobile = window.innerWidth <= 640; // You can adjust the breakpoint if needed
-    setSteps(isMobile ? mobileSteps : desktopSteps);
-    setImage(isMobile ? mobileSteps[0].image : desktopSteps[0].image);
-
+    const isMobile = window.innerWidth <= 640;
+    const stepList = isMobile ? mobileSteps : desktopSteps;
+    setSteps(stepList);
+    setImage(stepList[0].image);
+  
     import("gsap/ScrollTrigger").then(({ ScrollTrigger }) => {
       gsap.registerPlugin(ScrollTrigger);
-
+  
       const sections = gsap.utils.toArray("[id^=section_]");
-
-      sections.forEach((section, index) => {
-        ScrollTrigger.create({
-          trigger: section,
-          start: "top center",
-          onEnter: () => setImage((isMobile ? mobileSteps : desktopSteps)[index].image),
-          onEnterBack: () => setImage((isMobile ? mobileSteps : desktopSteps)[index].image),
-        });
-      });
-
-      // Pin and scroll the whole container
+  
+      // 💬 Animate sections moving up
       gsap.to(sections, {
         yPercent: -100 * (sections.length - 1),
         ease: "none",
         scrollTrigger: {
           trigger: "#our-services",
           start: "top top",
+          end: "+=" + window.innerHeight * sections.length,
           scrub: 1,
           pin: true,
-          end: "+=" + window.innerHeight * (sections.length),
           snap: 1 / (sections.length - 1),
           // markers: true,
         },
       });
-
-      // Rotate Image
-      gsap.to(imageRef.current, {
-        rotate: -360 * (sections.length - 1),
-        ease: "none",
-        scrollTrigger: {
-          trigger: "#our-services",
-          start: "top top",
-          scrub: 1,
-          end: "+=" + window.innerHeight * (sections.length),
+  
+      // 💬 Rotate and change image
+      ScrollTrigger.create({
+        trigger: "#our-services",
+        start: "top top",
+        end: "+=" + window.innerHeight * sections.length,
+        scrub: 1,
+        onUpdate: (self) => {
+          const progress = self.progress;
+          const currentStep = Math.floor(progress * sections.length);
+          const clampedStep = Math.min(currentStep, sections.length - 1);
+          setImage(stepList[clampedStep].image);
+  
+          if (imageRef.current) {
+            const totalRotation = -360 * (sections.length - 1);
+            imageRef.current.style.transform = `rotate(${totalRotation * progress}deg)`;
+          }
         },
       });
+  
     });
   }, []);
+  
+  
+  
 
   return (
     <div id="our-services" className="relative my-20 pt-[4vh] md:pt-0 h-screen w-full text-white overflow-hidden">
@@ -122,13 +125,15 @@ const ScrollServices = () => {
       <div className="w-full h-full flex flex-col md:flex-row justify-between">
         {/* Image Section */}
         <div className="w-full md:w-[40%] h-[40vh] md:h-screen sticky top-0 flex items-center justify-center">
+          <div className=" w-full center md:translate-x-[-40%] md:translate-y-10">
           <img
             ref={imageRef}
             id="scroll_img"
-            className="w-[60%] md:w-[100%] md:translate-x-[-40%] md:translate-y-10"
+            className="w-[60%] md:w-[100%] "
             src={image}
             alt="Rotating Circle"
-          />
+            />
+            </div>
         </div>
 
         {/* Sections */}
