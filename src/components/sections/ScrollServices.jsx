@@ -126,7 +126,7 @@ const ScrollServices = () => {
       <div className="w-full h-full flex flex-col md:flex-row justify-between">
         {/* Image Section */}
         <div className="w-full md:w-[40%] h-[40vh] md:h-screen sticky top-0 flex items-center justify-center">
-          <div className=" w-full center md:translate-y-10">
+          <div className=" w-full center -rotate-90 md:translate-y-10">
             <img
               ref={imageRef}
               id="scroll_img"
