@@ -137,7 +137,7 @@ export const Tank = ({ title, subtitle, description, highlights, changeHighlight
                         <p className='  mt-2 md:mt-0 mb-5 md:mb-0 text-sm opacity-80  leading-tight md:text-sm xl:text-sm  '>{description}</p>
 
                         <div className="w-full h-fit     flex flex-col md:flex-row ">
-                            <div className=" w-full py-5 md:py-0  md:w-[50%] center h-[20vh]  md:h-[50vh]">
+                            <div className=" w-full py-5 md:py-0   md:w-[50%] center h-[30vh]  md:h-[50vh]">
                                 <motion.img
                                     key={selectedImage}
                                     initial={{ opacity: 0 }}
