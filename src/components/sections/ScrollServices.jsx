@@ -116,7 +116,7 @@ const ScrollServices = () => {
 
 
   return (
-    <div id="our-services" className="relative my-20 pt-[7vh] md:pt-0 h-screen w-full text-white overflow-hidden">
+    <div id="our-services" className="relative my-10 pt-[7vh] md:pt-0 h-screen w-full text-white overflow-hidden">
       <p className="text-2xl min-[640px]:hidden font-semibold text-center my-4">From Insight to Impact</p>
       <div className="absolute w-full  max-[640px]:hidden font-semibold top-0 h-[25vh] items-end justify-end flex z-[9]">
         <div className="w-[60%] h-full flex items-end bg-white">

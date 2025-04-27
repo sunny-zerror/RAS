@@ -32,11 +32,11 @@
 @tailwind utilities;
 
 *{
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
-body::-webkit-scrollbar{
+/* body::-webkit-scrollbar{
   display: none;
-}
+} */
 .center{
   display: flex;
   justify-content: center;
@@ -111,7 +111,7 @@ a{
   #our-services,
   #our-fleet,
   #contact-form {
-    scroll-margin-top: 7vh;
+    scroll-margin-top: 8vh;
   }
   
 }

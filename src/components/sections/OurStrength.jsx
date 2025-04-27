@@ -32,7 +32,7 @@ const IconWithLabel = ({ defaultImg, hoverImg, label }) => {
 
 const OurStrength = () => {
   return (
-    <div className='mt-24 lg:mt-32 overflow-hidden'>
+    <div className='pt-24 lg:pt-32 overflow-hidden'>
       <div id='our-edge' className="pad  ">
         <h1 className="text-xl md:text-2xl lg:text-4xl font-semibold mb-5">Our Edge</h1>
         <div className="flex flex-col-reverse md:flex-row gap-5 md:gap-0 items-center justify-between">
