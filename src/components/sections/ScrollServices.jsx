@@ -102,7 +102,7 @@ const ScrollServices = () => {
           setImage(stepList[clampedStep].image);
 
           if (imageRef.current) {
-            const totalRotation = 360 ;
+            const totalRotation = 300 ;
             imageRef.current.style.transform = `rotate(${totalRotation * progress}deg)`;
           }
         },

@@ -54,9 +54,9 @@ const HowRas = () => {
     }, [swiperInstance, prevRef, nextRef]);
 
     return (
-        <div id='our-approach' className="story_swiper_classname_container  relative  pad mt-0 lg:mt-20 overflow-hidden ">
+        <div id='our-approach' className="story_swiper_classname_container  relative  pad mt-0 lg:mt-20 ">
             <h1 className='text-xl md:text-2xl lg:text-4xl font-semibold mb-8 '>How RAS Makes It Happen</h1>
-            <div className="absolute  max-[640px]:-bottom-10 pl-10 md:pl-0 md:top-0   flex w-full  right-0 z-[90] items-center md:justify-end ">
+            <div className="absolute  max-[640px]:-bottom-10 pl-6 md:pl-0 md:top-0   flex w-full  right-0 z-[90] items-center md:justify-end ">
                 <div className="flex  pr-5 md:pr-14 gap-2 ">
                     <button
                         ref={prevRef}
@@ -95,17 +95,11 @@ const HowRas = () => {
                                 </div>
                                 <div className=" w-full md:w-[45%] h-full center pt-5 md:pt-0">
                                     <div className="flex flex-col  h-full md:h-[50%] items-start gap-5   w-full ">
-                                        <div className="flex w-full  items-center  gap-1 md:gap-3 ">
-                                            <div className="   md:size-5 center">
-                                                <img className='w-[50%]' src="/icons/Ellipse 30.png" alt="" />
-                                            </div>
+                                            
                                             <p className='text-2xl lg:text-4xl xl:text-4xl font-semibold'>{item.title}</p>
-                                        </div>
-                                        <div className=" pl-5 md:pl-9">
                                             <p className=' text-sm lg:text-base  w-full md:w-[80%]'>{item.para}</p>
 
-                                        </div>
-                                        <div className="pl-5 md:pl-9">
+                                        <div className="">
                                             <RedBtn text={item.btn} />
                                         </div>
                                     </div>
