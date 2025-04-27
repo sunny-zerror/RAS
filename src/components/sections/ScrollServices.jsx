@@ -9,7 +9,7 @@ const desktopSteps = [
     description:
       "At this stage, RAS works with you to understand your supply chain goals and operational needs, setting the stage for a structured and solution-oriented collaboration.",
     button: "Send Inquiry",
-    image: "/images/services/circle1.png",
+    image: "/images/services/our_service_new_1.webp",
   },
   {
     title: "Solution Design & Proposal",
@@ -17,7 +17,7 @@ const desktopSteps = [
     description:
       "RAS identifies key priorities, evaluates operational requirements, & outlines a clear, tailored solution. The goal is to align capabilities with your objectives & build a roadmap that’s ready for implementation.",
     button: "Book Consultancy",
-    image: "/images/services/circle2.png",
+    image: "/images/services/our_service_new_2.webp",
   },
   {
     title: "Agreement & Onboarding",
@@ -25,7 +25,7 @@ const desktopSteps = [
     description:
       "Once aligned, RAS manages documentation, compliance checks, and onboarding processes—ensuring clarity, alignment, and readiness before execution begins.",
     button: "Start Onboarding",
-    image: "/images/services/circle3.png",
+    image: "/images/services/our_service_new_3.webp",
   },
   {
     title: "Operations & Execution",
@@ -33,7 +33,7 @@ const desktopSteps = [
     description:
       "This is where plans turn into action. RAS executes logistics operations with precision—ensuring safe, compliant, and timely cargo movement across touchpoints.",
     button: "Track Progress",
-    image: "/images/services/circle4.png",
+    image: "/images/services/our_service_new_4.webp",
   },
   {
     title: "Delivery & Support",
@@ -41,7 +41,7 @@ const desktopSteps = [
     description:
       "Cargo is delivered as promised, with continued support for documentation, compliance, and incident response. RAS remains an active partner post-delivery.",
     button: "Request Support",
-    image: "/images/services/circle5.png",
+    image: "/images/services/our_service_new_5.webp",
   },
   {
     title: "Continuous Improvement",
@@ -49,13 +49,13 @@ const desktopSteps = [
     description:
       "RAS actively gathers feedback, provides training, and identifies opportunities to refine logistics processes—building stronger, smarter supply chains together.",
     button: "Share Feedback",
-    image: "/images/services/circle6.png",
+    image: "/images/services/our_service_new_6.webp",
   },
 ];
 
 const mobileSteps = desktopSteps.map((step, index) => ({
   ...step,
-  image: `/images/services/circle${index + 1}.png`,
+  image: `/images/services/our_service_new_${index + 1}.webp`,
 }));
 
 const ScrollServices = () => {
@@ -126,7 +126,7 @@ const ScrollServices = () => {
       <div className="w-full h-full flex flex-col md:flex-row justify-between">
         {/* Image Section */}
         <div className="w-full md:w-[40%] h-[40vh] md:h-screen sticky top-0 flex items-center justify-center">
-          <div className=" w-full center -rotate-90 md:translate-y-10">
+          <div className=" w-full center  md:translate-y-10">
             <img
               ref={imageRef}
               id="scroll_img"
