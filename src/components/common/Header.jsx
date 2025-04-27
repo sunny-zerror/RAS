@@ -53,14 +53,14 @@ const Header = () => {
 
   return (
     <div>
-      <div id='header' className="w-full fixed top-0 left-0 h-[7vh] md:h-[10vh] z-[99] px-6 md:px-6 lg:px-20 flex items-center justify-between bg-white">
+      <div id='header' className="w-full fixed top-0 left-0 h-[7vh] md:h-[10vh] z-[99] px-6 md:px-6 lg:px-20 flex items-center justify-between bg-white overflow-hidden">
         <div className="w-[20%]">
           <a href="#home">
             <img className='w-[100%] md:w-[50%] lg:w-[40%]' src="/logos/ras_logo.png" alt="Logo" />
           </a>
         </div>
 
-        <div className="hidden md:flex gap-10 font-semibold items-center text-sm">
+        <div className="hidden md:flex gap-10 font-semibold items-center text-sm overflow-hidden">
           {navItems.map((item, index) => (
             <div
               key={index}
@@ -90,7 +90,7 @@ const Header = () => {
           <RiMenu2Line />
         </div>
 
-        <div className={`w-full fixed left-0 bg-white p-5 transition-all duration-500 ease-in-out z-40 ${navOpen ? 'top-0' : '-top-96'}`}>
+        <div className={`w-full fixed left-0 bg-white p-5 transition-all duration-500 overflow-hidden ease-in-out z-40 ${navOpen ? 'top-0' : '-top-96'}`}>
           {navItems.map((item, index) => (
             <div key={index} className="w-fit py-1 flex items-center">
               <div className="h-full text-base flex flex-col overflow-hidden whitespace-nowrap w-fit group">

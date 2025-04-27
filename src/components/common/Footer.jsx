@@ -107,7 +107,7 @@ const Footer = () => {
 
   return (
     <div>
-      <div className="w-full mt-20 overflow-x-hidden  bg-[#222D37] md:text-xs  xl:text-base  pad ft">
+      <div className="w-full mt-20 overflow-hidden  bg-[#222D37] md:text-xs  xl:text-base  pad ft">
         <div className=" pt-10">
           <div className="w-full py-2 center">
             <img className='w-[35%] md:w-[8%]' src="/logos/RAS_logo_white.png" alt="" />

@@ -99,7 +99,7 @@ const Section2New = () => {
     };
 
     return (
-        <div className='mt-10 mb-20 lg:mb-0 lg:mt-32 overflow-x-hidden'>
+        <div className='mt-10 mb-20 lg:mb-0 lg:mt-32 overflow-hidden'>
             <div className=" pad relative   w-full  ">
                 <div className=" w-full  flex flex-col justify-center gap-4  ">
                     <h1 className=' text-xl md:text-2xl lg:text-4xl font-bold'>Understanding the Landscape</h1>

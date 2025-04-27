@@ -5,7 +5,7 @@ const Certifications = () => {
 
   return (
     <div>
-      <div id='certifications' className="w-full  flex flex-col mt-12  gap-5 md:gap-16 pad ">
+      <div id='certifications' className="w-full  flex flex-col mt-12  gap-5 md:gap-16 pad overflow-hidden ">
         <h1 className="text-xl md:text-2xl lg:text-4xl font-semibold">Certification and Affiliations</h1>
         <div className="w-full  gap-5 md:gap-10 grid grid-cols-2 md:grid-cols-5">
           {logos.map((logo, index) => (

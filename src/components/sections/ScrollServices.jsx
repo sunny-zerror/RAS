@@ -55,7 +55,7 @@ const desktopSteps = [
 
 const mobileSteps = desktopSteps.map((step, index) => ({
   ...step,
-  image: `/images/services/mobile_circle${index + 1}.png`,
+  image: `/images/services/circle${index + 1}.png`,
 }));
 
 const ScrollServices = () => {
@@ -102,7 +102,7 @@ const ScrollServices = () => {
           setImage(stepList[clampedStep].image);
 
           if (imageRef.current) {
-            const totalRotation = -360 * (sections.length - 1);
+            const totalRotation = 360 ;
             imageRef.current.style.transform = `rotate(${totalRotation * progress}deg)`;
           }
         },
@@ -126,11 +126,11 @@ const ScrollServices = () => {
       <div className="w-full h-full flex flex-col md:flex-row justify-between">
         {/* Image Section */}
         <div className="w-full md:w-[40%] h-[40vh] md:h-screen sticky top-0 flex items-center justify-center">
-          <div className=" w-full center md:translate-x-[-40%] md:translate-y-10">
+          <div className=" w-full center md:translate-y-10">
             <img
               ref={imageRef}
               id="scroll_img"
-              className="w-[60%] md:w-[100%] "
+              className="w-[60%] md:w-[80%] "
               src={image}
               alt="Rotating Circle"
             />

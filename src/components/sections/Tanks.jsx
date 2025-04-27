@@ -229,7 +229,7 @@ const Tanks = () => {
 
 
     return (
-        <div id='our-fleet' className=" relative w-full  pad  mt-20 lg:my-20">
+        <div id='our-fleet' className=" relative w-full  pad  mt-20 lg:my-20 overflow-hidden">
             <div className="w-full ">
                 <h1 className='text-xl md:text-2xl lg:text-4xl font-semibold'>Your Requirement, Our Expertise</h1>
                 <p className='text-sm  lg:text-base leading-tight'>Built for Efficiency, Safety & Sustainability: Explore Our Specialized Fleet</p>
