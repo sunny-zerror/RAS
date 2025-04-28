@@ -6,7 +6,7 @@ const IconWithLabel = ({ defaultImg, hoverImg, label }) => {
 
   return (
     <div
-      className="h-full w-[22%] md:w-[18%]   gap-2 text-center center flex-col relative"
+      className="h-full w-[22%] md:w-[18%] cursor-pointer   gap-2 text-center center flex-col relative"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -23,7 +23,7 @@ const IconWithLabel = ({ defaultImg, hoverImg, label }) => {
         />
       </div>
       <div className="h-[8vh]">
-        <p className=" text-sm lg:text-sm  px-4 font-semibold  ">{label}</p>
+        <p className=" text-sm lg:text-base  px-4 font-semibold  ">{label}</p>
 
       </div>
     </div>
@@ -36,12 +36,12 @@ const OurStrength = () => {
       <div id='our-edge' className="pad  ">
         <h1 className="text-xl md:text-2xl lg:text-4xl font-semibold mb-5">Our Edge</h1>
         <div className="flex flex-col-reverse md:flex-row gap-5 md:gap-0 items-center justify-between">
-          <div className=" w-full md:w-[45%]  h-full flex md:gap-5 gap-8 flex-col ">
+          <div className=" w-full md:w-[45%]  h-full flex md:gap-5 gap-10 flex-col ">
             <div>
-              <p className="font-semibold text-base leading-tight md:text-lg">
+              <h2 className="font-semibold text-base leading-tight lg:text-2xl">
                 Built on Responsibility. Driven by Safety. Powered by Expertise.
-              </p>
-              <p className="mt-4 md:mt-2 text-sm md:text-base leading-tight">
+              </h2>
+              <p className="mt-4 md:mt-4 text-sm md:text-lg leading-tight">
                 We deliver specialized logistics solutions with a sharp focus on safety, sustainability, and performance. Our deep technical know-how, disciplined execution, and tailored approach enable seamless global movement of sensitive and regulated goods across global supply networks.
               </p>
             </div>
@@ -52,17 +52,17 @@ const OurStrength = () => {
             <IconWithLabel
               defaultImg="/icons/chemical_precision.webp"
               hoverImg="/icons/chemical_precision_hover.webp"
-              label="Chemical Fluency"
+              label="Chemical"
             />
             <IconWithLabel
               defaultImg="/icons/grade_a_care.webp"
               hoverImg="/icons/grade_a_care_hover.webp"
-              label="Grade-A Care"
+              label="Food Grade"
             />
             <IconWithLabel
               defaultImg="/icons/cryochemical_mastery.webp"
               hoverImg="/icons/cryochemical_mastery_hover.webp"
-              label="Cryochemical Mastery"
+              label="Specialance Specialty"
             />
           </div>
         </div>

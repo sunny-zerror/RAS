@@ -21,7 +21,7 @@ const HowRas = () => {
         }, {
             id: 2,
             title: "Global Agency Network",
-            img: "/images/How_RASSCS_Makes_It_Happen_slide_2_wider.webp",
+            img: "/images/global agency.png",
             para: "Our extensive international network, in-house operations teams, and fleet diversity give us control at every touchpoint—from procurement to last-mile delivery.",
             btn: "Power Your Reach"
         }, {
@@ -56,7 +56,7 @@ const HowRas = () => {
     return (
         <div id='our-approach' className="story_swiper_classname_container  relative  pad mt-0 lg:mt-20 ">
             <h1 className='text-xl md:text-2xl lg:text-4xl font-semibold mb-8 '>How RAS Makes It Happen</h1>
-            <div className="absolute  max-[640px]:-bottom-10 pl-6 md:pl-0 md:top-0   flex w-full  right-0 z-[90] items-center md:justify-end ">
+            <div className="absolute  max-[640px]:-bottom-10 pl-6 md:pl-0 bottom-0   flex w-full  right-0 z-[90] items-center md:justify-end ">
                 <div className="flex  pr-5 md:pr-14 gap-2 ">
                     <button
                         ref={prevRef}
@@ -91,13 +91,13 @@ const HowRas = () => {
                         <SwiperSlide key={item.id}>
                             <div className="w-full md:h-[70vh] flex flex-col md:flex-row items-center justify-between">
                                 <div className=" w-full md:w-[50%]  overflow-hidden rounded-2xl h-full">
-                                    <img className=' w-full h-full object-cover' src={item.img} alt="" />
+                                    <img className=' w-full h-full object-contain' src={item.img} alt="" />
                                 </div>
                                 <div className=" w-full md:w-[45%] h-full center pt-5 md:pt-0">
-                                    <div className="flex flex-col  h-full md:h-[50%] items-start gap-5   w-full ">
-                                            
-                                            <p className='text-2xl lg:text-4xl xl:text-4xl font-semibold'>{item.title}</p>
-                                            <p className=' text-sm lg:text-base  w-full md:w-[80%]'>{item.para}</p>
+                                    <div className="flex flex-col  h-full md:h-[50%] items-start gap-8   w-full ">
+
+                                        <p className='text-2xl lg:text-4xl xl:text-4xl font-semibold'>{item.title}</p>
+                                        <p className=' text-sm lg:text-lg  w-full md:w-[80%]'>{item.para}</p>
 
                                         <div className="">
                                             <RedBtn text={item.btn} />

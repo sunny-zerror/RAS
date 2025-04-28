@@ -133,8 +133,8 @@ export const Tank = ({ title, subtitle, description, highlights, changeHighlight
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
                         {/* <h1 className='text-xl  lg:text-2xl uppercase text-[#EA1B22]'>{title}</h1> */}
-                        <p className=' text-sm md:text-sm xl:text-base  font-semibold leading-tight'>{subtitle}</p>
-                        <p className='  mt-2 md:mt-0 mb-5 md:mb-0 text-sm opacity-80  leading-tight md:text-sm xl:text-sm  '>{description}</p>
+                        <p className=' text-sm md:text-sm xl:text-lg  font-semibold leading-tight'>{subtitle}</p>
+                        <p className='  mt-2 md:mt-0 mb-5 md:mb-0 text-sm opacity-80  leading-tight md:text-sm xl:text-base  '>{description}</p>
 
                         <div className="w-full h-fit     flex flex-col md:flex-row ">
                             <div className=" w-full py-5 md:py-0   md:w-[50%] center h-[30vh]  md:h-[50vh]">
@@ -232,7 +232,7 @@ const Tanks = () => {
         <div id='our-fleet' className=" relative w-full  pad   lg:py-20 overflow-hidden">
             <div className="w-full ">
                 <h1 className='text-xl md:text-2xl lg:text-4xl font-semibold'>Your Requirement, Our Expertise</h1>
-                <p className='text-sm  lg:text-base leading-tight'>Built for Efficiency, Safety & Sustainability: Explore Our Specialized Fleet</p>
+                <p className='text-sm  lg:text-xl leading-tight'>Built for Efficiency, Safety & Sustainability: Explore Our Specialized Fleet</p>
                 <div className="w-full flex max-[640px]:overflow-x-scroll max-[640px]:scroller pb-2 gap-2 md:gap-5 items-center my-5">
                     {tankData.map((tank, idx) => (
                         <button

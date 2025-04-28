@@ -25,8 +25,8 @@ const UnderstandingCard = ({ index, data }) => {
             />
           </div>
         </div>
-        <h2 className=" text-lg lg:text-xl font-medium cursor-default">{data.heading}</h2>
-        <p className=" text-sm lg:text-base leading-tight">{data.para}</p>
+        <h2 className=" text-lg lg:text-2xl font-medium cursor-default">{data.heading}</h2>
+        <p className=" text-sm lg:text-lg leading-tight">{data.para}</p>
       </div>
     </div>
   );

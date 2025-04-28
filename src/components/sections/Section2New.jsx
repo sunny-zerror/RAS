@@ -103,10 +103,10 @@ const Section2New = () => {
             <div className=" pad relative   w-full  ">
                 <div className=" w-full  flex flex-col justify-center gap-4  ">
                     <h1 className=' text-xl md:text-2xl lg:text-4xl font-bold'>Understanding the Landscape</h1>
-                    <p className='  text-xs  w-full md:w-[80%] lg:text-base  leading-tight '>At RAS, we endeavor to create supply chain as interconnected systems rather than isolated transactions. This approach seeks therefore, to develop unified customer experience, resilience, and expertise across all touchpoints.</p>
+                    <p className='  text-xs  w-full md:w-[75%] lg:text-lg  leading-tight '>At RAS, we endeavor to create supply chain as interconnected systems rather than isolated transactions. This approach seeks therefore, to develop unified customer experience, resilience, and expertise across all touchpoints.</p>
                 </div>
                 <div className="w-full h-fit md:h-[60vh]   mt-6 flex flex-col-reverse md:flex-row items-center">
-                    <div className=" w-full md:w-1/2 h-full md:pt-10 md:pr-24">
+                    <div className=" w-full md:w-1/2 h-full center md:pt-10 md:pr-24">
                         {
                             selectedInfo.title === "" ? (
                                 <div className="w-full grid grid-cols-2">
@@ -114,7 +114,7 @@ const Section2New = () => {
                                         titles.map((title, index) => (
                                             <h2 key={index}
                                                 onClick={() => handleMarkerHover(title)}
-                                                className=" text-lg cursor-pointer lg:text-xl font-medium  mb-6">{title}</h2>
+                                                className=" text-lg cursor-pointer lg:text-2xl font-medium  mb-6">{title}</h2>
                                         ))
                                     }
                                 </div>
@@ -128,13 +128,13 @@ const Section2New = () => {
                                     initial={{ y: "1vh", opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
                                     exit={{ y: "-1vh", opacity: 0 }}
-                                    className='w-full mt-5 md:mt-0 h-[12vh]'
+                                    className='w-full mt-5 md:mt-0 '
                                     transition={{ duration: 0.3, ease: "easeInOut" }}
                                 >
-                                    <h2 className="text-lg lg:text-xl font-medium cursor-default mb-2">
+                                    <h2 className="text-lg lg:text-3xl font-medium cursor-default mb-2">
                                         {selectedInfo.title}
                                     </h2>
-                                    <p className="text-xs lg:text-base leading-tight">
+                                    <p className="text-xs lg:text-xl leading-tight">
                                         {selectedInfo.desc}
                                     </p>
                                 </motion.div>

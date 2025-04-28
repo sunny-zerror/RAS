@@ -16,7 +16,7 @@ const desktopSteps = [
     subtitle: "Shaping a plan around your needs",
     description:
       "RAS identifies key priorities, evaluates operational requirements, & outlines a clear, tailored solution. The goal is to align capabilities with your objectives & build a roadmap that’s ready for implementation.",
-    button: "Book Consultancy",
+    button: "Build a Roadmap",
     image: "/images/services/our_service_new_2.webp",
   },
   {
@@ -24,7 +24,7 @@ const desktopSteps = [
     subtitle: "Seamless setup, built on trust and transparency",
     description:
       "Once aligned, RAS manages documentation, compliance checks, and onboarding processes—ensuring clarity, alignment, and readiness before execution begins.",
-    button: "Start Onboarding",
+    button: "Connect to Onboard",
     image: "/images/services/our_service_new_3.webp",
   },
   {
@@ -32,7 +32,7 @@ const desktopSteps = [
     subtitle: "Precision-driven logistics in motion",
     description:
       "This is where plans turn into action. RAS executes logistics operations with precision—ensuring safe, compliant, and timely cargo movement across touchpoints.",
-    button: "Track Progress",
+    button: "Plan to Action",
     image: "/images/services/our_service_new_4.webp",
   },
   {
@@ -144,13 +144,13 @@ const ScrollServices = () => {
               <div
                 key={index}
                 id={`section_${index}`}
-                className="h-full flex flex-col bg-white md:justify-center gap-5 md:gap-10 pad md:p-0"
+                className="h-[90%] pt-20 flex flex-col bg-white md:justify-center gap-5 md:gap-10 pad md:p-0"
               >
                 <div>
-                  <p className="text-xl md:text-3xl font-semibold">{step.title}</p>
+                  <h2 className="text-xl lg:text-3xl font-semibold">{step.title}</h2>
                   <p className="text-base md:text-xl mt-2 leading-tight">{step.subtitle}</p>
                 </div>
-                <p className="text-sm md:text-base w-full md:w-[70%] leading-tight">
+                <p className="text-sm md:text-lg w-full md:w-[70%] leading-tight">
                   {step.description}
                 </p>
                 <BorderBtn text={step.button} link="#contact-form" width="100%" />

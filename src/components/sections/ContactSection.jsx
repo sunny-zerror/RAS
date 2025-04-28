@@ -13,7 +13,7 @@ const ContactSection = () => {
                         <div className="w-full h-full flex flex-col justify-between overflow-hidden">
                             <div className=" mb-5 md:mb-0 w-full  flex flex-col gap-2 ">
                                 <h1 className='text-xl md:text-2xl lg:text-4xl font-semibold'>Begin Your Risk-Free Partnership</h1>
-                                <p className=' text-sm md:text-xl leading-tight'>Experience the RAS Solution</p>
+                                <p className=' text-sm md:text-2xl leading-tight'>Experience the RAS Solution</p>
                             </div>
                             <div className="w-full  md:w-[70%]  flex flex-col gap-6 md:gap-8  ">
                                 <input type="text" name="" id="" placeholder='Business Name' className='outline-none pb-1 w-full  text-sm  border-b border-[#00000092] ' />
@@ -34,7 +34,7 @@ const ContactSection = () => {
                                 <p className=' leading-tight text-sm xl:text-xl w-full   '>Where every shipment advances the science of safe, sustainable logistics.</p>
                                 <div className="mt-3 xl:mt-10">
 
-                                <BorderBtn  text={"Download Our Brochure"} link={""} width="100%" />
+                                <BorderBtn  text={"Download Our Brochure"} link={"/pdf/RAS_Goodrich_Brochure.pdf"} width="100%" />
                                 </div>
                             </div>
                         </div>
