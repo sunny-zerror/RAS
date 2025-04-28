@@ -8,8 +8,8 @@ const Section1 = () => {
                 <div className="w-fit  mt-[10vh] md:mt-[20vh] z-[99]  h-[40vh] flex flex-col gap-5 justify-center">
                     <div className="pad">
 
-                    <p className='  text-3xl md:text-5xl font-bold  text-black'>Supply Chain Solutions</p>
-                    <p className='md:mt-2 text-sm md:text-lg'>Responsible, safe, sustainable</p>
+                    <p className='  text-3xl md:text-5xl font-bold  '>Supply Chain Solutions</p>
+                    <p className='md:mt-2 text-base md:text-xl'>Responsible, Safe, Sustainable</p>
                     </div>
                     <div className="flex pad items-center  gap-5 ">
                         <RedBtn text={"Explore Services"} link={"#our-services"} />
